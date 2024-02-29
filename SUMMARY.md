@@ -10,7 +10,6 @@
 ## CVE Vault
 
 * [💥 P4n1c-V4ult](cve-vault/p4n1c-v4ult/README.md)
-  * [CVE-2022-25237](cve-vault/p4n1c-v4ult/cve-2022-25237.md)
   * [CVE-2023-6200](cve-vault/p4n1c-v4ult/cve-2023-6200.md)
   * [CVE-2023-46604](cve-vault/p4n1c-v4ult/cve-2023-46604.md)
   * [CVE-2023-3824](cve-vault/p4n1c-v4ult/cve-2023-3824.md)
@@ -18,6 +17,7 @@
   * [CVE-2022-46169](cve-vault/p4n1c-v4ult/cve-2022-46169.md)
   * [CVE-2022-44268](cve-vault/p4n1c-v4ult/cve-2022-44268.md)
   * [CVE-2022-31214](cve-vault/p4n1c-v4ult/cve-2022-31214.md)
+  * [CVE-2022-25237](cve-vault/p4n1c-v4ult/cve-2022-25237.md)
   * [CVE-2022-24855](cve-vault/p4n1c-v4ult/cve-2022-24855.md)
   * [CVE-2022-21699](cve-vault/p4n1c-v4ult/cve-2022-21699.md)
   * [CVE-2022-20229](cve-vault/p4n1c-v4ult/cve-2022-20229.md)
