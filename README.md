@@ -1,5 +1,4 @@
 ---
-description: The Hacker cooking book
 cover: .gitbook/assets/2377084.png
 coverY: 0
 ---
