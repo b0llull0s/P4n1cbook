@@ -1,0 +1,99 @@
+# Table of contents
+
+## 🏴‍☠️ Welcome!
+
+* [🔮 P4nicb00k](README.md)
+* [🚨 Licence and Disclaimer](welcome/licence-and-disclaimer.md)
+* [⚡ About Author](welcome/about-author.md)
+* [📚 Bookmarks](welcome/bookmarks.md)
+
+## CVE Vault
+
+* [💥 P4n1c-V4ult](cve-vault/p4n1c-v4ult/README.md)
+  * [CVE-2022-25237](cve-vault/p4n1c-v4ult/cve-2022-25237.md)
+  * [CVE-2023-6200](cve-vault/p4n1c-v4ult/cve-2023-6200.md)
+  * [CVE-2023-46604](cve-vault/p4n1c-v4ult/cve-2023-46604.md)
+  * [CVE-2023-3824](cve-vault/p4n1c-v4ult/cve-2023-3824.md)
+  * [CVE-2023-22515](cve-vault/p4n1c-v4ult/cve-2023-22515.md)
+  * [CVE-2022-46169](cve-vault/p4n1c-v4ult/cve-2022-46169.md)
+  * [CVE-2022-44268](cve-vault/p4n1c-v4ult/cve-2022-44268.md)
+  * [CVE-2022-31214](cve-vault/p4n1c-v4ult/cve-2022-31214.md)
+  * [CVE-2022-24855](cve-vault/p4n1c-v4ult/cve-2022-24855.md)
+  * [CVE-2022-21699](cve-vault/p4n1c-v4ult/cve-2022-21699.md)
+  * [CVE-2022-20229](cve-vault/p4n1c-v4ult/cve-2022-20229.md)
+  * [CVE-2022-4510](cve-vault/p4n1c-v4ult/cve-2022-4510.md)
+  * [CVE-2021-36368](cve-vault/p4n1c-v4ult/cve-2021-36368.md)
+  * [CVE-2021-41091](cve-vault/p4n1c-v4ult/cve-2021-41091.md)
+  * [CVE-2021-4034](cve-vault/p4n1c-v4ult/cve-2021-4034.md)
+  * [CVE-2018-14335](cve-vault/p4n1c-v4ult/cve-2018-14335.md)
+  * [CVE-2018-9276](cve-vault/p4n1c-v4ult/cve-2018-9276.md)
+  * [CVE-2018-1133](cve-vault/p4n1c-v4ult/cve-2018-1133.md)
+  * [CVE-2017-9101](cve-vault/p4n1c-v4ult/cve-2017-9101.md)
+  * [CVE-2016-4971](cve-vault/p4n1c-v4ult/cve-2016-4971.md)
+  * [CVE-2015-3292](cve-vault/p4n1c-v4ult/cve-2015-3292.md)
+  * [CVE-2014-6287](cve-vault/p4n1c-v4ult/cve-2014-6287.md)
+  * [CVE-2008-4250](cve-vault/p4n1c-v4ult/cve-2008-4250.md)
+  * [CVE-2007-2447](cve-vault/p4n1c-v4ult/cve-2007-2447.md)
+  * [CVE-2005-3503](cve-vault/p4n1c-v4ult/cve-2005-3503.md)
+
+## Main Methodology
+
+* [🐈‍⬛ Basic level](main-methodology/basic-level/README.md)
+  * [🌐 Network Protocols](main-methodology/basic-level/network-protocols/README.md)
+    * [FTP](main-methodology/basic-level/network-protocols/ftp.md)
+    * [SSH](main-methodology/basic-level/network-protocols/ssh.md)
+    * [SMB](main-methodology/basic-level/network-protocols/smb.md)
+    * [DNS](main-methodology/basic-level/network-protocols/dns.md)
+    * [SNMP](main-methodology/basic-level/network-protocols/snmp.md)
+  * [🕸️ Web](main-methodology/basic-level/web.md)
+  * [🦈 Wireshark](main-methodology/basic-level/wireshark.md)
+  * [💾 Regular Expressions](main-methodology/basic-level/regular-expressions/README.md)
+    * [🕵️‍♀️ Google Dorks](main-methodology/basic-level/regular-expressions/google-dorks.md)
+    * [🥷 Shodan Dorks](main-methodology/basic-level/regular-expressions/shodan-dorks.md)
+  * [🐦 File Transfer](main-methodology/basic-level/file-transfer.md)
+  * [🎯 BURP](main-methodology/basic-level/burp.md)
+  * [🤖 MetaExploit](main-methodology/basic-level/metaexploit.md)
+* [👁️‍🗨️ Recon](main-methodology/recon/README.md)
+  * [🔬 Files Enumeration](main-methodology/recon/files-enumeration.md)
+  * [Scanners](main-methodology/recon/scanners/README.md)
+    * [Nmap](main-methodology/recon/scanners/nmap.md)
+    * [👨‍🏫 Nessus](main-methodology/recon/scanners/nessus.md)
+* [☠️ Footholds](main-methodology/footholds/README.md)
+  * [💳 Credential Stuffing](main-methodology/footholds/credential-stuffing/README.md)
+    * [RDBMS](main-methodology/footholds/credential-stuffing/rdbms.md)
+  * [🔑 Brute-Forcing](main-methodology/footholds/brute-forcing.md)
+  * [Remote Code Execution](main-methodology/footholds/remote-code-execution/README.md)
+    * [🐚 Reverse Shells](main-methodology/footholds/remote-code-execution/reverse-shells.md)
+  * [🤹 Pivoting, Lateral Movements](main-methodology/footholds/pivoting-lateral-movements.md)
+* [💣 Privilege Scalation](main-methodology/privilege-scalation/README.md)
+  * [Windows Privilege Scalation](main-methodology/privilege-scalation/windows-privilege-scalation.md)
+  * [Linux Privilege Scalation](main-methodology/privilege-scalation/linux-privilege-scalation/README.md)
+    * [🌆 Buffer Overflow - Linux](main-methodology/privilege-scalation/linux-privilege-scalation/buffer-overflow-linux.md)
+* [🩺 Code Analysis](main-methodology/code-analysis/README.md)
+  * [Python](main-methodology/code-analysis/python.md)
+  * [Java Based Applications](main-methodology/code-analysis/java-based-applications.md)
+* [🕵️ OSINT](main-methodology/osint.md)
+* [🐟 Phishing](main-methodology/phishing.md)
+
+## Web Exploitation
+
+* [🕷️ Attacking Web](web-exploitation/attacking-web/README.md)
+  * [IDOR](web-exploitation/attacking-web/idor.md)
+  * [SSRF](web-exploitation/attacking-web/ssrf.md)
+* [APIs](web-exploitation/apis/README.md)
+  * [🌵 Cacti](web-exploitation/apis/cacti.md)
+  * [Wordpress](web-exploitation/apis/wordpress.md)
+  * [FLASK](web-exploitation/apis/flask.md)
+  * [Tomcat](web-exploitation/apis/tomcat.md)
+  * [Zabbix](web-exploitation/apis/zabbix.md)
+  * [OpenNetAdmin 18.1.1](web-exploitation/apis/opennetadmin-18.1.1.md)
+  * [Searchor](web-exploitation/apis/searchor.md)
+* [JDWP - Java Debug Wire Protocol](web-exploitation/jdwp-java-debug-wire-protocol.md)
+
+## Cloud Exploitation
+
+* [Dockers](cloud-exploitation/dockers.md)
+
+## Wireless Exploitation
+
+* [Wifi](wireless-exploitation/wifi.md)
