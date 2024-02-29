@@ -73,7 +73,6 @@
   * [Python](main-methodology/code-analysis/python.md)
   * [Java Based Applications](main-methodology/code-analysis/java-based-applications.md)
 * [🕵️ OSINT](main-methodology/osint.md)
-* [🐟 Phishing](main-methodology/phishing.md)
 
 ## Web Exploitation
 
