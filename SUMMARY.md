@@ -61,20 +61,21 @@
   * [Scanners](main-methodology/recon/scanners/README.md)
     * [Nmap](main-methodology/recon/scanners/nmap.md)
     * [👨‍🏫 Nessus](main-methodology/recon/scanners/nessus.md)
-* [☠️ Footholds](main-methodology/footholds/README.md)
-  * [💳 Credential Stuffing](main-methodology/footholds/credential-stuffing/README.md)
-    * [RDBMS](main-methodology/footholds/credential-stuffing/rdbms.md)
-  * [🔑 Brute-Forcing](main-methodology/footholds/brute-forcing.md)
-  * [Remote Code Execution](main-methodology/footholds/remote-code-execution/README.md)
-    * [🐚 Reverse Shells](main-methodology/footholds/remote-code-execution/reverse-shells.md)
-  * [🤹 Pivoting, Lateral Movements](main-methodology/footholds/pivoting-lateral-movements.md)
+* [☠️ Techniques](main-methodology/techniques/README.md)
+  * [💳 Credential Stuffing](main-methodology/techniques/credential-stuffing/README.md)
+    * [RDBMS](main-methodology/techniques/credential-stuffing/rdbms.md)
+  * [🔑 Brute-Forcing](main-methodology/techniques/brute-forcing.md)
+  * [Remote Code Execution](main-methodology/techniques/remote-code-execution/README.md)
+    * [🐚 Reverse Shells](main-methodology/techniques/remote-code-execution/reverse-shells.md)
+  * [🤹 Pivoting, Lateral Movements](main-methodology/techniques/pivoting-lateral-movements.md)
 * [💣 Privilege Scalation](main-methodology/privilege-scalation/README.md)
   * [Windows Privilege Scalation](main-methodology/privilege-scalation/windows-privilege-scalation.md)
   * [Linux Privilege Scalation](main-methodology/privilege-scalation/linux-privilege-scalation/README.md)
     * [🌆 Buffer Overflow - Linux](main-methodology/privilege-scalation/linux-privilege-scalation/buffer-overflow-linux.md)
 * [🩺 Code Analysis](main-methodology/code-analysis/README.md)
   * [Python](main-methodology/code-analysis/python.md)
-  * [Java Based Applications](main-methodology/code-analysis/java-based-applications.md)
+  * [Java](main-methodology/code-analysis/java/README.md)
+    * [JDWP - Java Debug Wire Protocol](main-methodology/code-analysis/java/jdwp-java-debug-wire-protocol.md)
 * [🕵️ OSINT](main-methodology/osint.md)
 
 ## Web Exploitation
@@ -90,7 +91,6 @@
   * [Zabbix](web-exploitation/apis/zabbix.md)
   * [OpenNetAdmin 18.1.1](web-exploitation/apis/opennetadmin-18.1.1.md)
   * [Searchor](web-exploitation/apis/searchor.md)
-* [JDWP - Java Debug Wire Protocol](web-exploitation/jdwp-java-debug-wire-protocol.md)
 
 ## Cloud Exploitation
 

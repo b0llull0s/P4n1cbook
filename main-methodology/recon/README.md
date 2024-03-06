@@ -30,8 +30,8 @@ description: Enumeration and Enumeration
 
 <mark style="color:purple;">Credentials is another value that Users works with, most of the people tend to reuse passwords and have a really bad</mark> <mark style="color:red;">**`SecOp`**</mark><mark style="color:red;">** **</mark><mark style="color:red;">**In a real red time situation you may need to get deep on here. Maybe you can take a look here. And also phising.**</mark>
 
-{% content-ref url="../footholds/credential-stuffing/" %}
-[credential-stuffing](../footholds/credential-stuffing/)
+{% content-ref url="../techniques/credential-stuffing/" %}
+[credential-stuffing](../techniques/credential-stuffing/)
 {% endcontent-ref %}
 
 <mark style="color:purple;">There are ways to gather valuable information that will be adding to this pages during the beta phase.</mark>
