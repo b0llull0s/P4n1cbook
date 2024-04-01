@@ -10,6 +10,7 @@
 ## CVE Vault
 
 * [💥 P4n1c-V4ult](cve-vault/p4n1c-v4ult/README.md)
+  * [CVE-2024-3094](cve-vault/p4n1c-v4ult/cve-2024-3094.md)
   * [CVE-2024-28741](cve-vault/p4n1c-v4ult/cve-2024-28741.md)
   * [CVE-2024-27620](cve-vault/p4n1c-v4ult/cve-2024-27620.md)
   * [CVE-2024-21762](cve-vault/p4n1c-v4ult/cve-2024-21762.md)
