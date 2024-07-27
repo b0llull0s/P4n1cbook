@@ -1,2 +1,0 @@
-# 🤹 Pivoting, Lateral Movements
-

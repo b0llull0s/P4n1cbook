@@ -51,7 +51,6 @@
     * [SMB](main-methodology/basic-level/network-protocols/smb.md)
     * [DNS](main-methodology/basic-level/network-protocols/dns.md)
     * [SNMP](main-methodology/basic-level/network-protocols/snmp.md)
-  * [🕸️ Web](main-methodology/basic-level/web.md)
   * [🦈 Wireshark](main-methodology/basic-level/wireshark.md)
   * [💾 Regular Expressions](main-methodology/basic-level/regular-expressions/README.md)
     * [🕵️‍♀️ Google Dorks](main-methodology/basic-level/regular-expressions/google-dorks.md)
@@ -60,26 +59,21 @@
   * [🎯 BURP](main-methodology/basic-level/burp.md)
   * [🤖 MetaExploit](main-methodology/basic-level/metaexploit.md)
 * [👁️‍🗨️ Recon](main-methodology/recon/README.md)
+  * [Web Scope](main-methodology/recon/web-scope.md)
+  * [🩺 Code Analysis](main-methodology/recon/code-analysis/README.md)
+    * [Python](main-methodology/recon/code-analysis/python.md)
+    * [Java](main-methodology/recon/code-analysis/java/README.md)
+      * [JDWP - Java Debug Wire Protocol](main-methodology/recon/code-analysis/java/jdwp-java-debug-wire-protocol.md)
   * [🔬 Files Enumeration](main-methodology/recon/files-enumeration.md)
-  * [Scanners](main-methodology/recon/scanners/README.md)
-    * [Nmap](main-methodology/recon/scanners/nmap.md)
-    * [👨‍🏫 Nessus](main-methodology/recon/scanners/nessus.md)
-* [☠️ Techniques](main-methodology/techniques/README.md)
-  * [💳 Credential Stuffing](main-methodology/techniques/credential-stuffing/README.md)
-    * [RDBMS](main-methodology/techniques/credential-stuffing/rdbms.md)
-  * [🔑 Brute-Forcing](main-methodology/techniques/brute-forcing.md)
-  * [Remote Code Execution](main-methodology/techniques/remote-code-execution/README.md)
-    * [🐚 Reverse Shells](main-methodology/techniques/remote-code-execution/reverse-shells.md)
-  * [🤹 Pivoting, Lateral Movements](main-methodology/techniques/pivoting-lateral-movements.md)
+  * [Dorks](main-methodology/recon/dorks.md)
 * [💣 Privilege Scalation](main-methodology/privilege-scalation/README.md)
   * [Windows Privilege Scalation](main-methodology/privilege-scalation/windows-privilege-scalation.md)
   * [Linux Privilege Scalation](main-methodology/privilege-scalation/linux-privilege-scalation/README.md)
     * [🌆 Buffer Overflow - Linux](main-methodology/privilege-scalation/linux-privilege-scalation/buffer-overflow-linux.md)
-* [🩺 Code Analysis](main-methodology/code-analysis/README.md)
-  * [Python](main-methodology/code-analysis/python.md)
-  * [Java](main-methodology/code-analysis/java/README.md)
-    * [JDWP - Java Debug Wire Protocol](main-methodology/code-analysis/java/jdwp-java-debug-wire-protocol.md)
-* [🕵️ OSINT](main-methodology/osint.md)
+
+## Advanced Techniques
+
+* [Pivoting/Lateral Movement](advanced-techniques/pivoting-lateral-movement.md)
 
 ## Web Exploitation
 
@@ -94,6 +88,7 @@
   * [Zabbix](web-exploitation/apis/zabbix.md)
   * [OpenNetAdmin 18.1.1](web-exploitation/apis/opennetadmin-18.1.1.md)
   * [Searchor](web-exploitation/apis/searchor.md)
+* [Phone Apps](web-exploitation/phone-apps.md)
 
 ## Cloud Exploitation
 

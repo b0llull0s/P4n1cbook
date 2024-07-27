@@ -12,8 +12,8 @@ description: Enumeration and Enumeration
 
 <mark style="color:purple;">The users are normally the biggest vulnerabilities and the environment can also be expose to physical penetration, google images from the area can be really handy to start a proper asset to the situation, as to get a look on the potential users. In case you need you can check the OSINT page of this book:</mark>
 
-{% content-ref url="../osint.md" %}
-[osint.md](../osint.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 <mark style="color:purple;">**From an user level we can also start enumeration for valuable information by taking a look at the source code and developer tool of an application**</mark>
@@ -24,14 +24,14 @@ description: Enumeration and Enumeration
 
 <mark style="color:purple;">**Enumerate**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">the technology to understand the scenario. There may be important information on the code</mark>
 
-{% content-ref url="../code-analysis/" %}
-[code-analysis](../code-analysis/)
+{% content-ref url="code-analysis/" %}
+[code-analysis](code-analysis/)
 {% endcontent-ref %}
 
 <mark style="color:purple;">Credentials is another value that Users works with, most of the people tend to reuse passwords and have a really bad</mark> <mark style="color:red;">**`SecOp`**</mark><mark style="color:red;">** **</mark><mark style="color:red;">**In a real red time situation you may need to get deep on here. Maybe you can take a look here. And also phising.**</mark>
 
-{% content-ref url="../techniques/credential-stuffing/" %}
-[credential-stuffing](../techniques/credential-stuffing/)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 <mark style="color:purple;">There are ways to gather valuable information that will be adding to this pages during the beta phase.</mark>
