@@ -57,8 +57,8 @@
 * [Dorks](fundamentals/dorks.md)
 * [🩺 Code Analysis](fundamentals/code-analysis/README.md)
   * [Python](fundamentals/code-analysis/python.md)
-  * [Java](fundamentals/code-analysis/java/README.md)
-    * [JDWP - Java Debug Wire Protocol](fundamentals/code-analysis/java/jdwp-java-debug-wire-protocol.md)
+  * [Javascript](fundamentals/code-analysis/javascript/README.md)
+    * [JDWP - Java Debug Wire Protocol](fundamentals/code-analysis/javascript/jdwp-java-debug-wire-protocol.md)
 
 ## Tools
 

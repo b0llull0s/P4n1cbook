@@ -1,3 +1,7 @@
+---
+icon: snake
+---
+
 # Python
 
 ## Python Eval Code Execution: <a href="#exploit-title" id="exploit-title"></a>
