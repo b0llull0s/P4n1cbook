@@ -44,7 +44,6 @@
 
 ## Fundamentals
 
-* [💾 Regular Expressions](fundamentals/regular-expressions.md)
 * [🌐 Network Protocols](fundamentals/network-protocols/README.md)
   * [FTP](fundamentals/network-protocols/ftp.md)
   * [SSH](fundamentals/network-protocols/ssh.md)
@@ -52,19 +51,21 @@
   * [DNS](fundamentals/network-protocols/dns.md)
   * [SNMP](fundamentals/network-protocols/snmp.md)
 * [Web Fuzzing](fundamentals/web-fuzzing.md)
-* [🐦 File Transfer](fundamentals/file-transfer.md)
+* [💾 Regular Expressions](fundamentals/regular-expressions.md)
 * [🔬 Files Enumeration](fundamentals/files-enumeration.md)
+* [🐦 File Transfer](fundamentals/file-transfer.md)
 * [Dorks](fundamentals/dorks.md)
 * [🩺 Code Analysis](fundamentals/code-analysis/README.md)
-  * [Python](fundamentals/code-analysis/python.md)
+  * [HTML](fundamentals/code-analysis/html.md)
   * [Javascript](fundamentals/code-analysis/javascript/README.md)
     * [JDWP - Java Debug Wire Protocol](fundamentals/code-analysis/javascript/jdwp-java-debug-wire-protocol.md)
+  * [Python](fundamentals/code-analysis/python.md)
 
 ## Tools
 
+* [Nmap](tools/nmap.md)
 * [feroxbuster](tools/feroxbuster.md)
 * [Gobuster](tools/gobuster.md)
-* [Nmap](tools/nmap.md)
 * [ffuz](tools/ffuz.md)
 * [🦈 Wireshark](tools/wireshark.md)
 * [🎯 BURP](tools/burp.md)
@@ -108,3 +109,4 @@
 
 * [Bluetooth](wireless-exploitation/bluetooth.md)
 * [Wifi](wireless-exploitation/wifi.md)
+* [NFC](wireless-exploitation/nfc.md)
