@@ -1,3 +1,7 @@
+---
+icon: database
+---
+
 # SMB
 
 ```bash

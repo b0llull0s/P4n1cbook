@@ -45,10 +45,11 @@
 ## Fundamentals
 
 * [🌐 Network Protocols](fundamentals/network-protocols/README.md)
-  * [FTP](fundamentals/network-protocols/ftp.md)
   * [SSH](fundamentals/network-protocols/ssh.md)
-  * [SMB](fundamentals/network-protocols/smb.md)
   * [DNS](fundamentals/network-protocols/dns.md)
+  * [HTTP/HTTPS](fundamentals/network-protocols/http-https.md)
+  * [FTP](fundamentals/network-protocols/ftp.md)
+  * [SMB](fundamentals/network-protocols/smb.md)
   * [SNMP](fundamentals/network-protocols/snmp.md)
 * [Web Fuzzing](fundamentals/web-fuzzing.md)
 * [💾 Regular Expressions](fundamentals/regular-expressions.md)
@@ -89,7 +90,7 @@
 
 ## MITRE ATT\&CK Framework
 
-* [Page 1](mitre-att-and-ck-framework/page-1.md)
+* [CWE-200 Information Exposure](mitre-att-and-ck-framework/cwe-200-information-exposure.md)
 
 ## Post Exploitation
 

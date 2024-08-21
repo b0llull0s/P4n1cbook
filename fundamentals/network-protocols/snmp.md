@@ -1,3 +1,7 @@
+---
+icon: shredder
+---
+
 # SNMP
 
 Get the MIBs

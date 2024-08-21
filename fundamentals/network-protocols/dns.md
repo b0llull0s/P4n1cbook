@@ -1,3 +1,7 @@
+---
+icon: building-memo
+---
+
 # DNS
 
 Host recon

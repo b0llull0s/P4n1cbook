@@ -1,5 +1,6 @@
 ---
 description: Port 21
+icon: file-chart-column
 ---
 
 # FTP
