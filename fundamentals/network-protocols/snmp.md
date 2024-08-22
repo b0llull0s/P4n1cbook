@@ -4,11 +4,13 @@ icon: shredder
 
 # SNMP
 
-Get the MIBs
+## MIBs
 
+{% code title="Installation" %}
 ```bash
 sudo apt install snmp-mibs-downloader
 ```
+{% endcode %}
 
 Enumerate with MIBs
 

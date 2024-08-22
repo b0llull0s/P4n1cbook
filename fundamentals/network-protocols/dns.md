@@ -1,11 +1,14 @@
 ---
 icon: building-memo
+description: Domain Name System
 ---
 
 # DNS
 
-Host recon
+## Enumeration
 
+{% code title="Zone Transfers" %}
 ```bash
-dig axfr bank.htb @10.10.10.29
+dig axfr HOST.NAME @10.10.10.29
 ```
+{% endcode %}

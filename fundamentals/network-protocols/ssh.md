@@ -1,6 +1,6 @@
 ---
 icon: key
-description: Secure Shell Protocol Cheat sheet
+description: Secure Shell Protocol
 ---
 
 # SSH

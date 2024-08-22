@@ -1,16 +1,30 @@
 ---
-description: Port 21
 icon: file-chart-column
+description: File Transfer Protocol
 ---
 
 # FTP
 
-<mark style="color:purple;">Allows anonymous login:</mark>
-
+{% tabs %}
+{% tab title="Port" %}
 ```
-ftp <ip>
-#Use
+21
+```
+{% endtab %}
+
+{% tab title="Anonymous login" %}
+```
+ftp <IP>
+# Next type
 anonymous
-#Look up for the for the path being root or C:\
+```
+{% endtab %}
+{% endtabs %}
+
+## <mark style="color:purple;">Enumeration</mark>
+
+{% code title="Check root path" %}
+```
 pwd / dir
 ```
+{% endcode %}

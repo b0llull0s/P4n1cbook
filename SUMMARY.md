@@ -51,42 +51,37 @@
   * [FTP](fundamentals/network-protocols/ftp.md)
   * [SMB](fundamentals/network-protocols/smb.md)
   * [SNMP](fundamentals/network-protocols/snmp.md)
-* [Web Fuzzing](fundamentals/web-fuzzing.md)
+  * [WinRM](fundamentals/network-protocols/winrm.md)
 * [💾 Regular Expressions](fundamentals/regular-expressions.md)
-* [🔬 Files Enumeration](fundamentals/files-enumeration.md)
 * [🐦 File Transfer](fundamentals/file-transfer.md)
+* [Databases](fundamentals/databases.md)
 * [Dorks](fundamentals/dorks.md)
-* [🩺 Code Analysis](fundamentals/code-analysis/README.md)
-  * [HTML](fundamentals/code-analysis/html.md)
-  * [Javascript](fundamentals/code-analysis/javascript/README.md)
-    * [JDWP - Java Debug Wire Protocol](fundamentals/code-analysis/javascript/jdwp-java-debug-wire-protocol.md)
-  * [Python](fundamentals/code-analysis/python.md)
-
-## Tools
-
-* [Nmap](tools/nmap.md)
-* [feroxbuster](tools/feroxbuster.md)
-* [Gobuster](tools/gobuster.md)
-* [ffuz](tools/ffuz.md)
-* [🦈 Wireshark](tools/wireshark.md)
-* [🎯 BURP](tools/burp.md)
-* [🤖 MetaExploit](tools/metaexploit.md)
-* [🥷 Shodan](tools/shodan.md)
-* [Flipper Zero](tools/flipper-zero.md)
+* [🦈 Wireshark](fundamentals/wireshark.md)
+* [Nmap](fundamentals/nmap.md)
+* [🤖 MetaExploit](fundamentals/metaexploit.md)
+* [HTML/CSS](fundamentals/html-css.md)
+* [Javascript](fundamentals/javascript/README.md)
+  * [JDWP - Java Debug Wire Protocol](fundamentals/javascript/jdwp-java-debug-wire-protocol.md)
+* [Python](fundamentals/python.md)
+* [Cryptography](fundamentals/cryptography.md)
 
 ## Web Exploitation
 
+* [BURP](web-exploitation/burp.md)
+* [Web Fuzzing](web-exploitation/web-fuzzing/README.md)
+  * [ffuz](web-exploitation/web-fuzzing/ffuz.md)
+  * [Gobuster](web-exploitation/web-fuzzing/gobuster.md)
+  * [feroxbuster](web-exploitation/web-fuzzing/feroxbuster.md)
 * [Main Techniques](web-exploitation/main-techniques/README.md)
   * [IDOR](web-exploitation/main-techniques/idor.md)
   * [SSRF](web-exploitation/main-techniques/ssrf.md)
 * [APIs](web-exploitation/apis/README.md)
   * [🌵 Cacti](web-exploitation/apis/cacti.md)
   * [Wordpress](web-exploitation/apis/wordpress.md)
-  * [FLASK](web-exploitation/apis/flask.md)
   * [Tomcat](web-exploitation/apis/tomcat.md)
   * [Zabbix](web-exploitation/apis/zabbix.md)
   * [OpenNetAdmin 18.1.1](web-exploitation/apis/opennetadmin-18.1.1.md)
-  * [Searchor](web-exploitation/apis/searchor.md)
+* [Report](web-exploitation/report.md)
 
 ## MITRE ATT\&CK Framework
 
@@ -111,3 +106,8 @@
 * [Bluetooth](wireless-exploitation/bluetooth.md)
 * [Wifi](wireless-exploitation/wifi.md)
 * [NFC](wireless-exploitation/nfc.md)
+
+## Advanced Tools
+
+* [🥷 Shodan](advanced-tools/shodan.md)
+* [Flipper Zero](advanced-tools/flipper-zero.md)
