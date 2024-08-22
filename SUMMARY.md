@@ -59,6 +59,7 @@
 * [🦈 Wireshark](fundamentals/wireshark.md)
 * [Nmap](fundamentals/nmap.md)
 * [🤖 MetaExploit](fundamentals/metaexploit.md)
+* [🥷 Shodan](fundamentals/shodan.md)
 * [HTML/CSS](fundamentals/html-css.md)
 * [Javascript](fundamentals/javascript/README.md)
   * [JDWP - Java Debug Wire Protocol](fundamentals/javascript/jdwp-java-debug-wire-protocol.md)
@@ -107,7 +108,6 @@
 * [Wifi](wireless-exploitation/wifi.md)
 * [NFC](wireless-exploitation/nfc.md)
 
-## Advanced Tools
+## Gadgets
 
-* [🥷 Shodan](advanced-tools/shodan.md)
-* [Flipper Zero](advanced-tools/flipper-zero.md)
+* [Flipper Zero](gadgets/flipper-zero.md)
