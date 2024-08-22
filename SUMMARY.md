@@ -61,8 +61,7 @@
 * [🤖 MetaExploit](fundamentals/metaexploit.md)
 * [🥷 Shodan](fundamentals/shodan.md)
 * [HTML/CSS](fundamentals/html-css.md)
-* [Javascript](fundamentals/javascript/README.md)
-  * [JDWP - Java Debug Wire Protocol](fundamentals/javascript/jdwp-java-debug-wire-protocol.md)
+* [Javascript](fundamentals/javascript.md)
 * [Python](fundamentals/python.md)
 * [Cryptography](fundamentals/cryptography.md)
 
@@ -76,6 +75,7 @@
 * [Main Techniques](web-exploitation/main-techniques/README.md)
   * [IDOR](web-exploitation/main-techniques/idor.md)
   * [SSRF](web-exploitation/main-techniques/ssrf.md)
+* [JDWP](web-exploitation/jdwp.md)
 * [APIs](web-exploitation/apis/README.md)
   * [🌵 Cacti](web-exploitation/apis/cacti.md)
   * [Wordpress](web-exploitation/apis/wordpress.md)
