@@ -1,16 +1,57 @@
 ---
 icon: database
+description: Server Message Block
 ---
 
 # SMB
 
+{% tabs %}
+{% tab title="smbclient" %}
+{% code title="Without Credentials" %}
+```
+smbclient --no-pass //IP/<Share>
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="smbmap" %}
+{% code title="Connect to Host" %}
+```
+smbmap -H <IP>
+```
+{% endcode %}
+
+{% hint style="info" %}
+{% code title="List Resource list" %}
+```
+smbclient -L <IP>
+```
+{% endcode %}
+{% endhint %}
+
+{% code title="List Share" %}
+```
+smbmap -H <IP> -r <SHARE>
+```
+{% endcode %}
+
+{% code title="List Null session" %}
+```
+smbclient -N <IP>
+```
+{% endcode %}
+
+
+{% endtab %}
+{% endtabs %}
+
 ```bash
 #Connect
-smbclient --no-pass //IP/<Share>
 
-smbmap -H <IP>
+
+
 #List Share
-smbmap -H <IP> -r <SHARE>
+
 #Resources List for null session
 smbclient -N <IP>
 #Resources List

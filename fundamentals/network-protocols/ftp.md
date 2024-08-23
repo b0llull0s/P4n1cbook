@@ -12,19 +12,26 @@ description: File Transfer Protocol
 ```
 {% endtab %}
 
-{% tab title="Anonymous login" %}
+{% tab title="Anonymous " %}
+{% code title="Login sequence" %}
 ```
 ftp <IP>
-# Next type
 anonymous
 ```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
-## <mark style="color:purple;">Enumeration</mark>
+<details>
+
+<summary><mark style="color:purple;"><strong>Enumeration</strong></mark></summary>
 
 {% code title="Check root path" %}
 ```
 pwd / dir
 ```
 {% endcode %}
+
+
+
+</details>
