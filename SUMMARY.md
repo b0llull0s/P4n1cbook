@@ -13,6 +13,7 @@
   * [SSH](fundamentals/network-protocols/ssh.md)
   * [DNS](fundamentals/network-protocols/dns.md)
   * [HTTP/HTTPS](fundamentals/network-protocols/http-https.md)
+  * [SQL](fundamentals/network-protocols/sql.md)
   * [FTP](fundamentals/network-protocols/ftp.md)
   * [SMB](fundamentals/network-protocols/smb.md)
   * [SNMP](fundamentals/network-protocols/snmp.md)

@@ -12,14 +12,6 @@ description: Server Message Block
 smbclient --no-pass //IP/<Share>
 ```
 {% endcode %}
-{% endtab %}
-
-{% tab title="smbmap" %}
-{% code title="Connect to Host" %}
-```
-smbmap -H <IP>
-```
-{% endcode %}
 
 {% hint style="info" %}
 {% code title="List Resource list" %}
@@ -29,43 +21,41 @@ smbclient -L <IP>
 {% endcode %}
 {% endhint %}
 
-{% code title="List Share" %}
-```
-smbmap -H <IP> -r <SHARE>
-```
-{% endcode %}
-
 {% code title="List Null session" %}
 ```
 smbclient -N <IP>
 ```
 {% endcode %}
+{% endtab %}
 
+{% tab title="smbmap" %}
+{% code title="Connect to Host" %}
+```
+smbmap -H <IP>
+```
+{% endcode %}
 
+{% code title="List Share" %}
+```
+smbmap -H <IP> -r <SHARE>
+```
+{% endcode %}
 {% endtab %}
 {% endtabs %}
 
-```bash
-#Connect
+<details>
 
+<summary><mark style="color:purple;"><strong>Download Files:</strong></mark></summary>
 
-
-#List Share
-
-#Resources List for null session
-smbclient -N <IP>
-#Resources List
-smbclient -L <IP>
+{% code title="Sequence" %}
 ```
-
-<mark style="color:purple;">**Download Files:**</mark>
-
-```python
-#In this order
 recurse
 prompt
 mget *
 ```
+{% endcode %}
+
+</details>
 
 <mark style="color:purple;">**Check files attributes**</mark>
 
