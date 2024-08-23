@@ -7,41 +7,6 @@
 * [⚡ About Author](welcome/about-author.md)
 * [📚 Bookmarks](welcome/bookmarks.md)
 
-## Archive
-
-* [💥 CVE Vault](archive/cve-vault/README.md)
-  * [CVE-2024-3094](archive/cve-vault/cve-2024-3094.md)
-  * [CVE-2024-28741](archive/cve-vault/cve-2024-28741.md)
-  * [CVE-2024-27620](archive/cve-vault/cve-2024-27620.md)
-  * [CVE-2024-21762](archive/cve-vault/cve-2024-21762.md)
-  * [CVE-2023-6200](archive/cve-vault/cve-2023-6200.md)
-  * [CVE-2023-46604](archive/cve-vault/cve-2023-46604.md)
-  * [CVE-2023-42942](archive/cve-vault/cve-2023-42942.md)
-  * [CVE-2023-3824](archive/cve-vault/cve-2023-3824.md)
-  * [CVE-2023-22515](archive/cve-vault/cve-2023-22515.md)
-  * [CVE-2022-46169](archive/cve-vault/cve-2022-46169.md)
-  * [CVE-2022-44268](archive/cve-vault/cve-2022-44268.md)
-  * [CVE-2022-31214](archive/cve-vault/cve-2022-31214.md)
-  * [CVE-2022-25237](archive/cve-vault/cve-2022-25237.md)
-  * [CVE-2022-24855](archive/cve-vault/cve-2022-24855.md)
-  * [CVE-2022-21699](archive/cve-vault/cve-2022-21699.md)
-  * [CVE-2022-20229](archive/cve-vault/cve-2022-20229.md)
-  * [CVE-2022-4510](archive/cve-vault/cve-2022-4510.md)
-  * [CVE-2021-41091](archive/cve-vault/cve-2021-41091.md)
-  * [CVE-2021-4034](archive/cve-vault/cve-2021-4034.md)
-  * [CVE-2021-36368](archive/cve-vault/cve-2021-36368.md)
-  * [CVE-2021-3345](archive/cve-vault/cve-2021-3345.md)
-  * [CVE-2018-14335](archive/cve-vault/cve-2018-14335.md)
-  * [CVE-2018-9276](archive/cve-vault/cve-2018-9276.md)
-  * [CVE-2018-1133](archive/cve-vault/cve-2018-1133.md)
-  * [CVE-2017-9101](archive/cve-vault/cve-2017-9101.md)
-  * [CVE-2016-4971](archive/cve-vault/cve-2016-4971.md)
-  * [CVE-2015-3292](archive/cve-vault/cve-2015-3292.md)
-  * [CVE-2014-6287](archive/cve-vault/cve-2014-6287.md)
-  * [CVE-2008-4250](archive/cve-vault/cve-2008-4250.md)
-  * [CVE-2007-2447](archive/cve-vault/cve-2007-2447.md)
-  * [CVE-2005-3503](archive/cve-vault/cve-2005-3503.md)
-
 ## Fundamentals
 
 * [🌐 Network Protocols](fundamentals/network-protocols/README.md)
@@ -84,10 +49,6 @@
   * [OpenNetAdmin 18.1.1](web-exploitation/apis/opennetadmin-18.1.1.md)
 * [Report](web-exploitation/report.md)
 
-## MITRE ATT\&CK Framework
-
-* [CWE-200 Information Exposure](mitre-att-and-ck-framework/cwe-200-information-exposure.md)
-
 ## Post Exploitation
 
 * [Windows Privilege Scalation](post-exploitation/windows-privilege-scalation.md)
@@ -111,3 +72,42 @@
 ## Gadgets
 
 * [Flipper Zero](gadgets/flipper-zero.md)
+
+## Archive
+
+* [💥 CVE Vault](archive/cve-vault/README.md)
+  * [CVE-2024-3094](archive/cve-vault/cve-2024-3094.md)
+  * [CVE-2024-28741](archive/cve-vault/cve-2024-28741.md)
+  * [CVE-2024-27620](archive/cve-vault/cve-2024-27620.md)
+  * [CVE-2024-21762](archive/cve-vault/cve-2024-21762.md)
+  * [CVE-2023-6200](archive/cve-vault/cve-2023-6200.md)
+  * [CVE-2023-46604](archive/cve-vault/cve-2023-46604.md)
+  * [CVE-2023-42942](archive/cve-vault/cve-2023-42942.md)
+  * [CVE-2023-3824](archive/cve-vault/cve-2023-3824.md)
+  * [CVE-2023-22515](archive/cve-vault/cve-2023-22515.md)
+  * [CVE-2022-46169](archive/cve-vault/cve-2022-46169.md)
+  * [CVE-2022-44268](archive/cve-vault/cve-2022-44268.md)
+  * [CVE-2022-31214](archive/cve-vault/cve-2022-31214.md)
+  * [CVE-2022-25237](archive/cve-vault/cve-2022-25237.md)
+  * [CVE-2022-24855](archive/cve-vault/cve-2022-24855.md)
+  * [CVE-2022-21699](archive/cve-vault/cve-2022-21699.md)
+  * [CVE-2022-20229](archive/cve-vault/cve-2022-20229.md)
+  * [CVE-2022-4510](archive/cve-vault/cve-2022-4510.md)
+  * [CVE-2021-41091](archive/cve-vault/cve-2021-41091.md)
+  * [CVE-2021-4034](archive/cve-vault/cve-2021-4034.md)
+  * [CVE-2021-36368](archive/cve-vault/cve-2021-36368.md)
+  * [CVE-2021-3345](archive/cve-vault/cve-2021-3345.md)
+  * [CVE-2018-14335](archive/cve-vault/cve-2018-14335.md)
+  * [CVE-2018-9276](archive/cve-vault/cve-2018-9276.md)
+  * [CVE-2018-1133](archive/cve-vault/cve-2018-1133.md)
+  * [CVE-2017-9101](archive/cve-vault/cve-2017-9101.md)
+  * [CVE-2016-4971](archive/cve-vault/cve-2016-4971.md)
+  * [CVE-2015-3292](archive/cve-vault/cve-2015-3292.md)
+  * [CVE-2014-6287](archive/cve-vault/cve-2014-6287.md)
+  * [CVE-2008-4250](archive/cve-vault/cve-2008-4250.md)
+  * [CVE-2007-2447](archive/cve-vault/cve-2007-2447.md)
+  * [CVE-2005-3503](archive/cve-vault/cve-2005-3503.md)
+
+## MITRE ATT\&CK Framework
+
+* [CWE-200 Information Exposure](mitre-att-and-ck-framework/cwe-200-information-exposure.md)
