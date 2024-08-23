@@ -19,7 +19,7 @@
   * [SNMP](fundamentals/network-protocols/snmp.md)
   * [WinRM](fundamentals/network-protocols/winrm.md)
 * [💾 Regular Expressions](fundamentals/regular-expressions.md)
-* [🐦 File Transfer](fundamentals/file-transfer.md)
+* [File Transfer](fundamentals/file-transfer.md)
 * [Databases](fundamentals/databases.md)
 * [Dorks](fundamentals/dorks.md)
 * [🦈 Wireshark](fundamentals/wireshark.md)
@@ -29,7 +29,9 @@
 * [HTML/CSS](fundamentals/html-css.md)
 * [Javascript](fundamentals/javascript.md)
 * [Python](fundamentals/python.md)
+* [Docker](fundamentals/docker.md)
 * [Cryptography](fundamentals/cryptography.md)
+* [Reporting](fundamentals/reporting.md)
 
 ## Web Exploitation
 
@@ -41,14 +43,15 @@
 * [Main Techniques](web-exploitation/main-techniques/README.md)
   * [IDOR](web-exploitation/main-techniques/idor.md)
   * [SSRF](web-exploitation/main-techniques/ssrf.md)
-* [JDWP](web-exploitation/jdwp.md)
-* [APIs](web-exploitation/apis/README.md)
-  * [🌵 Cacti](web-exploitation/apis/cacti.md)
-  * [Wordpress](web-exploitation/apis/wordpress.md)
-  * [Tomcat](web-exploitation/apis/tomcat.md)
-  * [Zabbix](web-exploitation/apis/zabbix.md)
-  * [OpenNetAdmin 18.1.1](web-exploitation/apis/opennetadmin-18.1.1.md)
-* [Report](web-exploitation/report.md)
+* [Java-based web application](web-exploitation/java-based-web-application/README.md)
+  * [.WAR](web-exploitation/java-based-web-application/.war.md)
+  * [JDWP](web-exploitation/java-based-web-application/jdwp.md)
+* [Wordpress](web-exploitation/wordpress.md)
+* [Web Servers](web-exploitation/web-servers/README.md)
+  * [🌵 Cacti](web-exploitation/web-servers/cacti.md)
+  * [Tomcat](web-exploitation/web-servers/tomcat.md)
+  * [Zabbix](web-exploitation/web-servers/zabbix.md)
+  * [OpenNetAdmin](web-exploitation/web-servers/opennetadmin.md)
 
 ## Post Exploitation
 
@@ -59,9 +62,7 @@
 
 ## Cloud Exploitation
 
-* [Kubernetes](cloud-exploitation/kubernetes.md)
 * [Azure](cloud-exploitation/azure.md)
-* [Dockers](cloud-exploitation/dockers.md)
 * [AWS](cloud-exploitation/aws.md)
 
 ## Wireless Exploitation
