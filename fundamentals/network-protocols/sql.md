@@ -1,6 +1,6 @@
 ---
-description: Structure Query Language
 icon: server
+description: Structure Query Language
 ---
 
 # SQL
@@ -9,7 +9,7 @@ icon: server
 * <mark style="color:purple;">SQL itself is not a network protocol but plays a significant role in networked environments.</mark>
 * <mark style="color:purple;">SQL queries are sent over</mark> <mark style="color:orange;">**`TCP/IP`**</mark>
 * <mark style="color:purple;">SQL can transported over</mark> <mark style="color:orange;">**`HTTP`**</mark><mark style="color:purple;">,</mark> <mark style="color:orange;">**`HTTPS`**</mark><mark style="color:purple;">, or custom protocols designed for database communication.</mark>
-* <mark style="color:purple;">SQL can be wrapped in other protocols (e.g.,</mark> <mark style="color:orange;">**ODBC**</mark>, <mark style="color:orange;">**`JDBC`**</mark><mark style="color:purple;">)</mark>
+* <mark style="color:purple;">SQL can be wrapped in other protocols (e.g.,</mark> <mark style="color:orange;">**`ODBC`**</mark>, <mark style="color:orange;">**`JDBC`**</mark><mark style="color:purple;">)</mark>
 {% endhint %}
 
 {% tabs %}
