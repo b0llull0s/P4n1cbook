@@ -5,77 +5,69 @@ description: Advanced Google Search
 
 # Dorks
 
-## <mark style="color:purple;">Build-in Queries:</mark>
-
+{% tabs %}
+{% tab title="Build-in Queries" %}
 {% hint style="info" %}
 {% code title="Specific site" %}
 ```
 "<word>" site:<example.com>
 ```
 {% endcode %}
-{% endhint %}
 
-{% hint style="info" %}
 {% code title="Key Words in the URL" %}
 ```
 inurl:"</PATH/IN/THE/SITE.php>" site:<example.com>
 ```
 {% endcode %}
-{% endhint %}
 
-{% hint style="info" %}
 {% code title="Key words in tittle" %}
 ```
 intittle:"<word>" site:<example.com>
 ```
 {% endcode %}
-{% endhint %}
 
-{% hint style="info" %}
 {% code title="Hyper-Links on the website" %}
 ```
 link:"https://example.com
 ```
 {% endcode %}
-{% endhint %}
 
-{% hint style="info" %}
 {% code title="Specific File Type" %}
 ```
 filetype:<log> site:<example.com>
 ```
 {% endcode %}
 {% endhint %}
+{% endtab %}
 
-## <mark style="color:purple;">Operators:</mark>
-
+{% tab title="Operators" %}
 {% hint style="info" %}
 {% code title="Wildcard (*)" %}
 ```
 "How to hack * using google"
 ```
 {% endcode %}
-{% endhint %}
 
-{% hint style="info" %}
-<mark style="color:red;">**Adding quotation marks around your search terms forces an exact match.**</mark>
-{% endhint %}
+{% code title="Quation marks (")" %}
+```
+Adding quotation marks around your search terms forces an exact match.
+```
+{% endcode %}
 
-{% hint style="info" %}
 {% code title="OR (|)" %}
 ```
 "how to hack" site:(reddit.com | stackoverflow.com)
 ```
 {% endcode %}
-{% endhint %}
 
-{% hint style="info" %}
 {% code title="Minus (-)" %}
 ```
 site:example.com password -ext:txt
 ```
 {% endcode %}
 {% endhint %}
+{% endtab %}
+{% endtabs %}
 
 ## <mark style="color:purple;">Examples:</mark>
 
