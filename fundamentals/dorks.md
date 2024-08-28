@@ -69,34 +69,35 @@ site:example.com password -ext:txt
 {% endtab %}
 {% endtabs %}
 
-## <mark style="color:purple;">Examples:</mark>
+***
 
 {% embed url="https://www.exploit-db.com/google-hacking-database" fullWidth="false" %}
 Google Hacking Database
 {% endembed %}
 
-<details>
+***
 
-<summary><mark style="color:purple;"><strong>Recon</strong></mark></summary>
-
-{% code title="Subdomains" %}
+{% tabs %}
+{% tab title="Subdomains" %}
+{% hint style="warning" %}
 ```
 site:<*.example.com>
 ```
-{% endcode %}
+{% endhint %}
+{% endtab %}
 
-{% code title="APIs" %}
+{% tab title="APIs" %}
+{% hint style="warning" %}
+{% code title="Kibana" %}
 ```
 site:example.com inurl:app/kibana
 ```
 {% endcode %}
+{% endhint %}
+{% endtab %}
 
-</details>
-
-<details>
-
-<summary><mark style="color:purple;"><strong>Extensions</strong></mark></summary>
-
+{% tab title="Files" %}
+{% hint style="warning" %}
 {% code title="PHP" %}
 ```
 site:example.com ext:php
@@ -114,27 +115,26 @@ site:example.com ext:log
 site:example.com ext:txt password
 ```
 {% endcode %}
+{% endhint %}
+{% endtab %}
 
-</details>
-
-<details>
-
-<summary><mark style="color:purple;"><strong>AWS</strong></mark></summary>
-
+{% tab title="AWS" %}
+{% hint style="warning" %}
+{% code title="Buckets" %}
 ```
 site:s3.amazonaws.com <Companay_name>
 ```
+{% endcode %}
+{% endhint %}
+{% endtab %}
 
-</details>
-
-<details>
-
-<summary><mark style="color:purple;"><strong>CISCO</strong></mark></summary>
-
+{% tab title="CISCO" %}
+{% hint style="warning" %}
 {% code title="Anyconnect" %}
 ```
 intitle:index.of cisco anyconnect
 ```
 {% endcode %}
-
-</details>
+{% endhint %}
+{% endtab %}
+{% endtabs %}
