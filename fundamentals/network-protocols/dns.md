@@ -5,15 +5,17 @@ description: Domain Name System
 
 # DNS
 
-<details>
-
-<summary><mark style="color:purple;"><strong>Enumeration</strong></mark></summary>
-
-{% code title="Zone Transfers" %}
-```bash
+{% tabs %}
+{% tab title="Zone Transfers" %}
+{% hint style="info" %}
+```sh
 dig axfr HOST.NAME @10.10.10.29
 ```
-{% endcode %}
+{% endhint %}
+{% endtab %}
 
-</details>
+{% tab title="Second Tab" %}
+
+{% endtab %}
+{% endtabs %}
 

@@ -29,12 +29,21 @@ ssh-keygen -t ecdsa-sk
 {% tab title="FIDO/U2F" %}
 ```sh
 ssh-keygen -t ed25519-sk
+```
 
-# No-Touch Mode
+{% hint style="info" %}
+{% code title="No-Touch Mode" %}
+```sh
 ssh-keygen -O no-touch-required -t ed25519-sk
-# Allow touch mode on sshd
+```
+{% endcode %}
+
+{% code title="Allow mode on sshd" %}
+```sh
 no-touch-required sk-ssh-ed25519@openssh.com AAAAInN... user@example.com
 ```
+{% endcode %}
+{% endhint %}
 {% endtab %}
 {% endtabs %}
 
