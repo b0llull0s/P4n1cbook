@@ -1,0 +1,6 @@
+---
+icon: mandalorian
+---
+
+# Algorithm thinking
+

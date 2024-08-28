@@ -18,20 +18,24 @@
   * [SMB](fundamentals/network-protocols/smb.md)
   * [SNMP](fundamentals/network-protocols/snmp.md)
   * [WinRM](fundamentals/network-protocols/winrm.md)
+* [Algorithm thinking](fundamentals/algorithm-thinking/README.md)
+  * [HTML/CSS](fundamentals/algorithm-thinking/html-css.md)
+  * [Javascript](fundamentals/algorithm-thinking/javascript.md)
+  * [Python](fundamentals/algorithm-thinking/python.md)
 * [💾 Regular Expressions](fundamentals/regular-expressions.md)
-* [File Transfer](fundamentals/file-transfer.md)
 * [Databases](fundamentals/databases.md)
 * [Dorks](fundamentals/dorks.md)
-* [🦈 Wireshark](fundamentals/wireshark.md)
-* [Nmap](fundamentals/nmap.md)
-* [🤖 MetaExploit](fundamentals/metaexploit.md)
-* [🥷 Shodan](fundamentals/shodan.md)
-* [HTML/CSS](fundamentals/html-css.md)
-* [Javascript](fundamentals/javascript.md)
-* [Python](fundamentals/python.md)
-* [Docker](fundamentals/docker.md)
 * [Cryptography](fundamentals/cryptography.md)
-* [Reporting](fundamentals/reporting.md)
+* [Docker](fundamentals/docker.md)
+
+## Vulnerability Assessment
+
+* [File Transfer](vulnerability-assessment/file-transfer.md)
+* [Nmap](vulnerability-assessment/nmap.md)
+* [🦈 Wireshark](vulnerability-assessment/wireshark.md)
+* [🥷 Shodan](vulnerability-assessment/shodan.md)
+* [🤖 MetaExploit](vulnerability-assessment/metaexploit.md)
+* [Reporting](vulnerability-assessment/reporting.md)
 
 ## Web Exploitation
 
