@@ -7,7 +7,7 @@ description: Domain Name System
 
 <details>
 
-<summary>Enumeration</summary>
+<summary><mark style="color:purple;"><strong>Enumeration</strong></mark></summary>
 
 {% code title="Zone Transfers" %}
 ```bash
