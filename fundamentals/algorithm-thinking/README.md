@@ -1,5 +1,5 @@
 ---
-icon: mandalorian
+icon: puzzle-piece
 ---
 
 # Algorithm thinking

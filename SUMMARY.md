@@ -9,6 +9,11 @@
 
 ## Fundamentals
 
+* [Algorithm thinking](fundamentals/algorithm-thinking/README.md)
+  * [C++](fundamentals/algorithm-thinking/c++.md)
+  * [HTML/CSS](fundamentals/algorithm-thinking/html-css.md)
+  * [Javascript](fundamentals/algorithm-thinking/javascript.md)
+  * [Python](fundamentals/algorithm-thinking/python.md)
 * [🌐 Network Protocols](fundamentals/network-protocols/README.md)
   * [SSH](fundamentals/network-protocols/ssh.md)
   * [DNS](fundamentals/network-protocols/dns.md)
@@ -18,10 +23,6 @@
   * [SMB](fundamentals/network-protocols/smb.md)
   * [SNMP](fundamentals/network-protocols/snmp.md)
   * [WinRM](fundamentals/network-protocols/winrm.md)
-* [Algorithm thinking](fundamentals/algorithm-thinking/README.md)
-  * [HTML/CSS](fundamentals/algorithm-thinking/html-css.md)
-  * [Javascript](fundamentals/algorithm-thinking/javascript.md)
-  * [Python](fundamentals/algorithm-thinking/python.md)
 * [💾 Regular Expressions](fundamentals/regular-expressions.md)
 * [Databases](fundamentals/databases.md)
 * [Dorks](fundamentals/dorks.md)
@@ -32,6 +33,7 @@
 
 * [🦈 Wireshark](vulnerability-assessment/wireshark.md)
 * [Nmap](vulnerability-assessment/nmap.md)
+* [BURP](vulnerability-assessment/burp.md)
 * [🤖 MetaExploit](vulnerability-assessment/metaexploit.md)
 * [🥷 Shodan](vulnerability-assessment/shodan.md)
 * [Web Servers](vulnerability-assessment/web-servers/README.md)
@@ -43,7 +45,6 @@
 
 ## Web Exploitation
 
-* [BURP](web-exploitation/burp.md)
 * [Web Fuzzing](web-exploitation/web-fuzzing/README.md)
   * [ffuz](web-exploitation/web-fuzzing/ffuz.md)
   * [Gobuster](web-exploitation/web-fuzzing/gobuster.md)
