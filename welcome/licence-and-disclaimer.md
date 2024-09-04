@@ -4,7 +4,7 @@ description: Share and Care
 
 # 🚨 Licence and Disclaimer
 
-## <mark style="color:green;">Licence</mark>&#x20;
+## <mark style="color:orange;">Licence</mark>&#x20;
 
 <mark style="color:purple;">**Except where otherwise specified (the external information copied into the book belongs to the original authors), the text on**</mark> [<mark style="color:red;">**`P4nicb00k`**</mark>](https://panic-thread.gitbook.io/p4n1cb00k) <mark style="color:purple;">**by Isaac P. Bassart is licensed under the**</mark>[ ](https://creativecommons.org/licenses/by-nc/4.0/)<mark style="color:red;">**`Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)`**</mark><mark style="color:purple;">**`.`**</mark>
 
@@ -14,7 +14,7 @@ description: Share and Care
 
 <mark style="color:purple;">**By accessing or using P4n1cb00k, you agree to abide by the terms of this license. If you do not agree with these terms, please, do not access this website.**</mark>
 
-## <mark style="color:green;">**Disclaimer**</mark>
+## <mark style="color:orange;">**Disclaimer**</mark>
 
 <pre><code><strong>
 </strong><strong>This book, 'P4n1cb00k,' is intended for educational and informational purposes only.
