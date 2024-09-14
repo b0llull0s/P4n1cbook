@@ -33,29 +33,29 @@
 
 * [🦈 Wireshark](vulnerability-assessment/wireshark.md)
 * [Nmap](vulnerability-assessment/nmap.md)
+* [Gobuster](vulnerability-assessment/gobuster.md)
+* [ffuz](vulnerability-assessment/ffuz.md)
+* [feroxbuster](vulnerability-assessment/feroxbuster.md)
 * [BURP](vulnerability-assessment/burp.md)
 * [🤖 MetaExploit](vulnerability-assessment/metaexploit.md)
 * [🥷 Shodan](vulnerability-assessment/shodan.md)
-* [Web Servers](vulnerability-assessment/web-servers/README.md)
-  * [🌵 Cacti](vulnerability-assessment/web-servers/cacti.md)
-  * [Tomcat](vulnerability-assessment/web-servers/tomcat.md)
-  * [Zabbix](vulnerability-assessment/web-servers/zabbix.md)
-  * [OpenNetAdmin](vulnerability-assessment/web-servers/opennetadmin.md)
-* [Reporting](vulnerability-assessment/reporting.md)
 
 ## Web Exploitation
 
-* [Web Fuzzing](web-exploitation/web-fuzzing/README.md)
-  * [ffuz](web-exploitation/web-fuzzing/ffuz.md)
-  * [Gobuster](web-exploitation/web-fuzzing/gobuster.md)
-  * [feroxbuster](web-exploitation/web-fuzzing/feroxbuster.md)
+* [Recon](web-exploitation/recon.md)
 * [Main Techniques](web-exploitation/main-techniques/README.md)
   * [IDOR](web-exploitation/main-techniques/idor.md)
   * [SSRF](web-exploitation/main-techniques/ssrf.md)
+* [Web Servers](web-exploitation/web-servers/README.md)
+  * [🌵 Cacti](web-exploitation/web-servers/cacti.md)
+  * [Tomcat](web-exploitation/web-servers/tomcat.md)
+  * [Zabbix](web-exploitation/web-servers/zabbix.md)
+  * [OpenNetAdmin](web-exploitation/web-servers/opennetadmin.md)
 * [Java-based web application](web-exploitation/java-based-web-application/README.md)
   * [.WAR](web-exploitation/java-based-web-application/.war.md)
   * [JDWP](web-exploitation/java-based-web-application/jdwp.md)
 * [Wordpress](web-exploitation/wordpress.md)
+* [Reporting](web-exploitation/reporting.md)
 
 ## Post Exploitation
 
