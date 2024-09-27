@@ -23,6 +23,7 @@
   * [SMB](fundamentals/network-protocols/smb.md)
   * [SNMP](fundamentals/network-protocols/snmp.md)
   * [WinRM](fundamentals/network-protocols/winrm.md)
+  * [LLMNR](fundamentals/network-protocols/llmnr.md)
 * [💾 Regular Expressions](fundamentals/regular-expressions.md)
 * [Databases](fundamentals/databases.md)
 * [Dorks](fundamentals/dorks.md)
