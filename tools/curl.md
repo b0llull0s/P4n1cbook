@@ -60,7 +60,7 @@ curl -L
 ***
 
 {% hint style="warning" %}
-## Requests
+## <mark style="color:purple;">Requests</mark>
 
 {% code title="Send POST request" %}
 ```bash
@@ -106,7 +106,7 @@ curl http://username:password@example.com:PORT
 
 ***
 
-### Cookies
+### <mark style="color:purple;">Cookies</mark>
 
 {% code title="Set Specific Cookie" %}
 ```bash
@@ -128,7 +128,7 @@ curl -H "X-FORWARDED-FOR: 1.1.1.1; ping -c 1 10.10.16.7;" -b cookies.txt -v http
 
 ***
 
-### Certificates
+### <mark style="color:purple;">Certificates</mark>
 
 {% code title="Skip SSL Certificate validation" %}
 ```bash
@@ -266,7 +266,7 @@ curl -X PATCH -T example.txt https://example.com/upload
 ***
 
 {% hint style="warning" %}
-## APIs
+## <mark style="color:purple;">APIs</mark>
 
 {% code title="Read all entries" %}
 ```bash
@@ -302,7 +302,7 @@ curl -X DELETE http://<SERVER_IP>:<PORT>/api.php/city/New_HTB_City
 ***
 
 {% hint style="danger" %}
-## Combinations
+## <mark style="color:purple;">Combinations</mark>
 
 {% code title="Stealth + SSL Skip + Full details" %}
 ```bash
