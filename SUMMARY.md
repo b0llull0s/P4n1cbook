@@ -32,12 +32,15 @@
 ## Tools
 
 * [curl](tools/curl.md)
+* [JohnTheRipper](tools/johntheripper.md)
+* [impacket](tools/impacket.md)
 * [🦈 Wireshark](tools/wireshark.md)
 * [Nmap](tools/nmap.md)
 * [Gobuster](tools/gobuster.md)
 * [ffuz](tools/ffuz.md)
 * [feroxbuster](tools/feroxbuster.md)
 * [BURP](tools/burp.md)
+* [SQLmap](tools/sqlmap.md)
 * [🤖 MetaExploit](tools/metaexploit.md)
 * [🥷 Shodan](tools/shodan.md)
 
