@@ -399,6 +399,12 @@ nmap -n -Pn -vv -O -sV -script smb-enum*,smb-ls,smb-mbenum,smb-os-discovery,smb-
 ```
 {% endcode %}
 
+{% code title="Safe HTTP" %}
+```bash
+nmap -n -Pn -vv -O -sV --script=http-enum,http-headers,http-methods,http-title,http-vuln* 192.168.1.1
+```
+{% endcode %}
+
 {% code title="HTTP Map Generator" %}
 ```bash
 nmap -Pn -script=http-sitemap-generator scanme.nmap.org
