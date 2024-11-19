@@ -79,7 +79,7 @@ crackmapexec smb <IP> -u <username> -p <password> --allinfo
 ```
 {% endcode %}
 
-{% code title="Bruteforce" %}
+{% code title="Bruteforce credentials" %}
 ```bash
 cracmapexec smb <IP> -u usernames -p passwords
 ```
@@ -91,7 +91,7 @@ crackmapexec smb <IP> -u <USER> -p <PASSWORD> --rid-brute
 ```
 {% endcode %}
 
-{% code title="Deep Enumeration" %}
+{% code title="Deep Credential Bruteforce" %}
 ```bash
 crackmapexec smb <IP> -u usernames -p passwords --continue-on-success
 ```
