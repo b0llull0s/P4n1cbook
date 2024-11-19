@@ -23,6 +23,7 @@
   * [SQL](fundamentals/network-protocols/sql.md)
 * [💾 Regular Expressions](fundamentals/regular-expressions.md)
 * [Dorks](fundamentals/dorks.md)
+* [Steganography](fundamentals/steganography.md)
 * [Cryptography](fundamentals/cryptography.md)
 
 ## Tools
@@ -37,6 +38,7 @@
 * [impacket](tools/impacket.md)
 * [🦈 Wireshark](tools/wireshark.md)
 * [BURP](tools/burp.md)
+* [Reverse Shells](tools/reverse-shells.md)
 * [🤖 MetaExploit](tools/metaexploit.md)
 * [🥷 Shodan](tools/shodan.md)
 
