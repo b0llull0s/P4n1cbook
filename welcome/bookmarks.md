@@ -8,7 +8,7 @@ description: References and appreciations
 
 ### <mark style="color:red;">`HackTricks`</mark>
 
-> <mark style="color:purple;">Best Hacking resource and inspiration for this book by</mark> <mark style="color:purple;"></mark><mark style="color:purple;">**Carlos Palop**</mark>
+> <mark style="color:purple;">Best Hacking resource and inspiration for this book by</mark> <mark style="color:red;">**`Carlos Palop`**</mark>
 
 {% embed url="https://book.hacktricks.xyz/welcome/readme" %}
 HackTricks
@@ -28,13 +28,19 @@ Academy
 
 ### <mark style="color:orange;">**`PortSwigger`**</mark>
 
-> <mark style="color:purple;">Best free academy for web security out there with an extense lab content.</mark>
+> <mark style="color:purple;">Best free academy for web security out there with an extensive lab content.</mark>
 
 {% embed url="https://portswigger.net/web-security" %}
 Web-Academy
 {% endembed %}
 
 ***
+
+### <mark style="color:purple;">`StationX`</mark>
+
+> <mark style="color:purple;">Very nice cheat sheets</mark>
+
+{% embed url="https://www.stationx.net/" %}
 
 ### <mark style="color:purple;">**`0xdf`**</mark>
 

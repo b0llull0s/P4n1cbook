@@ -1,6 +1,6 @@
 ---
-icon: server
 description: Structure Query Language
+icon: server
 ---
 
 # SQL
