@@ -41,14 +41,18 @@ gobuster dir -u http://10.10.10.60 -w /usr/share/wordlists/dirbuster/directory-l
 ***
 
 {% hint style="info" %}
-## Domain Scanning
+## Sub-Domain Scanning
 
-{% code title="top1million" %}
+{% code title="Enumerate Virtual Host" %}
 ```bash
 gobuster vhost -u http://IP -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt -t 200
 ```
 {% endcode %}
 
-
+{% code title="DNS Brute-forcing" %}
+```bash
+gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt
+```
+{% endcode %}
 {% endhint %}
 

@@ -49,32 +49,45 @@ sudo apt install snmp-mibs-downloader
 {% endcode %}
 {% endhint %}
 
-<details>
+***
 
-<summary><mark style="color:purple;"><strong>Enumeration</strong></mark></summary>
+{% hint style="info" %}
+## <mark style="color:purple;">Enumeration</mark>
 
-{% code title="Big chunk" %}
-```sh
+{% code title="Full Enumeration" %}
+```bash
 snmpwalk -v 2c -c public 10.10.10.92
 ```
 {% endcode %}
 
-{% code title="Process" %}
+{% code title="Scan SNMP on an IP" %}
+```bash
+snmpwalk -v 2c -c public 10.129.42.253 1.3.6.1.2.1.1.5.0
+```
+{% endcode %}
+
+{% code title="Enumerate Process" %}
 ```bash
 snmpbulkwalk -v2c -c public 10.10.10.92 hrSWRunName
 ```
 {% endcode %}
 
-{% code title="Within Processes" %}
-```sh
+{% code title="Enumerate within processes" %}
+```bash
 snmpbulkwalk -v2c -c public 10.10.10.92 hrSWRunTable | grep <PID>
 ```
 {% endcode %}
 
-{% code title="Interfaces" %}
-```sh
+{% code title="Enumerate Interfaces" %}
+```bash
 snmpbulkwalk -v2c -c public 10.10.10.92 ipAddressType
 ```
 {% endcode %}
 
-</details>
+{% code title="Brute force Secret String" %}
+```bash
+onesixtyone -c dict.txt 10.129.42.254
+```
+{% endcode %}
+{% endhint %}
+

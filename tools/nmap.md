@@ -355,6 +355,12 @@ nmap -f -t 0 -n -Pn --data-length 200 -D 192.168.1.101,192.168.1.102,192.168.1.1
 {% hint style="warning" %}
 ## <mark style="color:purple;">Scripting Engine (NSE)</mark>
 
+{% code title="List Scripts" %}
+```bash
+locate scripts/citrix
+```
+{% endcode %}
+
 {% code title="Look At The Categories" %}
 ```bash
 locate .nse | xargs grep "categories" | grep -oP '".*?"' | sort -u
