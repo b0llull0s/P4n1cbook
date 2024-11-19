@@ -28,7 +28,7 @@ smbclient -L <IP>
 {% endcode %}
 
 {% code title="List Null session" %}
-```
+```bash
 smbclient -N <IP>
 ```
 {% endcode %}
