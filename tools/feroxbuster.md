@@ -196,12 +196,6 @@ feroxbuster -u <url> -w <wordlist> --collect-backups
 {% endcode %}
 {% endhint %}
 
-{% code title="User Cookies" %}
-```sh
-feroxbuster -u <url> -w <wordlist> -C <cookie>
-```
-{% endcode %}
-
 ***
 
 ## <mark style="color:purple;">Wordlists</mark>
