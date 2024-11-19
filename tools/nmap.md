@@ -352,7 +352,7 @@ nmap -f -t 0 -n -Pn --data-length 200 -D 192.168.1.101,192.168.1.102,192.168.1.1
 
 ***
 
-{% hint style="info" %}
+{% hint style="warning" %}
 ## <mark style="color:purple;">Scripting Engine (NSE)</mark>
 
 {% code title="Look At The Categories" %}
