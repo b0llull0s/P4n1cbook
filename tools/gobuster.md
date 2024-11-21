@@ -20,7 +20,6 @@ description: Directory and file brute-forcing, as well as DNS and virtual host e
 * <mark style="color:orange;">**`-c`**</mark> <mark style="color:purple;">-> Custom headers to include in requests.</mark>
 * <mark style="color:orange;">**`-k`**</mark> <mark style="color:purple;">-> Ignore SSL certificate verification errors.</mark>
 * <mark style="color:orange;">**`-z`**</mark> <mark style="color:purple;">-> Set timeout for each request.</mark>
-* <mark style="color:purple;">-i -> Show</mark>&#x20;
 {% endhint %}
 
 {% hint style="info" %}
