@@ -1,5 +1,6 @@
 ---
 icon: linux
+description: Basic commands
 ---
 
 # Linux
