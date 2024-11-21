@@ -10,6 +10,7 @@
 ## Fundamentals
 
 * [Linux](fundamentals/linux.md)
+* [💾 Regular Expressions](fundamentals/regular-expressions.md)
 * [🌐 Network Protocols](fundamentals/network-protocols/README.md)
   * [SSH](fundamentals/network-protocols/ssh.md)
   * [DNS](fundamentals/network-protocols/dns.md)
@@ -19,9 +20,10 @@
   * [SNMP](fundamentals/network-protocols/snmp.md)
   * [WinRM](fundamentals/network-protocols/winrm.md)
   * [LLMNR](fundamentals/network-protocols/llmnr.md)
-* [Databases](fundamentals/databases.md)
-  * [SQL](fundamentals/network-protocols/sql.md)
-* [💾 Regular Expressions](fundamentals/regular-expressions.md)
+* [Databases](fundamentals/databases/README.md)
+  * [GraphSQL](fundamentals/databases/graphsql.md)
+  * [MySQL](fundamentals/databases/mysql.md)
+  * [SQL](fundamentals/databases/sql.md)
 * [Dorks](fundamentals/dorks.md)
 * [Steganography](fundamentals/steganography.md)
 * [Cryptography](fundamentals/cryptography.md)

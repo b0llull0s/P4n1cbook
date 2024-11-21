@@ -1,9 +1,9 @@
 ---
-icon: server
+icon: database
 description: Structure Query Language
 ---
 
-# SQL
+# Databases
 
 {% hint style="warning" %}
 * <mark style="color:purple;">SQL queries are sent over</mark> <mark style="color:orange;">**`TCP/IP`**</mark>
