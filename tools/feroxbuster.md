@@ -9,14 +9,14 @@ description: Recursive Web Enumeration Tool - Rust
 
 {% tabs %}
 {% tab title="Arch" %}
-{% hint style="info" %}
+{% hint style="success" %}
 <pre class="language-sh" data-title="AUR repo" data-full-width="false"><code class="lang-sh"><strong>yay -S feroxbuster
 </strong></code></pre>
 {% endhint %}
 {% endtab %}
 
 {% tab title="Kali" %}
-{% hint style="info" %}
+{% hint style="success" %}
 ```sh
 sudo apt get feroxbuster
 ```
@@ -27,6 +27,8 @@ sudo apt get feroxbuster
 ***
 
 {% hint style="info" %}
+## <mark style="color:purple;">Common Uses</mark>
+
 {% code title="Basic Usage" %}
 ```sh
 feroxbuster -u <url> -w <wordlist>
@@ -69,19 +71,19 @@ feroxbuster -u <url> -w <wordlist> --scan-limit <number>
 ```
 {% endcode %}
 
-{% code title="An alternative to timeouts" %}
+{% code title="Set a timeout" %}
 ```sh
 feroxbuster -u <url> -w <wordlist> --rate-limit <number>
 ```
 {% endcode %}
 
-<mark style="color:purple;">For example, in this case there will be</mark> <mark style="color:orange;">**8**</mark> <mark style="color:purple;">active connections and each connection will have a timeout of</mark> <mark style="color:orange;">**500ms**</mark> <mark style="color:purple;">for</mark> <mark style="color:orange;">**1**</mark> <mark style="color:purple;">URL at the time</mark>
+* <mark style="color:purple;">For example, in this case there will be</mark> <mark style="color:orange;">**8**</mark> <mark style="color:purple;">active connections and each connection will have a timeout of</mark> <mark style="color:orange;">**500ms**</mark> <mark style="color:purple;">for</mark> <mark style="color:orange;">**1**</mark> <mark style="color:purple;">URL at the time</mark>
 
 ```sh
 feroxbuster --threads 4 --scan-limit 2 --rate-limit 2
 ```
 
-<mark style="color:purple;">On the other the hand, here there will be</mark> <mark style="color:orange;">**8**</mark> <mark style="color:purple;">active connection with a timeout of</mark> <mark style="color:orange;">**500ms**</mark> <mark style="color:purple;">for</mark> <mark style="color:orange;">**4**</mark> <mark style="color:purple;">URLs at the time</mark>
+* <mark style="color:purple;">On the other the hand, here there will be</mark> <mark style="color:orange;">**8**</mark> <mark style="color:purple;">active connection with a timeout of</mark> <mark style="color:orange;">**500ms**</mark> <mark style="color:purple;">for</mark> <mark style="color:orange;">**4**</mark> <mark style="color:purple;">URLs at the time</mark>
 
 ```sh
 feroxbuster --threads 2--scan-limit 4 --rate-limit 2
@@ -95,7 +97,7 @@ feroxbuster --threads 2--scan-limit 4 --rate-limit 2
 
 {% code title="Exclude by status code" %}
 ```sh
-feroxbuster -u <url> -w <wordlist> -C 404
+feroxbuster -u <url> -w <wordlist> -x 404
 ```
 {% endcode %}
 
@@ -147,6 +149,24 @@ feroxbuster -u <url> -w <wordlist> --filter-similar-to error.html
 {% hint style="warning" %}
 ## <mark style="color:purple;">Special Options</mark>
 
+{% code title="Recursive Scan" %}
+```bash
+feroxbuster -u http://example.com -w wordlist.txt --depth 3
+```
+{% endcode %}
+
+{% code title="Disable Recursion" %}
+```bash
+feroxbuster -u http://example.com -w wordlist.txt --no-recursion
+```
+{% endcode %}
+
+{% code title="Follow redirects automatically" %}
+```bash
+feroxbuster -u http://example.com -w wordlist.txt --url-redirect
+```
+{% endcode %}
+
 {% code title="Specify the user agent" %}
 ```sh
 feroxbuster -u <url> -w <wordlist> -H "User-Agent: <user_agent>"
@@ -168,12 +188,6 @@ feroxbuster -u <url> -w <wordlist> -r
 {% code title="Use SSL verification/Disable TLS validation" %}
 ```sh
 feroxbuster -u <url> -w <wordlist> --insecure
-```
-{% endcode %}
-
-{% code title="Set a timeout" %}
-```sh
-feroxbuster -u <url> -w <wordlist> --rate-limit <number>
 ```
 {% endcode %}
 
