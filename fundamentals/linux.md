@@ -105,6 +105,18 @@ sudo find / -regex ".*alacritty.*" 2>/dev/null
 ```
 {% endcode %}
 
+{% code title="Updates the database used by locate" %}
+```bash
+sudo updatedb
+```
+{% endcode %}
+
+{% code title="Look file from the database" %}
+```bash
+locate file.txt
+```
+{% endcode %}
+
 {% code title="Shows the full path of an executable" %}
 ```bash
 which binary
@@ -199,15 +211,27 @@ sudo systemctl enable nginx
 ```
 {% endcode %}
 
-{% code title="" %}
+{% code title="Print Info about the system" %}
 ```bash
 uname -a 
+```
+{% endcode %}
+
+{% code title="Print Environment" %}
+```bash
+env
 ```
 {% endcode %}
 
 {% code title="Shows details about all block devices" %}
 ```bash
 lsblk -f
+```
+{% endcode %}
+
+{% code title="List PCI devices" %}
+```bash
+lspci
 ```
 {% endcode %}
 
@@ -235,9 +259,27 @@ free -h
 ```
 {% endcode %}
 
-{% code title="Print system info" %}
+{% code title="Displays the maximum allowed size of a process's lockable memory" %}
 ```bash
 ulimit -l
+```
+{% endcode %}
+
+{% code title="Put a process in the background" %}
+```bash
+bg
+```
+{% endcode %}
+
+{% code title="List all process in the background" %}
+```bash
+jobs
+```
+{% endcode %}
+
+{% code title="Puts a process into the foreground" %}
+```bash
+fg
 ```
 {% endcode %}
 
@@ -271,6 +313,8 @@ w
 ```
 {% endcode %}
 
+### <mark style="color:purple;">Logs</mark>
+
 {% code title="Display login records" %}
 ```bash
 last
@@ -283,21 +327,68 @@ lastb
 ```
 {% endcode %}
 
+{% code title="Shows log as they are written" %}
+```bash
+journalctl -f 
+```
+{% endcode %}
+
+{% code title="Shows logs from the current boot" %}
+```bash
+journalctl -b
+```
+{% endcode %}
+
+{% code title="Shows logs from the previous boot" %}
+```bash
+journalctl -b -1
+```
+{% endcode %}
+
+{% code title="Shows logs from a specific service" %}
+```bash
+journalctl -u <service>
+```
+{% endcode %}
+
+{% code title="Shows logs from a time range" %}
+```bash
+journalctl --since "2024-11-01" --until "2024-11-10"
+```
+{% endcode %}
+
+{% code title="Show logs by priority level" %}
+```bash
+journalctl -p <level>
+```
+{% endcode %}
+
+#### <mark style="color:purple;">Priority Levels:</mark>
+
+* <mark style="color:orange;">`0`</mark> <mark style="color:purple;">(emergency)</mark>
+* <mark style="color:orange;">`1`</mark> <mark style="color:purple;">(alert)</mark>
+* <mark style="color:orange;">`2`</mark> <mark style="color:purple;">(critical)</mark>
+* <mark style="color:orange;">`3`</mark> <mark style="color:purple;">(error)</mark>
+* <mark style="color:orange;">`4`</mark> <mark style="color:purple;">(warning)</mark>
+* <mark style="color:orange;">`5`</mark> <mark style="color:purple;">(notice)</mark>
+* <mark style="color:orange;">`6`</mark> <mark style="color:purple;">(informational)</mark>
+* <mark style="color:orange;">`7`</mark> <mark style="color:purple;">(debug)</mark>
+
+{% code title="Shows logs for a specific process" %}
+```bash
+journalctl _PID=<pid>
+```
+{% endcode %}
+
+{% code title="Shows logs from the kernel" %}
+```bash
+journalctl -k
+```
+{% endcode %}
+
 {% code title="Show kernel and boot messages" %}
 ```bash
 dmesg
-```
-{% endcode %}
-
-{% code title="Updates the database used by locate" %}
-```bash
-sudo updatedb
-```
-{% endcode %}
-
-{% code title="Look file from the database" %}
-```bash
-locate file.txt
 ```
 {% endcode %}
 {% endhint %}
