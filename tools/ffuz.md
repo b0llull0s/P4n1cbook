@@ -55,7 +55,7 @@ go get github.com/ffuf/ffuf
 
 ***
 
-{% hint style="info" %}
+{% hint style="warning" %}
 ## <mark style="color:purple;">Directory Fuzzing</mark>
 
 {% code title="Basic Scan" %}
@@ -91,7 +91,7 @@ ffuf -u https://W2/W1 -w ./wordlist.txt:W1,./domains.txt:W2
 
 ***
 
-{% hint style="info" %}
+{% hint style="danger" %}
 ## <mark style="color:purple;">Extension fuzzing</mark>
 
 {% code title="Standard use" %}
@@ -109,7 +109,7 @@ ffuf -w wordlist.txt:FUZZ -u http://SERVER_IP:PORT/FUZZ -recursion -recursion-de
 
 ***
 
-{% hint style="info" %}
+{% hint style="warning" %}
 ## <mark style="color:purple;">Subdomain fuzzing</mark>
 
 {% code title="Subdomains" %}
@@ -127,7 +127,7 @@ ffuf -c -w /path/to/wordlist -u https://ffuf.io.fi -H "Host: FUZZ.ffuf.io.fi"
 
 ***
 
-{% hint style="info" %}
+{% hint style="danger" %}
 ## <mark style="color:purple;">HTTP Fuzzing</mark>
 
 {% code title="Cookie-based Authentication" %}
