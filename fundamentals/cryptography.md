@@ -4,6 +4,12 @@ icon: binary-lock
 
 # Cryptography
 
+{% hint style="info" %}
+## <mark style="color:purple;">`base64`</mark>
+
+
+{% endhint %}
+
 <mark style="color:red;">`md5sum`</mark> <mark style="color:purple;">--></mark> <mark style="color:purple;"></mark><mark style="color:purple;">**SHA256 CheckSum**</mark>
 
 ### File Signatures:
