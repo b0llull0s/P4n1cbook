@@ -48,6 +48,7 @@
 
 * [Recon](web-exploitation/recon.md)
 * [Main Techniques](web-exploitation/main-techniques/README.md)
+  * [XSS](web-exploitation/main-techniques/xss.md)
   * [IDOR](web-exploitation/main-techniques/idor.md)
   * [SSRF](web-exploitation/main-techniques/ssrf.md)
   * [HTTP/HTTPS](web-exploitation/main-techniques/http-https.md)
@@ -57,10 +58,10 @@
   * [Tomcat](web-exploitation/web-services/tomcat.md)
   * [Zabbix](web-exploitation/web-services/zabbix.md)
   * [OpenNetAdmin](web-exploitation/web-services/opennetadmin.md)
-* [Java-based web application](web-exploitation/java-based-web-application/README.md)
-  * [.WAR](web-exploitation/java-based-web-application/.war.md)
-  * [JDWP](web-exploitation/java-based-web-application/jdwp.md)
-* [Wordpress](web-exploitation/wordpress.md)
+  * [Wordpress](web-exploitation/web-services/wordpress.md)
+  * [Java-based web application](web-exploitation/web-services/java-based-web-application/README.md)
+    * [.WAR](web-exploitation/web-services/java-based-web-application/.war.md)
+    * [JDWP](web-exploitation/web-services/java-based-web-application/jdwp.md)
 * [Reporting](web-exploitation/reporting.md)
 
 ## Post Exploitation
