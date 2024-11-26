@@ -10,7 +10,7 @@ description: Share and Care
 
 <mark style="color:purple;">**Midjourney:**</mark>
 
-<mark style="color:purple;">**Licensing terms for free users As a free Midjourney user, you are allowed to use the produced images for personal or non-profit activities, following the guidelines of the**</mark>** **<mark style="color:red;">**`Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)`**</mark>.
+<mark style="color:purple;">**Licensing terms for free users As a free Midjourney user, you are allowed to use the produced images for personal or non-profit activities, following the guidelines of the**</mark>**&#x20;**<mark style="color:red;">**`Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)`**</mark>.
 
 <mark style="color:purple;">**By accessing or using P4n1cb00k, you agree to abide by the terms of this license. If you do not agree with these terms, please, do not access this website.**</mark>
 

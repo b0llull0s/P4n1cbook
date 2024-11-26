@@ -13,7 +13,7 @@ description: Network Mapper
 * <mark style="color:purple;">**`filtered`**</mark> -> _Nmap does not know if the port is open or closed._
 * <mark style="color:purple;">**`unfiltered`**</mark> _-> Port is accessible, but we don't know if it's open or closed._
 * <mark style="color:purple;">**`open | filtered`**</mark> _-> This default state is assigned. It could be that a firewall is protecting the port._
-* <mark style="color:purple;">**`closed | filtered`**</mark>** ->** _It's impossible to determine if the port is open or closed._
+* <mark style="color:purple;">**`closed | filtered`**</mark>**&#x20;->** _It's impossible to determine if the port is open or closed._
 {% endhint %}
 
 ***

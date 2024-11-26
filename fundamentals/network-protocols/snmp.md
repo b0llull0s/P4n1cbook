@@ -11,11 +11,11 @@ description: Simple Network Management Protocol
 
 {% tabs %}
 {% tab title="Port 161" %}
-* <mark style="color:purple;">**Used for sending**</mark>** **<mark style="color:orange;">**`SNMP`**</mark> <mark style="color:purple;">**requests to network devices.**</mark>
+* <mark style="color:purple;">**Used for sending**</mark>**&#x20;**<mark style="color:orange;">**`SNMP`**</mark> <mark style="color:purple;">**requests to network devices.**</mark>
 {% endtab %}
 
 {% tab title="Port 162" %}
-* <mark style="color:purple;">**Used for receiving**</mark>** **<mark style="color:orange;">**`SNMP`**</mark>** **<mark style="color:purple;">**notifications (**</mark><mark style="color:orange;">**`Traps`**</mark>** **<mark style="color:purple;">**and**</mark>** **<mark style="color:orange;">**`InformRequests`**</mark><mark style="color:purple;">**) from network devices.**</mark>
+* <mark style="color:purple;">**Used for receiving**</mark>**&#x20;**<mark style="color:orange;">**`SNMP`**</mark>**&#x20;**<mark style="color:purple;">**notifications (**</mark><mark style="color:orange;">**`Traps`**</mark>**&#x20;**<mark style="color:purple;">**and**</mark>**&#x20;**<mark style="color:orange;">**`InformRequests`**</mark><mark style="color:purple;">**) from network devices.**</mark>
 {% endtab %}
 {% endtabs %}
 
