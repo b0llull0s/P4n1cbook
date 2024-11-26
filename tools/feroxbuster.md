@@ -175,7 +175,7 @@ feroxbuster -u <url> -w <wordlist> -H "User-Agent: <user_agent>"
 
 {% code title="Provide a User Cookie" %}
 ```bash
-feroxbuster -u <url> -w <wordlist> -C <cookie>
+feroxbuster -u http://example.com -w /path/to/wordlist.txt -H "Cookie: sessionid=your_session_id"
 ```
 {% endcode %}
 
