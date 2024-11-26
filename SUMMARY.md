@@ -10,7 +10,7 @@
 ## Fundamentals
 
 * [Linux](fundamentals/linux.md)
-* [💾 Regular Expressions](fundamentals/regular-expressions.md)
+* [💾 Regex](fundamentals/regex.md)
 * [🌐 Network Protocols](fundamentals/network-protocols/README.md)
   * [SSH](fundamentals/network-protocols/ssh.md)
   * [DNS](fundamentals/network-protocols/dns.md)
