@@ -1,2 +1,6 @@
-# 🥷 Shodan Dorks
+---
+hidden: true
+---
+
+# 🥷 Shodan
 

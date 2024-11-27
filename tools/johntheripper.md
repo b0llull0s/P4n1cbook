@@ -1,5 +1,6 @@
 ---
 icon: knife-kitchen
+hidden: true
 ---
 
 # JohnTheRipper

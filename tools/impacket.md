@@ -1,5 +1,6 @@
 ---
 icon: bomb
+hidden: true
 ---
 
 # impacket
