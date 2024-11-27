@@ -2,7 +2,46 @@
 icon: book-skull
 ---
 
-# Reverse Shells
+# Shells/TTYs
+
+
+
+TTYs
+
+```bash
+#Spawn a terminal 1
+python3 -c 'import pty;pty.spawn("/bin/bash")’
+```
+
+Spawning Shells
+
+```bash
+python -c 'import pty; pty.spawn("/bin/sh")' 
+python3 -c 'import pty; pty.spawn("/bin/sh")'
+
+script -qc /bin/bash /dev/null
+
+echo os.system('/bin/bash') 
+/bin/sh -i 
+perl -e 'exec "/bin/sh";' 
+perl: exec "/bin/sh"; 
+ruby: exec "/bin/sh" 
+lua: os.execute('/bin/sh') 
+exec "/bin/sh"; 
+/bin/bash -i
+exec "/bin/sh"                # (From within IRB) 
+:!bash                        # (From within vi)
+:set shell=/bin/bash:shell    # (From within vi) 
+!sh                           # (From within nmap)
+```
+
+
+
+
+
+***
+
+
 
 HTTP
 

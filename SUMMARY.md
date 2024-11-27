@@ -26,6 +26,7 @@
   * [GraphSQL](fundamentals/databases/graphsql.md)
 * [Dorks](fundamentals/dorks.md)
 * [Steganography](fundamentals/steganography.md)
+* [Shells/TTYs](fundamentals/shells-ttys.md)
 * [Cryptography](fundamentals/cryptography.md)
 
 ## Tools
@@ -40,7 +41,6 @@
 * [impacket](tools/impacket.md)
 * [🦈 Wireshark](tools/wireshark.md)
 * [BURP](tools/burp.md)
-* [Reverse Shells](tools/reverse-shells.md)
 * [🤖 MetaExploit](tools/metaexploit.md)
 * [🥷 Shodan](tools/shodan.md)
 
