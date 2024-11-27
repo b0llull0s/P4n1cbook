@@ -53,6 +53,7 @@
   * [SSRF](web-exploitation/main-techniques/ssrf.md)
   * [HTTP/HTTPS](web-exploitation/main-techniques/http-https.md)
 * [Web Services](web-exploitation/web-services/README.md)
+  * [CMS Made Simple](web-exploitation/web-services/cms-made-simple.md)
   * [Werkzeug](web-exploitation/web-services/werkzeug.md)
   * [🌵 Cacti](web-exploitation/web-services/cacti.md)
   * [Tomcat](web-exploitation/web-services/tomcat.md)
