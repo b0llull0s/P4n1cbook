@@ -4,6 +4,29 @@ icon: book-skull
 
 # Shells/TTYs
 
+{% hint style="info" %}
+## <mark style="color:purple;">`TTYs`</mark>
+
+### <mark style="color:purple;">Ncat</mark>
+
+* <mark style="color:purple;">You can use the</mark> <mark style="color:orange;">**`rlwrap`**</mark> <mark style="color:purple;">utility to</mark> <mark style="color:purple;">enables line editing and history.</mark>
+* <mark style="color:purple;">In order to have a full</mark> <mark style="color:orange;">**`TTY`**</mark> <mark style="color:purple;">**follow this steps:**</mark>
+
+#### <mark style="color:orange;">`BASH`</mark>:
+
+1. `python3 -c 'import pty; pty.spawn("/bin/bash")'`
+2. &#x20;`CTRL+Z`
+3. `stty raw -echo; fg; ls; export SHELL=/bin/bash; export TERM=screen; stty rows 38 columns 116; reset;`
+{% endhint %}
+
+
+
+
+
+
+
+
+
 
 
 TTYs
