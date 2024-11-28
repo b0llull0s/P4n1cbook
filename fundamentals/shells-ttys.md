@@ -12,11 +12,21 @@ icon: book-skull
 * <mark style="color:purple;">You can use the</mark> <mark style="color:orange;">**`rlwrap`**</mark> <mark style="color:purple;">utility to</mark> <mark style="color:purple;">enables line editing and history.</mark>
 * <mark style="color:purple;">In order to have a full</mark> <mark style="color:orange;">**`TTY`**</mark> <mark style="color:purple;">**follow this steps:**</mark>
 
-#### <mark style="color:orange;">`BASH`</mark>:
+#### <mark style="color:orange;">`BASH`</mark><mark style="color:purple;">:</mark>
 
-1. `python3 -c 'import pty; pty.spawn("/bin/bash")'`
-2. &#x20;`CTRL+Z`
-3. `stty raw -echo; fg; ls; export SHELL=/bin/bash; export TERM=screen; stty rows 38 columns 116; reset;`
+1. <mark style="color:purple;">`python3 -c 'import pty; pty.spawn("/bin/bash")'`</mark>
+2. &#x20;<mark style="color:purple;">`CTRL+Z`</mark>
+3. <mark style="color:purple;">`stty raw -echo; fg; ls; export SHELL=/bin/bash; export TERM=screen; stty rows 38 columns 116; reset;`</mark>
+
+<mark style="color:orange;">**`ZSH`**</mark><mark style="color:purple;">:</mark>
+
+* <mark style="color:purple;">Same first two steps and then:</mark>
+
+{% code overflow="wrap" %}
+```bash
+stty raw -echo; fg %1; export SHELL=/bin/bash; export TERM=screen; stty rows 38 columns 116; reset;
+```
+{% endcode %}
 {% endhint %}
 
 
