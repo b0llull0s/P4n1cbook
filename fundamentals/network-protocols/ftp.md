@@ -12,13 +12,25 @@ description: File Transfer Protocol
 ```
 {% endtab %}
 
-{% tab title="Anonymous " %}
-{% code title="Login sequence" %}
-```
+{% tab title="Login " %}
+{% code title="Standard Login" %}
+```bash
 ftp <IP>
-anonymous
 ```
 {% endcode %}
+
+* <mark style="color:purple;">Sometimes</mark> <mark style="color:orange;">**`anonymous`**</mark> <mark style="color:purple;">is enable by default, then just type it when being prompt by an user.</mark>
+* <mark style="color:purple;">To login as any other user:</mark>
+
+```bash
+USER <user>
+```
+
+* To specify a password:
+
+```bash
+PASS <password>
+```
 {% endtab %}
 {% endtabs %}
 
