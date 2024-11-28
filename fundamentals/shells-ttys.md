@@ -9,7 +9,7 @@ icon: book-skull
 
 ### <mark style="color:purple;">Ncat</mark>
 
-* <mark style="color:purple;">You can use the</mark> <mark style="color:orange;">**`rlwrap`**</mark> <mark style="color:purple;">utility to</mark> <mark style="color:purple;">enables line editing and history.</mark>
+* <mark style="color:purple;">You can use the</mark> <mark style="color:orange;">**`rlwrap`**</mark> <mark style="color:purple;">utility to</mark> <mark style="color:purple;">enable line editing and history.</mark>
 * <mark style="color:purple;">In order to have a full</mark> <mark style="color:orange;">**`TTY`**</mark> <mark style="color:purple;">**follow this steps:**</mark>
 
 #### <mark style="color:orange;">`BASH`</mark><mark style="color:purple;">:</mark>
@@ -36,15 +36,6 @@ stty raw -echo; fg %1; export SHELL=/bin/bash; export TERM=screen; stty rows 38 
 
 
 
-
-
-
-TTYs
-
-```bash
-#Spawn a terminal 1
-python3 -c 'import pty;pty.spawn("/bin/bash")’
-```
 
 Spawning Shells
 
