@@ -29,6 +29,62 @@ stty raw -echo; fg %1; export SHELL=/bin/bash; export TERM=screen; stty rows 38 
 {% endcode %}
 {% endhint %}
 
+***
+
+## <mark style="color:purple;">Shells</mark>
+
+{% hint style="info" %}
+## <mark style="color:purple;">`PSY`</mark>
+
+* <mark style="color:orange;">**`PSY`**</mark> <mark style="color:purple;">Shell is an interactive</mark> <mark style="color:orange;">**`PHP REPL (Read-Eval-Print Loop)`**</mark> <mark style="color:purple;">used normally for debugging.</mark>
+
+***
+
+### <mark style="color:purple;">Useful Commands:</mark>
+
+{% code title="Very handy" %}
+```sh
+help
+```
+{% endcode %}
+
+{% code title="Print the working directory" %}
+```php
+getcwd()
+```
+{% endcode %}
+
+{% code title="Print the current user" %}
+```php
+get_current_user()
+```
+{% endcode %}
+
+{% code title="Print system info" %}
+```php
+phpinfo()
+```
+{% endcode %}
+
+{% code title="Print contents from directory" %}
+```php
+scandir("/home")
+```
+{% endcode %}
+
+{% code title="Print content from file" %}
+```php
+file_get_contents("/etc/os-release")
+```
+{% endcode %}
+
+* <mark style="color:purple;">If there are break line characters like</mark> <mark style="color:orange;">**`/n`**</mark> <mark style="color:purple;">and you want to get ride of then:</mark>
+
+```php
+echo file_get_contents("/home/nairobi/ca.key")
+```
+{% endhint %}
+
 
 
 
@@ -64,6 +120,12 @@ exec "/bin/sh"                # (From within IRB)
 
 
 ***
+
+{% hint style="danger" %}
+## Reverse Shells
+
+
+{% endhint %}
 
 
 
