@@ -48,6 +48,7 @@
 
 * [Recon](web-exploitation/recon.md)
 * [Main Techniques](web-exploitation/main-techniques/README.md)
+  * [LFI](web-exploitation/main-techniques/lfi.md)
   * [XSS](web-exploitation/main-techniques/xss.md)
   * [IDOR](web-exploitation/main-techniques/idor.md)
   * [SSRF](web-exploitation/main-techniques/ssrf.md)

