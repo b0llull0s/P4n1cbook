@@ -69,8 +69,8 @@
 
 * [File Transfer](post-exploitation/file-transfer.md)
 * [Pivoting/Lateral Movement](post-exploitation/pivoting-lateral-movement.md)
-* [Linux Privilege Scalation](post-exploitation/linux-privilege-scalation/README.md)
-  * [💣 Buffer Overflow - Linux](post-exploitation/linux-privilege-scalation/buffer-overflow-linux.md)
+* [Linux Privilege Escalation](post-exploitation/linux-privilege-escalation/README.md)
+  * [💣 Buffer Overflow - Linux](post-exploitation/linux-privilege-escalation/buffer-overflow-linux.md)
 * [Windows Privilege Scalation](post-exploitation/windows-privilege-scalation.md)
 
 ## Cloud Exploitation
