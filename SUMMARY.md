@@ -48,7 +48,7 @@
 
 * [Recon](web-exploitation/recon.md)
 * [Main Techniques](web-exploitation/main-techniques/README.md)
-  * [Server Side Template Injection](web-exploitation/main-techniques/server-side-template-injection.md)
+  * [SSTI](web-exploitation/main-techniques/ssti.md)
   * [LFI](web-exploitation/main-techniques/lfi.md)
   * [XSS](web-exploitation/main-techniques/xss.md)
   * [IDOR](web-exploitation/main-techniques/idor.md)
