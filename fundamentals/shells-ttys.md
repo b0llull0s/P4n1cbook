@@ -48,6 +48,88 @@ stty raw -echo; fg %1; export SHELL=/bin/bash; export TERM=screen; stty rows 38 
 ## <mark style="color:purple;">Shells</mark>
 
 {% hint style="info" %}
+## <mark style="color:purple;">Spawning Shells</mark>
+
+{% code title="" %}
+```sh
+python3 -c 'import pty; pty.spawn("/bin/sh")' 
+```
+{% endcode %}
+
+{% code title="" %}
+```sh
+script -qc /bin/bash /dev/null
+```
+{% endcode %}
+
+{% code title="" %}
+```sh
+echo os.system('/bin/bash') 
+```
+{% endcode %}
+
+{% code title="" %}
+```sh
+/bin/sh -i 
+```
+{% endcode %}
+
+{% code title="" %}
+```sh
+/bin/bash -i
+```
+{% endcode %}
+
+{% code title="" %}
+```sh
+perl -e 'exec "/bin/sh";'
+```
+{% endcode %}
+
+{% code title="" %}
+```sh
+perl: exec "/bin/sh"; 
+```
+{% endcode %}
+
+{% code title="" %}
+```sh
+ruby: exec "/bin/sh" 
+```
+{% endcode %}
+
+{% code title="" %}
+```sh
+lua: os.execute('/bin/sh') 
+```
+{% endcode %}
+
+{% code title="" %}
+```sh
+exec "/bin/sh"; 
+```
+{% endcode %}
+
+```
+// Some code
+```
+
+```
+// Some code
+```
+
+```
+// Some code
+```
+
+```
+// Some code
+```
+{% endhint %}
+
+***
+
+{% hint style="info" %}
 ## <mark style="color:purple;">`PSY`</mark>
 
 * <mark style="color:orange;">**`PSY`**</mark> <mark style="color:purple;">Shell is an interactive</mark> <mark style="color:orange;">**`PHP REPL (Read-Eval-Print Loop)`**</mark> <mark style="color:purple;">used normally for debugging.</mark>
@@ -220,19 +302,6 @@ s.close()' > shell.py
 Spawning Shells
 
 ```bash
-python -c 'import pty; pty.spawn("/bin/sh")' 
-python3 -c 'import pty; pty.spawn("/bin/sh")'
-
-script -qc /bin/bash /dev/null
-
-echo os.system('/bin/bash') 
-/bin/sh -i 
-perl -e 'exec "/bin/sh";' 
-perl: exec "/bin/sh"; 
-ruby: exec "/bin/sh" 
-lua: os.execute('/bin/sh') 
-exec "/bin/sh"; 
-/bin/bash -i
 exec "/bin/sh"                # (From within IRB) 
 :!bash                        # (From within vi)
 :set shell=/bin/bash:shell    # (From within vi) 
