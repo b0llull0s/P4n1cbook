@@ -212,6 +212,8 @@ C:\xampp\htdocs\
 ```
 {% endcode %}
 
+***
+
 ### <mark style="color:orange;">`PHP`</mark>
 
 {% code title="Standard shell" %}
