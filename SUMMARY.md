@@ -21,7 +21,6 @@
   * [LLMNR](fundamentals/network-protocols/llmnr.md)
 * [Databases](fundamentals/network-protocols/sql.md)
   * [MySQL](fundamentals/databases/mysql.md)
-  * [SQL](fundamentals/databases/sql.md)
   * [NoSQL](fundamentals/databases/nosql.md)
   * [GraphSQL](fundamentals/databases/graphsql.md)
 * [Dorks](fundamentals/dorks.md)
