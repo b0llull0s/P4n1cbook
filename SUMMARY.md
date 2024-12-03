@@ -47,6 +47,7 @@
 
 * [Recon](web-exploitation/recon.md)
 * [Main Techniques](web-exploitation/main-techniques/README.md)
+  * [Arbitrary File Upload](web-exploitation/main-techniques/arbitrary-file-upload.md)
   * [SSTI](web-exploitation/main-techniques/ssti.md)
   * [LFI](web-exploitation/main-techniques/lfi.md)
   * [XSS](web-exploitation/main-techniques/xss.md)
