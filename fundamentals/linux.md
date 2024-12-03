@@ -22,6 +22,12 @@ ls -l
 ```
 {% endcode %}
 
+{% code title="List all files recursively" %}
+```sh
+ls -lAR
+```
+{% endcode %}
+
 {% code title="Read file" %}
 ```bash
 cat file.txt
