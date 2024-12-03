@@ -16,7 +16,7 @@ description: Directory and file brute-forcing, as well as DNS and virtual host e
 * <mark style="color:orange;">**`-o`**</mark> <mark style="color:purple;">-> Output file to save results.</mark>
 * <mark style="color:orange;">**`-v`**</mark> <mark style="color:purple;">-> Verbose mode.</mark>
 * <mark style="color:orange;">**`-z`**</mark> <mark style="color:purple;">-> Don't display progress.</mark>
-* <mark style="color:orange;">`--delay duration`</mark> <mark style="color:purple;">-></mark> <mark style="color:orange;">**DNS**</mark> <mark style="color:purple;">resolver output.</mark>
+* <mark style="color:orange;">**`--delay duration`**</mark> <mark style="color:purple;">-></mark> <mark style="color:orange;">**`DNS`**</mark> <mark style="color:purple;">resolver output.</mark>
 {% endhint %}
 
 {% hint style="info" %}
@@ -71,13 +71,13 @@ gobuster dir -u http://example.com -w /path/to/wordlist.txt -t 2 -z 20s -a "Mozi
 {% hint style="info" %}
 ## <mark style="color:purple;">File Scanning</mark>
 
-{% code title="Bunch of files" %}
+{% code title="Bunch of files" overflow="wrap" %}
 ```bash
 gobuster dir -u http://IP -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 150 -x .php,.html,.py,.git,.sh,.bak,.js,.txt,.git
 ```
 {% endcode %}
 
-{% code title="Txt files" %}
+{% code title="Txt files" overflow="wrap" %}
 ```bash
 gobuster dir -u http://10.10.10.60 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x .txt -t 40
 ```
@@ -101,7 +101,7 @@ gobuster vhost -u http://IP -w /usr/share/seclists/Discovery/DNS/subdomains-top1
 
 ### <mark style="color:orange;">`DNS`</mark>
 
-{% code title="Standard Scan " %}
+{% code title="Standard Scan " overflow="wrap" %}
 ```bash
 gobuster dns -d inlanefreight.com -w /usr/share/SecLists/Discovery/DNS/namelist.txt
 ```
