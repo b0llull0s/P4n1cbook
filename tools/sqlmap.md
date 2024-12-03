@@ -1,5 +1,5 @@
 ---
-icon: laptop-code
+icon: sword
 ---
 
 # SQLmap

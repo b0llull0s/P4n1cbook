@@ -10,7 +10,6 @@
 ## Fundamentals
 
 * [Linux](fundamentals/linux.md)
-* [💾 Regex](fundamentals/regex.md)
 * [🌐 Network Protocols](fundamentals/network-protocols/README.md)
   * [SSH](fundamentals/network-protocols/ssh.md)
   * [DNS](fundamentals/network-protocols/dns.md)
@@ -23,24 +22,25 @@
   * [MySQL](fundamentals/databases/mysql.md)
   * [NoSQL](fundamentals/databases/nosql.md)
   * [GraphSQL](fundamentals/databases/graphsql.md)
-* [Dorks](fundamentals/dorks.md)
-* [Steganography](fundamentals/steganography.md)
 * [Shells/TTYs](fundamentals/shells-ttys.md)
+* [💾 Regex](fundamentals/regex.md)
+* [Dorks](fundamentals/dorks.md)
 * [Cryptography](fundamentals/cryptography.md)
+* [Steganography](fundamentals/steganography.md)
 
 ## Tools
 
-* [Nmap](tools/nmap.md)
 * [curl](tools/curl.md)
-* [ffuz](tools/ffuz.md)
+* [Nmap](tools/nmap.md)
+* [ffuf](tools/ffuf.md)
 * [Gobuster](tools/gobuster.md)
 * [feroxbuster](tools/feroxbuster.md)
 * [SQLmap](tools/sqlmap.md)
+* [🦈 Wireshark](tools/wireshark.md)
+* [🤖 MetaExploit](tools/metaexploit.md)
 * [JohnTheRipper](tools/johntheripper.md)
 * [impacket](tools/impacket.md)
-* [🦈 Wireshark](tools/wireshark.md)
 * [BURP](tools/burp.md)
-* [🤖 MetaExploit](tools/metaexploit.md)
 * [🥷 Shodan](tools/shodan.md)
 
 ## Web Exploitation
