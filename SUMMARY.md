@@ -32,7 +32,7 @@
 
 * [curl](tools/curl.md)
 * [Nmap](tools/nmap.md)
-* [ffuf](tools/ffuf.md)
+* [ffuf](tools/ffuz.md)
 * [Gobuster](tools/gobuster.md)
 * [feroxbuster](tools/feroxbuster.md)
 * [SQLmap](tools/sqlmap.md)

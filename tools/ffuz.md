@@ -1,9 +1,9 @@
 ---
-icon: campfire
 description: Fuzz Faster U Fool
+icon: campfire
 ---
 
-# ffuz
+# ffuf
 
 {% hint style="success" %}
 ## <mark style="color:purple;">Installation</mark>
