@@ -13,8 +13,10 @@ description: Regular Expressions
 ```
 {% endcode %}
 
+* <mark style="color:purple;">Removes all</mark> <mark style="color:orange;">**`/r`**</mark> <mark style="color:purple;">from the target file</mark>
+
 ```
-// Some code
+sed -i 's/\r$//' file.sh
 ```
 {% endhint %}
 
