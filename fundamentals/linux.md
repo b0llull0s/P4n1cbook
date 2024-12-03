@@ -635,6 +635,12 @@ ss -tuln
 ```
 {% endcode %}
 
+{% code title="Show listening ports for a process" %}
+```bash
+ss -tulnp | grep PID
+```
+{% endcode %}
+
 {% code title="Display the Routing Table" %}
 ```bash
 ip route show
