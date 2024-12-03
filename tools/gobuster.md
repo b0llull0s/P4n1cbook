@@ -34,6 +34,12 @@ gobuster dir -u https://example.com -w ~/wordlists/shortlist.txt -l
 ```
 {% endcode %}
 
+{% code title="Common Extensions" overflow="wrap" %}
+```bash
+gobuster dir -u http://IP -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 150 -x .php,.html,.py,.git,.sh,.bak,.js,.txt,.git,.asp,.aspx,.jsp,.cgi,.env,.yaml,.yml,.json,.log,.old,.swp,.xml,.woff,.woff2
+```
+{% endcode %}
+
 {% code title="Stealthy Scan" overflow="wrap" %}
 ```bash
 gobuster dir -u http://example.com -w /path/to/wordlist.txt -t 2 -z 20s -a "Mozilla/5.0" -q -c "X-Forwarded-For: 192.168.1.100"
@@ -64,24 +70,6 @@ gobuster dir -u http://example.com -w /path/to/wordlist.txt -t 2 -z 20s -a "Mozi
 * <mark style="color:orange;">**`-a`**</mark>**&#x20;**<mark style="color:purple;">**->**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">Set</mark> <mark style="color:orange;">**`User-agent`**</mark><mark style="color:purple;">.</mark>
 * <mark style="color:orange;">**`-d`**</mark> <mark style="color:purple;">**->**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">Search for backup files once a file is discovered.</mark>
 * <mark style="color:orange;">**`--wildcard`**</mark> <mark style="color:purple;">**->**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">continue scanning</mark> <mark style="color:purple;"></mark><mark style="color:purple;">**even if a wildcard**</mark>**&#x20;**<mark style="color:orange;">**`DNS`**</mark> <mark style="color:purple;">entry or a similar issue is detected.</mark>
-{% endhint %}
-
-***
-
-{% hint style="info" %}
-## <mark style="color:purple;">File Scanning</mark>
-
-{% code title="Bunch of files" overflow="wrap" %}
-```bash
-gobuster dir -u http://IP -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 150 -x .php,.html,.py,.git,.sh,.bak,.js,.txt,.git
-```
-{% endcode %}
-
-{% code title="Txt files" overflow="wrap" %}
-```bash
-gobuster dir -u http://10.10.10.60 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x .txt -t 40
-```
-{% endcode %}
 {% endhint %}
 
 ***
