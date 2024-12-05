@@ -73,6 +73,7 @@
 * [File Transfer](post-exploitation/file-transfer.md)
 * [Pivoting/Lateral Movement](post-exploitation/pivoting-lateral-movement.md)
 * [Linux Privilege Escalation](post-exploitation/linux-privilege-escalation/README.md)
+  * [Docker Escape](post-exploitation/linux-privilege-escalation/docker-escape.md)
   * [💣 Buffer Overflow - Linux](post-exploitation/linux-privilege-escalation/buffer-overflow-linux.md)
 * [Windows Privilege Scalation](post-exploitation/windows-privilege-scalation.md)
 
