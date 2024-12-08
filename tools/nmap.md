@@ -8,12 +8,12 @@ description: Network Mapper
 {% hint style="info" %}
 ## <mark style="color:purple;">Port Status</mark>
 
-* <mark style="color:purple;">**`open`**</mark> -> _The connection through the NMAP scan has been successful._
-* <mark style="color:purple;">**`closed`**</mark> -> _The port is closed._
-* <mark style="color:purple;">**`filtered`**</mark> -> _Nmap does not know if the port is open or closed._
-* <mark style="color:purple;">**`unfiltered`**</mark> _-> Port is accessible, but we don't know if it's open or closed._
-* <mark style="color:purple;">**`open | filtered`**</mark> _-> This default state is assigned. It could be that a firewall is protecting the port._
-* <mark style="color:purple;">**`closed | filtered`**</mark>**&#x20;->** _It's impossible to determine if the port is open or closed._
+* <mark style="color:orange;">**`open`**</mark> -> _<mark style="color:purple;">The connection through the NMAP scan has been successful.</mark>_
+* <mark style="color:orange;">**`closed`**</mark> <mark style="color:purple;">-></mark> <mark style="color:purple;"></mark>_<mark style="color:purple;">The port is closed.</mark>_
+* <mark style="color:orange;">**`filtered`**</mark> <mark style="color:purple;">-></mark> <mark style="color:purple;"></mark>_<mark style="color:purple;">Nmap does not know if the port is open or closed.</mark>_
+* <mark style="color:orange;">**`unfiltered`**</mark> _<mark style="color:purple;">-> Port is accessible, but we don't know if it's open or closed.</mark>_
+* <mark style="color:orange;">**`open | filtered`**</mark> _<mark style="color:purple;">-> This default state is assigned. It could be that a firewall is protecting the port.</mark>_
+* <mark style="color:orange;">**`closed | filtered`**</mark>**&#x20;**<mark style="color:purple;">**->**</mark> <mark style="color:purple;"></mark>_<mark style="color:purple;">It's impossible to determine if the port is open or closed.</mark>_
 {% endhint %}
 
 ***
