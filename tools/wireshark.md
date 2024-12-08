@@ -154,3 +154,13 @@ ftp-data
 
 {% endhint %}
 
+***
+
+## <mark style="color:purple;">Identifiers</mark>
+
+{% hint style="info" %}
+### <mark style="color:orange;">`FTP`</mark> <mark style="color:purple;">I</mark><mark style="color:purple;">**dentifiers**</mark>
+
+
+{% endhint %}
+
