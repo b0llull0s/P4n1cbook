@@ -192,6 +192,12 @@ htop
 ```
 {% endcode %}
 
+{% code title="Get the current process ID" %}
+```sh
+echo $$
+```
+{% endcode %}
+
 {% code title="Kill a process" %}
 ```bash
 sudo kill -9 <PID>
