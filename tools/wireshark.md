@@ -149,9 +149,73 @@ ftp-data
 ***
 
 {% hint style="info" %}
-## <mark style="color:purple;">Tshark</mark>
+## <mark style="color:orange;">`tshark`</mark>
 
+* <mark style="color:purple;">List available interfaces to capture from:</mark>
 
+```sh
+tshark -D
+```
+
+* <mark style="color:purple;">Capture on a selected interface:</mark>
+
+```shell
+tshark -i (int)
+```
+
+* <mark style="color:purple;">Apply a filter looking for a specific host:</mark>
+
+```sh
+tshark -i eth0 -f "host (ip)"
+```
+
+* <mark style="color:purple;">Will display any interfaces available to capture from and then exit out:</mark>
+
+```
+D
+```
+
+* <mark style="color:purple;">Will list the Link-layer mediums you can capture from and then exit out:</mark>
+
+```
+L
+```
+
+* <mark style="color:purple;">Defines a stop condition; Grab a specific number of packets, then quit the program :</mark>
+
+```sh
+c
+```
+
+* <mark style="color:purple;">Defines an auto-stop condition. It can be after a duration, specific file size, or after a certain number of packets:</mark>
+
+```
+a
+```
+
+* <mark style="color:purple;">Read from a file:</mark>
+
+```sh
+r (pcap-file)
+```
+
+* <mark style="color:purple;">Write into a file using the</mark> <mark style="color:orange;">**`pcapng`**</mark> <mark style="color:purple;">format:</mark>
+
+```sh
+W (pcap-file)
+```
+
+* <mark style="color:purple;">Will print the packet summary while writing into a file (</mark><mark style="color:orange;">**`-W`**</mark><mark style="color:purple;">):</mark>
+
+```sh
+P
+```
+
+* <mark style="color:purple;">Will add</mark> <mark style="color:orange;">**`Hex`**</mark> <mark style="color:purple;">and</mark> <mark style="color:orange;">**`ASCII`**</mark> <mark style="color:purple;">output into the capture:</mark>
+
+```sh
+x
+```
 {% endhint %}
 
 ***
