@@ -47,6 +47,7 @@
 
 * [Recon](web-exploitation/recon.md)
 * [Main Techniques](web-exploitation/main-techniques/README.md)
+  * [Log Poisoning](web-exploitation/main-techniques/log-poisoning.md)
   * [Code Injection](web-exploitation/main-techniques/code-injection.md)
   * [SQLi](web-exploitation/main-techniques/sqli.md)
   * [Arbitrary File Upload](web-exploitation/main-techniques/arbitrary-file-upload.md)
