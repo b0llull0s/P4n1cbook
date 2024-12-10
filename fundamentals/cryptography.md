@@ -1,5 +1,6 @@
 ---
 icon: binary-lock
+hidden: true
 ---
 
 # Cryptography

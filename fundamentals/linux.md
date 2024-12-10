@@ -28,15 +28,15 @@ ls -lAR
 ```
 {% endcode %}
 
-{% code title="Read file" %}
+{% code title="Read raw binary data" %}
 ```bash
-cat file.txt
+cat example | hexdump -C
 ```
 {% endcode %}
 
 {% code title="Look for a given word inside a file" %}
 ```bash
-cat file.txt | grep word 
+cat file.txt | grep word
 ```
 {% endcode %}
 

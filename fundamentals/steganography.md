@@ -1,5 +1,6 @@
 ---
 icon: palette
+hidden: true
 ---
 
 # Steganography
