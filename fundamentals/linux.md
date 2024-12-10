@@ -12,13 +12,7 @@ description: Basic commands
 
 {% code title="List all files + details" %}
 ```bash
-ls -a
-```
-{% endcode %}
-
-{% code title="List with details" %}
-```bash
-ls -l
+ls -al
 ```
 {% endcode %}
 
@@ -58,39 +52,9 @@ realpath file.txt
 ```
 {% endcode %}
 
-{% code title="Change Directory" %}
-```bash
-cd /example/example
-```
-{% endcode %}
-
-{% code title="Move up one directory level" %}
-```bash
-cd ..
-```
-{% endcode %}
-
-{% code title="Copy files" %}
-```bash
-cp file.txt /home/user/
-```
-{% endcode %}
-
 {% code title="Copy recursively " %}
 ```bash
 cp -r dir/ /home/user/
-```
-{% endcode %}
-
-{% code title="Rename a file" %}
-```bash
-mv oldname.txt newname.txt
-```
-{% endcode %}
-
-{% code title="Move a file" %}
-```bash
-mv file.txt /home/user/ 
 ```
 {% endcode %}
 
@@ -124,27 +88,15 @@ locate file.txt
 ```
 {% endcode %}
 
-{% code title="Shows the full path of an executable" %}
+{% code title="Full path of a binary" %}
 ```bash
 which binary
-```
-{% endcode %}
-
-{% code title="Creates a directory" %}
-```bash
-mkdir newdir
 ```
 {% endcode %}
 
 {% code title="Creates a new file/Update timestamps" %}
 ```bash
 touch newfile
-```
-{% endcode %}
-
-{% code title="Delete file" %}
-```bash
-rm file.txt
 ```
 {% endcode %}
 
@@ -156,15 +108,9 @@ rm -r directory/
 
 ### <mark style="color:purple;">Process Management</mark>
 
-{% code title="List all process running in the system" %}
+{% code title="List details for process" %}
 ```bash
-ps aux
-```
-{% endcode %}
-
-{% code title="Detailed list of all processes" %}
-```bash
-ps -ef
+ps -ef | grep process
 ```
 {% endcode %}
 
@@ -206,24 +152,6 @@ sudo kill -9 <PID>
 
 ### <mark style="color:purple;">System Management</mark>
 
-{% code title="Check the status of a service" %}
-```bash
-sudo systemctl status nginx
-```
-{% endcode %}
-
-{% code title="Start a service" %}
-```bash
-sudo systemctl start nginx
-```
-{% endcode %}
-
-{% code title="Enable a service to start on boot" %}
-```bash
-sudo systemctl enable nginx
-```
-{% endcode %}
-
 {% code title="Print Info about the system" %}
 ```bash
 uname -a 
@@ -260,9 +188,9 @@ du -sh *
 ```
 {% endcode %}
 
-{% code title="Shows the 40 largest directories on the system" %}
+{% code title="Shows the 10 largest directories on the system" %}
 ```bash
-sudo du -hsx /* | sort -rh | head -n 40
+sudo du -hsx /* | sort -rh | head -n 10
 ```
 {% endcode %}
 
@@ -412,12 +340,6 @@ dmesg
 ## <mark style="color:purple;">User/Group Management</mark>
 
 ### <mark style="color:purple;">Users</mark>
-
-{% code title="Print current user name" %}
-```bash
-whoami
-```
-{% endcode %}
 
 {% code title="Display user and group ID of the current user" %}
 ```bash
