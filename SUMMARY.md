@@ -47,6 +47,7 @@
 
 * [Recon](web-exploitation/recon.md)
 * [Main Techniques](web-exploitation/main-techniques/README.md)
+  * [Deserialization](web-exploitation/main-techniques/deserialization.md)
   * [Log Poisoning](web-exploitation/main-techniques/log-poisoning.md)
   * [Code Injection](web-exploitation/main-techniques/code-injection.md)
   * [SQLi](web-exploitation/main-techniques/sqli.md)
