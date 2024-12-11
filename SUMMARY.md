@@ -58,6 +58,7 @@
   * [IDOR](web-exploitation/main-techniques/idor.md)
   * [SSRF](web-exploitation/main-techniques/ssrf.md)
 * [Web Services](web-exploitation/web-services/README.md)
+  * [Tiny File Manager](web-exploitation/web-services/tiny-file-manager.md)
   * [Joomla](web-exploitation/web-services/joomla.md)
   * [CMS Made Simple](web-exploitation/web-services/cms-made-simple.md)
   * [Werkzeug](web-exploitation/web-services/werkzeug.md)
