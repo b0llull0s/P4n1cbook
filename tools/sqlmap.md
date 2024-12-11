@@ -9,7 +9,7 @@ icon: sword
 
 <mark style="color:orange;">**`--batch`**</mark> <mark style="color:purple;">**->**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">Non interactive mode.</mark>
 
-<mark style="color:orange;">**`--dbms`**</mark> <mark style="color:purple;">**->**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">Type of db being used (Ex.</mark> <mark style="color:orange;">**`mysql`**</mark><mark style="color:purple;">)</mark>
+<mark style="color:orange;">**`--dbms`**</mark> <mark style="color:purple;">**->**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">Type of db being use (Ex.</mark> <mark style="color:orange;">**`mysql`**</mark><mark style="color:purple;">)</mark>
 
 <mark style="color:orange;">**`--threads`**</mark> <mark style="color:purple;">**->**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">Goes from</mark> <mark style="color:orange;">**`1`**</mark> <mark style="color:purple;">to</mark> <mark style="color:orange;">**`10`**</mark><mark style="color:purple;">.</mark>
 
