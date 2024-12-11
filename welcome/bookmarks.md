@@ -6,6 +6,8 @@ description: References and appreciations
 
 <figure><img src="../.gitbook/assets/Psylogen_data_cult_85714ead-7ff7-4e12-980c-fbd38d99d138.png" alt=""><figcaption><p>AI generated Midway</p></figcaption></figure>
 
+<mark style="color:purple;">**This book wouldn't exist without the following resources and there are a lot of borrowed words from them, so make sure you check then out as they are the prime source for the sauce.**</mark>
+
 ### <mark style="color:red;">`HackTricks`</mark>
 
 > <mark style="color:purple;">Best Hacking resource and inspiration for this book by</mark> <mark style="color:red;">**`Carlos Palop`**</mark>
@@ -13,6 +15,14 @@ description: References and appreciations
 {% embed url="https://book.hacktricks.xyz/welcome/readme" %}
 HackTricks
 {% endembed %}
+
+***
+
+### <mark style="color:red;">`GTFOBins`</mark>
+
+> <mark style="color:red;">**`GTFOBins`**</mark> <mark style="color:purple;">is the best curated list of Unix binaries that can be used to bypass local security restrictions in misconfigured systems</mark>
+
+{% embed url="https://gtfobins.github.io/" %}
 
 ***
 
@@ -36,13 +46,15 @@ Web-Academy
 
 ***
 
-### <mark style="color:purple;">`StationX`</mark>
+### <mark style="color:blue;">`StationX`</mark>
 
 > <mark style="color:purple;">Very nice cheat sheets</mark>
 
 {% embed url="https://www.stationx.net/" %}
 
-### <mark style="color:purple;">**`0xdf`**</mark>
+***
+
+### <mark style="color:green;">**`0xdf`**</mark>
 
 > <mark style="color:purple;">The legend, best content to understand and solve boxes and even start making Bash and python scripts.</mark>
 
@@ -52,7 +64,7 @@ CTF Blog
 
 ***
 
-### <mark style="color:purple;">`Nonstarchpress`</mark>
+### <mark style="color:yellow;">`Nonstarchpress`</mark>
 
 > <mark style="color:purple;">Best publisher for technical books about hacking and programming.</mark>
 
@@ -78,6 +90,16 @@ V. Anton Spraul
 
 ***
 
-<mark style="color:purple;">**MITRE ATT\&CK Framework:**</mark>
+### <mark style="color:orange;">**`MITRE ATT&CK Framework`**</mark>
+
+> <mark style="color:purple;">Comprehensive knowledge base of adversary tactics, techniques, and procedures (TTPs) used for cybersecurity defense and incident response.</mark>
 
 {% embed url="https://attack.mitre.org/" %}
+
+***
+
+### <mark style="color:blue;">`OWASP`</mark>
+
+> <mark style="color:purple;">The community-driven organization that provides resources and best practices for improving web application security.</mark>
+
+{% embed url="https://owasp.org/" %}
