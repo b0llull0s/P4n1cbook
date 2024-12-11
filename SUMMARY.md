@@ -39,6 +39,7 @@
 * [🦈 Wireshark](tools/wireshark.md)
 * [🤖 MetaExploit](tools/metaexploit.md)
 * [JohnTheRipper](tools/johntheripper.md)
+* [NetExec](tools/netexec.md)
 * [impacket](tools/impacket.md)
 * [BURP](tools/burp.md)
 * [🥷 Shodan](tools/shodan.md)
@@ -95,6 +96,7 @@
 ## Gadgets
 
 * [Flipper Zero](gadgets/flipper-zero.md)
+* [Raspberry Pi](gadgets/raspberry-pi.md)
 
 ## Archive
 
