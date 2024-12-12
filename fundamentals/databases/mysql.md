@@ -15,7 +15,7 @@ icon: server
 ***
 
 {% hint style="info" %}
-### <mark style="color:purple;">MySQL Operator Precedence</mark>
+### <mark style="color:orange;">`MySQL`</mark> <mark style="color:purple;">Operator Precedence</mark>
 
 <mark style="color:purple;">**Highest to lowest:**</mark>
 

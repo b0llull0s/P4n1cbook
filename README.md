@@ -3,11 +3,9 @@ cover: .gitbook/assets/2377084.png
 coverY: 0
 ---
 
-# 🔮 P4nicb00k
+# 🔮 P4n1cBook
 
 <figure><img src=".gitbook/assets/Shremboat_purple_matrix_code_color_explosion_c755ddcc-0691-4c20-8014-6a17ca5ef284.png" alt=""><figcaption><p>Midjourney AI generated</p></figcaption></figure>
-
-<mark style="color:purple;">**Alpha: 0.0.9**</mark>
 
 <mark style="color:purple;">**Welcome**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">to the early version of</mark> <mark style="color:orange;">**`P4n1cBook`**</mark><mark style="color:purple;">**, The**</mark> <mark style="color:purple;">**ultimate**</mark> <mark style="color:purple;">**Hacker**</mark> <mark style="color:purple;">**handbook!**</mark>&#x20;
 

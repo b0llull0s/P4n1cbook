@@ -19,7 +19,7 @@ cat example | grep -Ev "^#" | grep .
 sed 's/"\([^"]*\)"/\1/g' filename
 ```
 
-* <mark style="color:purple;">**Converting**</mark>**&#x20;**<mark style="color:orange;">**`Windows-style`**</mark>**&#x20;**<mark style="color:purple;">**line endings to**</mark>**&#x20;**<mark style="color:orange;">**`Unix-style`**</mark>**&#x20;**<mark style="color:purple;">**line endings:**</mark>
+* <mark style="color:purple;">Converting</mark> <mark style="color:orange;">**`Windows-style`**</mark> <mark style="color:purple;">line endings to</mark> <mark style="color:orange;">**`Unix-style`**</mark> <mark style="color:purple;">line endings:</mark>
 
 ```sh
 sed -i 's/\r$//' file.sh

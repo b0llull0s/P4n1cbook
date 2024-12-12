@@ -6,9 +6,7 @@ description: Teletypewriters and Shells
 # Shells/TTYs
 
 {% hint style="info" %}
-## <mark style="color:purple;">`TTYs`</mark>
-
-### <mark style="color:purple;">Ncat</mark>
+## <mark style="color:orange;">`TTYs`</mark>
 
 * <mark style="color:purple;">You can use the</mark> <mark style="color:orange;">**`rlwrap`**</mark> <mark style="color:purple;">utility to</mark> <mark style="color:purple;">enable line editing and history:</mark>
 
@@ -185,34 +183,6 @@ echo file_get_contents("home/nairobi/ca.key")
 
 {% hint style="warning" %}
 ## <mark style="color:purple;">Web Shells</mark>
-
-### <mark style="color:purple;">Identify the</mark> <mark style="color:orange;">`Webroot`</mark>
-
-{% code title="Apache" %}
-```
-/var/www/html
-```
-{% endcode %}
-
-{% code title="Nginx" %}
-```
-/usr/local/nginx/html/
-```
-{% endcode %}
-
-{% code title="IIS" %}
-```
-c:\inetpub\wwwroot\
-```
-{% endcode %}
-
-{% code title="XAMPP" %}
-```
-C:\xampp\htdocs\
-```
-{% endcode %}
-
-***
 
 ### <mark style="color:orange;">`PHP`</mark>
 
