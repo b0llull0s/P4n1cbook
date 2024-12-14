@@ -82,6 +82,7 @@ ALL : 10.10.16.8
 {% endcode %}
 
 * <mark style="color:purple;">Add that in the</mark> <mark style="color:orange;">**`/hosts.allow`**</mark> <mark style="color:purple;">file; make sure to let a blank line at the end.</mark>
+* <mark style="color:orange;">**`sshd_wl`**</mark> <mark style="color:purple;">is the syslink to</mark> <mark style="color:orange;">**`host.allow`**</mark> <mark style="color:purple;">and is normally in</mark> <mark style="color:orange;">**`.ssh`**</mark>
 {% endhint %}
 
 ## <mark style="color:purple;">**OpenSSH Vulnerabilities**</mark>
