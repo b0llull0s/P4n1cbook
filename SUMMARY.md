@@ -16,6 +16,7 @@
   * [FTP](fundamentals/network-protocols/ftp.md)
   * [SMB](fundamentals/network-protocols/smb.md)
   * [SNMP](fundamentals/network-protocols/snmp.md)
+  * [SMTP](fundamentals/network-protocols/smtp.md)
   * [WinRM](fundamentals/network-protocols/winrm.md)
   * [LLMNR](fundamentals/network-protocols/llmnr.md)
 * [Databases](fundamentals/network-protocols/sql.md)
