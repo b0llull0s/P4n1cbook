@@ -1,5 +1,6 @@
 ---
 description: Internet Printing Protocol
+icon: print
 ---
 
 # IPP
