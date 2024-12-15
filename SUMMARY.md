@@ -120,20 +120,6 @@
   * [CVE-2022-21699](archive/cve-vault/cve-2022-21699.md)
   * [CVE-2022-20229](archive/cve-vault/cve-2022-20229.md)
   * [CVE-2022-4510](archive/cve-vault/cve-2022-4510.md)
-  * [CVE-2021-41091](archive/cve-vault/cve-2021-41091.md)
-  * [CVE-2021-4034](archive/cve-vault/cve-2021-4034.md)
-  * [CVE-2021-36368](archive/cve-vault/cve-2021-36368.md)
-  * [CVE-2021-3345](archive/cve-vault/cve-2021-3345.md)
-  * [CVE-2018-14335](archive/cve-vault/cve-2018-14335.md)
-  * [CVE-2018-9276](archive/cve-vault/cve-2018-9276.md)
-  * [CVE-2018-1133](archive/cve-vault/cve-2018-1133.md)
-  * [CVE-2017-9101](archive/cve-vault/cve-2017-9101.md)
-  * [CVE-2016-4971](archive/cve-vault/cve-2016-4971.md)
-  * [CVE-2015-3292](archive/cve-vault/cve-2015-3292.md)
-  * [CVE-2014-6287](archive/cve-vault/cve-2014-6287.md)
-  * [CVE-2008-4250](archive/cve-vault/cve-2008-4250.md)
-  * [CVE-2007-2447](archive/cve-vault/cve-2007-2447.md)
-  * [CVE-2005-3503](archive/cve-vault/cve-2005-3503.md)
 
 ## MITRE ATT\&CK Framework
 
