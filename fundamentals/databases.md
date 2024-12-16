@@ -1,21 +1,87 @@
 ---
-icon: server
+icon: database
+description: Structure Query Language
 ---
 
-# MySQL
+# Databases
 
-{% hint style="info" %}
-## <mark style="color:purple;">Default Ports:</mark> <mark style="color:orange;">`3306`</mark> <mark style="color:purple;">and</mark> <mark style="color:orange;">`33060`</mark>
-
-* <mark style="color:purple;">Use</mark> <mark style="color:orange;">**`ss -tlpn`**</mark> <mark style="color:purple;">**to check if is being run locally.**</mark>
-
-### <mark style="color:green;">`Python`</mark> <mark style="color:purple;">-></mark> <mark style="color:green;">`MySQL Connector/Python`</mark> <mark style="color:purple;">automatically appends a semicolon at the end of your queries.</mark>
+{% hint style="warning" %}
+* <mark style="color:purple;">SQL queries are sent over</mark> <mark style="color:orange;">**`TCP/IP`**</mark>
+* <mark style="color:purple;">SQL can transported over</mark> <mark style="color:orange;">**`HTTP`**</mark><mark style="color:purple;">,</mark> <mark style="color:orange;">**`HTTPS`**</mark><mark style="color:purple;">, or custom protocols designed for database communication.</mark>
+* <mark style="color:purple;">SQL can be wrapped in other protocols (e.g.,</mark> <mark style="color:orange;">**`ODBC`**</mark>, <mark style="color:orange;">**`JDBC`**</mark><mark style="color:purple;">)</mark>
 {% endhint %}
+
+{% tabs %}
+{% tab title="SQL Server" %}
+{% code title="Default Port" %}
+```
+1433
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="MySQL" %}
+{% code title="Default Port" %}
+```
+3306 and 33060
+```
+{% endcode %}
+
+{% hint style="warning" %}
+<mark style="color:purple;">Same as</mark> <mark style="color:orange;">**`MariaDb`**</mark>
+{% endhint %}
+{% endtab %}
+
+{% tab title="PostgreSQL" %}
+{% code title="Port" %}
+```
+5432
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="MSSQL" %}
+{% code title="TCP Port" %}
+```
+1433
+```
+{% endcode %}
+
+{% code title="UDP Port" %}
+```
+1434
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="Oracle" %}
+{% code title="Port" %}
+```
+1521
+```
+{% endcode %}
+{% endtab %}
+
+{% tab title="IBM DB2" %}
+{% code title="TCP Port" %}
+```
+50000
+```
+{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ***
 
 {% hint style="info" %}
-### <mark style="color:orange;">`MySQL`</mark> <mark style="color:purple;">Operator Precedence</mark>
+## <mark style="color:purple;">MySQL</mark>
+
+* <mark style="color:purple;">Use</mark> <mark style="color:orange;">**`ss -tlpn`**</mark> <mark style="color:purple;">**to check if is being run locally.**</mark>
+* <mark style="color:green;">**`MySQL Connector/Python`**</mark> <mark style="color:purple;">automatically appends a semicolon at the end of your queries.</mark>
+
+***
+
+### <mark style="color:purple;">Operator Precedence</mark>
 
 <mark style="color:purple;">**Highest to lowest:**</mark>
 
@@ -46,12 +112,10 @@ icon: server
    * <mark style="color:orange;">**`&&`**</mark> <mark style="color:purple;">(AND)</mark>
 8. <mark style="color:purple;">**Logical OR**</mark><mark style="color:purple;">:</mark>
    * <mark style="color:orange;">**`||`**</mark> <mark style="color:purple;">(OR)</mark>
-{% endhint %}
 
 ***
 
-{% hint style="info" %}
-## <mark style="color:purple;">Commands:</mark>
+### <mark style="color:purple;">Commands</mark>
 
 ### <mark style="color:purple;">General</mark>
 
@@ -193,4 +257,8 @@ SELECT * FROM logins WHERE username LIKE 'admin%';
 ```
 {% endcode %}
 {% endhint %}
+
+***
+
+## <mark style="color:purple;">NoSQL</mark>
 
