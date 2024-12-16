@@ -1,6 +1,6 @@
 ---
-icon: chart-bullet
 description: Data query and manipulation language for APIs
+icon: chart-bullet
 ---
 
 # GraphSQL

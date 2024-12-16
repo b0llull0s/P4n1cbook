@@ -26,6 +26,14 @@ HackTricks
 
 ***
 
+### <mark style="color:red;">`PayloadAllTheThings`</mark>
+
+> Literally...
+
+{% embed url="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XXE%20Injection#exploiting-xxe-to-retrieve-files" %}
+
+***
+
 ### <mark style="color:green;">**`HackTheBox`**</mark>
 
 > <mark style="color:purple;">Best learning resources out there, both academy and labs.</mark>
