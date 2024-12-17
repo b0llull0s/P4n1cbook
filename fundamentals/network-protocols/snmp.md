@@ -38,13 +38,7 @@ sudo apt install snmp-mibs-downloader
 
 {% code title="Arch" %}
 ```sh
-// Some code
-```
-{% endcode %}
-
-{% code title="Kali" %}
-```sh
-// Some code
+sudo pacman -Sy net-snmp
 ```
 {% endcode %}
 {% endhint %}
@@ -90,4 +84,3 @@ onesixtyone -c dict.txt 10.129.42.254
 ```
 {% endcode %}
 {% endhint %}
-

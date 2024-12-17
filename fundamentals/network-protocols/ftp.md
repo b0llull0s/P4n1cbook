@@ -45,7 +45,6 @@ PASS <password>
 searchsploit <version>
 ```
 
-* <mark style="color:purple;">Always check the root path.</mark>
 * <mark style="color:purple;">Check where you land:</mark>
 
 ```bash
@@ -83,4 +82,3 @@ nc 10.10.10.131 6200
 
 
 {% endhint %}
-

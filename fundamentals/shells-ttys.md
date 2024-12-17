@@ -48,80 +48,76 @@ stty raw -echo; fg %1; export SHELL=/bin/bash; export TERM=screen; stty rows 38 
 {% hint style="info" %}
 ## <mark style="color:purple;">Spawning Shells</mark>
 
-{% code title="" %}
+* <mark style="color:purple;">The</mark> <mark style="color:orange;">**`pty`**</mark> <mark style="color:purple;">module in</mark> <mark style="color:green;">**`Python`**</mark> <mark style="color:purple;">allows you to spawn a new process in a pseudo-terminal, effectively creating an interactive shell:</mark>
+
 ```sh
 python3 -c 'import pty; pty.spawn("/bin/sh")' 
 ```
-{% endcode %}
 
-{% code title="" %}
+* <mark style="color:purple;">The</mark> <mark style="color:orange;">**`script`**</mark> <mark style="color:purple;">command starts a shell session and records the session to a file.</mark> <mark style="color:orange;">**`/dev/null`**</mark> <mark style="color:purple;">is specified as the file where the session is "recorded", but since it's</mark> <mark style="color:orange;">**`/dev/null`**</mark><mark style="color:purple;">, no logging actually happens:</mark>
+
 ```sh
 script -qc /bin/bash /dev/null
 ```
-{% endcode %}
 
-{% code title="" %}
+* <mark style="color:purple;">Uses</mark> <mark style="color:orange;">**`echo`**</mark> <mark style="color:purple;">to pass the</mark> <mark style="color:green;">**`Python`**</mark> <mark style="color:purple;">command</mark> <mark style="color:orange;">**`os.system('/bin/bash')`**</mark> <mark style="color:purple;">to the Python interpreter:</mark>
+
 ```sh
 echo os.system('/bin/bash') 
 ```
-{% endcode %}
 
-{% code title="" %}
+* <mark style="color:purple;">Spawn an interactive shell directly from the terminal:</mark>
+
 ```sh
-/bin/sh -i 
+/bin/sh -i
 ```
-{% endcode %}
 
-{% code title="" %}
-```sh
-/bin/bash -i
-```
-{% endcode %}
+* <mark style="color:purple;">The command</mark> <mark style="color:orange;">**`exec "/bin/sh"`**</mark> <mark style="color:purple;">tells Perl to replace the running</mark> <mark style="color:orange;">**`Perl`**</mark> <mark style="color:purple;">process with a new</mark> <mark style="color:orange;">**`/bin/sh`**</mark> <mark style="color:purple;">shell:</mark>
 
-{% code title="" %}
 ```sh
 perl -e 'exec "/bin/sh";'
 ```
-{% endcode %}
 
-{% code title="" %}
+* <mark style="color:purple;">This is similar to the previous example, but without the</mark> <mark style="color:orange;">**`-e`**</mark> <mark style="color:purple;">flag used directly from the command line. It represents</mark> <mark style="color:orange;">**`Perl`**</mark> <mark style="color:purple;">code where the</mark> <mark style="color:orange;">**`exec`**</mark> <mark style="color:purple;">function is used to spawn a shell:</mark>
+
 ```sh
-perl: exec "/bin/sh"; 
+perl: exec "/bin/sh";
 ```
-{% endcode %}
 
-{% code title="" %}
+* <mark style="color:red;">**`Ruby`**</mark><mark style="color:purple;">'s</mark> <mark style="color:orange;">**`exec`**</mark> <mark style="color:purple;">function, like in Perl, replaces the current process with a new process—in this case,</mark> <mark style="color:orange;">**`/bin/sh`**</mark><mark style="color:purple;">:</mark>
+
 ```sh
-ruby: exec "/bin/sh" 
+ruby: exec "/bin/sh"
 ```
-{% endcode %}
 
-{% code title="" %}
+* <mark style="color:purple;">Runs a shell command from</mark> <mark style="color:orange;">**`Lua`**</mark><mark style="color:purple;">, but unlike in</mark> <mark style="color:orange;">**`Perl`**</mark> <mark style="color:purple;">or</mark> <mark style="color:red;">**`Ruby`**</mark><mark style="color:purple;">, this does not replace the current process. It runs</mark> <mark style="color:orange;">**`/bin/sh`**</mark> <mark style="color:purple;">as a child process:</mark>
+
 ```sh
-lua: os.execute('/bin/sh') 
+lua: os.execute('/bin/sh')
 ```
-{% endcode %}
 
-{% code title="" %}
+* <mark style="color:purple;">Replaces the current</mark> <mark style="color:red;">**`Ruby`**</mark> <mark style="color:purple;">interpreter (IRB) with the shell:</mark>
+
 ```sh
-exec "/bin/sh"; 
-```
-{% endcode %}
-
-```
-// Some code
+exec "/bin/sh";
 ```
 
-```
-// Some code
+* <mark style="color:purple;">Used to execute an external shell command:</mark>
+
+```vim
+:!bash
 ```
 
-```
-// Some code
+* <mark style="color:purple;">Changes the default shell used by vim's</mark> <mark style="color:orange;">**`:!`**</mark> <mark style="color:purple;">command:</mark>
+
+```vim
+:set shell=/bin/bash:shell
 ```
 
-```
-// Some code
+* <mark style="color:purple;">Spawn a shell from within the</mark> <mark style="color:orange;">**`nmap`**</mark> <mark style="color:purple;">interface, enabling the execution of additional shell commands while scanning:</mark>
+
+```sh
+!sh
 ```
 {% endhint %}
 
@@ -377,14 +373,3 @@ powershell -NoP -NonI -W Hidden -Exec Bypass -Command $listener = [System.Net.So
 ```
 {% endcode %}
 {% endhint %}
-
-\
-Spawning Shells
-
-```bash
-exec "/bin/sh"                # (From within IRB) 
-:!bash                        # (From within vi)
-:set shell=/bin/bash:shell    # (From within vi) 
-!sh                           # (From within nmap)
-```
-
