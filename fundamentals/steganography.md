@@ -5,7 +5,31 @@ hidden: true
 
 # Steganography
 
-Extract
+{% hint style="info" %}
+### <mark style="color:orange;">`steghide`</mark>
+
+{% code title="Extract data from a picture" %}
+```sh
+steghide extract -sf <file>
+```
+{% endcode %}
+{% endhint %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ```bash
 #Strings
