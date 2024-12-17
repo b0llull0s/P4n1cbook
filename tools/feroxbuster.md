@@ -209,7 +209,3 @@ feroxbuster -u <url> -w <wordlist> --collect-backups
 ```
 {% endcode %}
 {% endhint %}
-
-***
-
-## <mark style="color:purple;">Wordlists</mark>
