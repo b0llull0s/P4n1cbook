@@ -22,7 +22,7 @@
   * [LLMNR](fundamentals/network-protocols/llmnr.md)
 * [Databases](fundamentals/network-protocols/sql.md)
 * [Web APIs](fundamentals/web-apis/README.md)
-  * [GraphSQL](fundamentals/databases/graphsql.md)
+  * [GraphQL](fundamentals/web-apis/graphql.md)
 * [Shells/TTYs](fundamentals/shells-ttys.md)
 * [💾 Regex](fundamentals/regex.md)
 * [Dorks](fundamentals/dorks.md)
