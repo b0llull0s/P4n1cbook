@@ -52,7 +52,7 @@
   * [XXE](web-exploitation/main-techniques/xxe.md)
   * [Deserialization](web-exploitation/main-techniques/deserialization.md)
   * [Log Poisoning](web-exploitation/main-techniques/log-poisoning.md)
-  * [Code Injection](web-exploitation/main-techniques/code-injection.md)
+  * [Command Injection](web-exploitation/main-techniques/command-injection.md)
   * [SQLi](web-exploitation/main-techniques/sqli.md)
   * [Arbitrary File Upload](web-exploitation/main-techniques/arbitrary-file-upload.md)
   * [SSTI](web-exploitation/main-techniques/ssti.md)

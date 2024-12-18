@@ -111,3 +111,5 @@ V. Anton Spraul
 > <mark style="color:purple;">The community-driven organization that provides resources and best practices for improving web application security.</mark>
 
 {% embed url="https://owasp.org/" %}
+
+{% embed url="https://cheatsheetseries.owasp.org/index.html" %}
