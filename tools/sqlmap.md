@@ -77,7 +77,14 @@ icon: sword
 {% hint style="info" %}
 ### <mark style="color:orange;">`HTTP`</mark>
 
-* <mark style="color:purple;">When working with HTTP request is good practice to directly save the request in to a file and use the</mark> <mark style="color:orange;">**`-r`**</mark> <mark style="color:purple;">option.</mark>
+* <mark style="color:purple;">When working with HTTP request is good practice to directly save the request in to a file and use the</mark> <mark style="color:orange;">**`-r`**</mark> <mark style="color:purple;">option</mark>
+
+{% code overflow="wrap" %}
+```sh
+sqlmap -r request.txt --level 5 --risk 3 --dump-all --batch
+```
+{% endcode %}
+
 * <mark style="color:purple;">Use</mark> <mark style="color:orange;">**`--force-ssl`**</mark> <mark style="color:purple;">when working with</mark> <mark style="color:orange;">**`HTTPS`**</mark><mark style="color:purple;">.</mark>
 
 {% code title="Initiates the injection test" %}
