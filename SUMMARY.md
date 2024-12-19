@@ -61,6 +61,7 @@
   * [IDOR](web-exploitation/main-techniques/idor.md)
   * [SSRF](web-exploitation/main-techniques/ssrf.md)
 * [Web Services](web-exploitation/web-services/README.md)
+  * [Kubernetes](web-exploitation/web-services/kubernetes.md)
   * [Express](web-exploitation/web-services/express.md)
   * [Tiny File Manager](web-exploitation/web-services/tiny-file-manager.md)
   * [Joomla](web-exploitation/web-services/joomla.md)
