@@ -15,6 +15,7 @@
   * [Telnet](fundamentals/network-protocols/telnet.md)
   * [DNS](fundamentals/network-protocols/dns.md)
   * [FTP](fundamentals/network-protocols/ftp.md)
+  * [HTTP/HTTPS](fundamentals/network-protocols/http-https.md)
   * [SMB](fundamentals/network-protocols/smb.md)
   * [SNMP](fundamentals/network-protocols/snmp.md)
   * [SMTP](fundamentals/network-protocols/smtp.md)

