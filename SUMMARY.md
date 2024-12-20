@@ -61,7 +61,6 @@
   * [IDOR](web-exploitation/main-techniques/idor.md)
   * [SSRF](web-exploitation/main-techniques/ssrf.md)
 * [Web Services](web-exploitation/web-services/README.md)
-  * [Kubernetes](web-exploitation/web-services/kubernetes.md)
   * [Express](web-exploitation/web-services/express.md)
   * [Tiny File Manager](web-exploitation/web-services/tiny-file-manager.md)
   * [Joomla](web-exploitation/web-services/joomla.md)
@@ -77,6 +76,12 @@
     * [JDWP](web-exploitation/java-based-web-application/jdwp.md)
 * [Reporting](web-exploitation/reporting.md)
 
+## Cloud Exploitation
+
+* [Kubernetes](cloud-exploitation/kubernetes.md)
+* [Azure](cloud-exploitation/azure.md)
+* [AWS](cloud-exploitation/aws.md)
+
 ## Post Exploitation
 
 * [File Transfer](post-exploitation/file-transfer.md)
@@ -85,11 +90,6 @@
   * [Docker Escape](post-exploitation/linux-privilege-escalation/docker-escape.md)
   * [💣 Buffer Overflow - Linux](post-exploitation/linux-privilege-escalation/buffer-overflow-linux.md)
 * [Windows Privilege Scalation](post-exploitation/windows-privilege-scalation.md)
-
-## Cloud Exploitation
-
-* [Azure](cloud-exploitation/azure.md)
-* [AWS](cloud-exploitation/aws.md)
 
 ## Wireless Exploitation
 
