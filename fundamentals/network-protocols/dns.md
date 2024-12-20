@@ -6,6 +6,12 @@ description: Domain Name System
 # DNS
 
 {% hint style="info" %}
+#### <mark style="color:orange;">`Port 53`</mark>
+{% endhint %}
+
+***
+
+{% hint style="info" %}
 ### <mark style="color:purple;">Enumeration</mark>
 
 #### <mark style="color:purple;">Resolve the IP:</mark>
@@ -30,7 +36,7 @@ server 10.10.10.10
 
 ***
 
-#### <mark style="color:purple;">If</mark>  <mark style="color:orange;">`DNS`</mark> <mark style="color:purple;">is running over</mark> <mark style="color:orange;">`TCP`</mark> <mark style="color:purple;">try a zone transfer:</mark>&#x20;
+#### <mark style="color:purple;">If</mark> <mark style="color:orange;">`DNS`</mark> <mark style="color:purple;">is running over</mark> <mark style="color:orange;">`TCP`</mark> <mark style="color:purple;">try a zone transfer:</mark>&#x20;
 
 ```bash
 dig axfr HOST.NAME @10.10.10.29

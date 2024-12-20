@@ -5,6 +5,12 @@ description: Secure Shell Protocol
 
 # SSH
 
+{% hint style="info" %}
+#### <mark style="color:orange;">`Port 22`</mark>
+{% endhint %}
+
+***
+
 ## <mark style="color:purple;">Key generation</mark>
 
 {% tabs %}

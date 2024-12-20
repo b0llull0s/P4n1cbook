@@ -20,7 +20,7 @@ HackTricks
 
 ### <mark style="color:red;">`GTFOBins`</mark>
 
-> <mark style="color:red;">**`GTFOBins`**</mark> <mark style="color:purple;">is the best curated list of Unix binaries that can be used to bypass local security restrictions in misconfigured systems</mark>
+> <mark style="color:purple;">The best curated list of Unix binaries that can be used to bypass local security restrictions in misconfigured systems</mark>
 
 {% embed url="https://gtfobins.github.io/" %}
 
@@ -28,7 +28,7 @@ HackTricks
 
 ### <mark style="color:red;">`PayloadAllTheThings`</mark>
 
-> Literally...
+> <mark style="color:purple;">Literally...</mark>
 
 {% embed url="https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XXE%20Injection#exploiting-xxe-to-retrieve-files" %}
 
@@ -76,25 +76,7 @@ CTF Blog
 
 > <mark style="color:purple;">Best publisher for technical books about hacking and programming.</mark>
 
-{% embed url="https://nostarch.com/tlcl2" %}
-William Shotts
-{% endembed %}
-
-{% embed url="https://nostarch.com/bug-bounty-bootcamp" %}
-Vicky Lee
-{% endembed %}
-
-{% embed url="https://nostarch.com/hacking-apis" %}
-Corey Ball
-{% endembed %}
-
-{% embed url="https://nostarch.com/black-hat-python2E" %}
-Justin Seitz and Tim Arnold
-{% endembed %}
-
-{% embed url="https://nostarch.com/thinklikeaprogrammer" %}
-V. Anton Spraul
-{% endembed %}
+{% embed url="https://nostarch.com/" %}
 
 ***
 

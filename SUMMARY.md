@@ -12,6 +12,7 @@
 * [Linux Cheat Sheet](fundamentals/linux-cheat-sheet.md)
 * [🌐 Network Protocols](fundamentals/network-protocols/README.md)
   * [SSH](fundamentals/network-protocols/ssh.md)
+  * [Telnet](fundamentals/network-protocols/telnet.md)
   * [DNS](fundamentals/network-protocols/dns.md)
   * [FTP](fundamentals/network-protocols/ftp.md)
   * [SMB](fundamentals/network-protocols/smb.md)

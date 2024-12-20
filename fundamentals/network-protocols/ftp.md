@@ -5,14 +5,19 @@ description: File Transfer Protocol
 
 # FTP
 
-{% tabs %}
-{% tab title="Port" %}
-```
-21
-```
-{% endtab %}
+{% hint style="info" %}
+### <mark style="color:purple;">Standard Ports</mark>
 
-{% tab title="Login " %}
+<mark style="color:purple;">**Data**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">-></mark>  <mark style="color:orange;">**`Port 20`**</mark>
+
+<mark style="color:purple;">**Command**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">-></mark> <mark style="color:orange;">**`Port 21`**</mark>
+{% endhint %}
+
+***
+
+{% hint style="info" %}
+### <mark style="color:purple;">Basic Commands</mark>
+
 {% code title="Standard Login" %}
 ```bash
 ftp <IP>
@@ -26,13 +31,12 @@ ftp <IP>
 USER <user>
 ```
 
-* To specify a password:
+* <mark style="color:purple;">To specify a password:</mark>
 
 ```bash
 PASS <password>
 ```
-{% endtab %}
-{% endtabs %}
+{% endhint %}
 
 ***
 
