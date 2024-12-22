@@ -64,6 +64,7 @@
   * [SSRF](web-exploitation/main-techniques/ssrf.md)
 * [Web Services](web-exploitation/web-services/README.md)
   * [Express](web-exploitation/web-services/express.md)
+  * [Magento](web-exploitation/web-services/magento.md)
   * [Tiny File Manager](web-exploitation/web-services/tiny-file-manager.md)
   * [Joomla](web-exploitation/web-services/joomla.md)
   * [CMS Made Simple](web-exploitation/web-services/cms-made-simple.md)
