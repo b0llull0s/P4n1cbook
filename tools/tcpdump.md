@@ -178,8 +178,8 @@ tcpdump -i (int) proto 6
 ### <mark style="color:purple;">`Protocol Number List`</mark>
 
 * <mark style="color:orange;">**`ICMP`**</mark>**&#x20;**<mark style="color:purple;">**(Internet Control Message Protocol) ->**</mark>**&#x20;**<mark style="color:orange;">**`1`**</mark>
-* <mark style="color:orange;">**`IGMP`**</mark> <mark style="color:purple;">(Internet Group Management Protocol) -></mark> <mark style="color:orange;">**`2`**</mark>
-* <mark style="color:orange;">**`TCP`**</mark> <mark style="color:purple;">(Transmission Control Protocol) -></mark> <mark style="color:orange;">**`6`**</mark>
+* <mark style="color:orange;">**`IGMP`**</mark> <mark style="color:purple;">**(Internet Group Management Protocol) ->**</mark> <mark style="color:orange;">**`2`**</mark>
+* <mark style="color:orange;">**`TCP`**</mark> <mark style="color:purple;">**(Transmission Control Protocol) ->**</mark> <mark style="color:orange;">**`6`**</mark>
 * <mark style="color:orange;">**`UDP`**</mark>**&#x20;**<mark style="color:purple;">**(User Datagram Protocol) ->**</mark>**&#x20;**<mark style="color:orange;">**`17`**</mark>
 * <mark style="color:orange;">**`OSPF`**</mark>**&#x20;**<mark style="color:purple;">**(Open Shortest Path First) ->**</mark>**&#x20;**<mark style="color:orange;">**`89`**</mark>
 * <mark style="color:orange;">**`EIGRP`**</mark>**&#x20;**<mark style="color:purple;">**(Enhanced Interior Gateway Routing Protocol) ->**</mark>**&#x20;**<mark style="color:orange;">**`88`**</mark>
