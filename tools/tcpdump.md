@@ -95,7 +95,7 @@ tcpdump -s 64
 
 * <mark style="color:purple;">Filter by</mark> <mark style="color:orange;">**`Packet Size`**</mark><mark style="color:purple;">:</mark>
 
-```
+```bash
 tcpdump greater 1000
 tcpdump less 500
 ```
