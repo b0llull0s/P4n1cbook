@@ -34,6 +34,7 @@
 ## Tools
 
 * [curl](tools/curl.md)
+* [tcpdump](tools/tcpdump.md)
 * [Nmap](tools/nmap.md)
 * [ffuf](tools/ffuz.md)
 * [Gobuster](tools/gobuster.md)
