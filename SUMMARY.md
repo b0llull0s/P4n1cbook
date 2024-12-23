@@ -51,6 +51,7 @@
 
 * [Recon](web-exploitation/recon.md)
 * [Main Techniques](web-exploitation/main-techniques/README.md)
+  * [Prototype Pollution](web-exploitation/main-techniques/prototype-pollution.md)
   * [XXE](web-exploitation/main-techniques/xxe.md)
   * [Deserialization](web-exploitation/main-techniques/deserialization.md)
   * [Log Poisoning](web-exploitation/main-techniques/log-poisoning.md)
