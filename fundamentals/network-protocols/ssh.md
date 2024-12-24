@@ -95,6 +95,22 @@ ALL : 10.10.16.8
 
 {% embed url="https://repology.org/project/openssh/cves?version=8.9.p1" %}
 
+{% hint style="info" %}
+### <mark style="color:orange;">`RsaCtfTool`</mark>
+
+* &#x20;[<mark style="color:orange;">**`RSA attack tool`**</mark>](https://github.com/RsaCtfTool/RsaCtfTool/tree/master) <mark style="color:purple;">(mainly for ctf) - retrieve private key from weak public key and/or uncipher data.</mark>
+* <mark style="color:purple;">Install</mark> <mark style="color:orange;">**`libmpc-dev`**</mark><mark style="color:purple;">,</mark> <mark style="color:orange;">**`libgmp3-dev`**</mark> <mark style="color:purple;">and</mark> <mark style="color:orange;">**`sagemath`**</mark>
+* <mark style="color:purple;">Also recommend to use a virtual environment</mark>
+
+{% code overflow="wrap" %}
+```sh
+RsaCtfTool/RsaCtfTool.py --publickey decoder.pub --decryptfile pass.crypt 
+```
+{% endcode %}
+{% endhint %}
+
+***
+
 {% hint style="danger" %}
 ### <mark style="color:orange;">`CVE-2008-0166`</mark>
 

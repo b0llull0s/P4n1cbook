@@ -39,6 +39,32 @@ rlwrap nc 10.10.10.131 6200
 stty raw -echo; fg %1; export SHELL=/bin/bash; export TERM=screen; stty rows 38 columns 116; reset;
 ```
 {% endcode %}
+
+***
+
+### <mark style="color:purple;">Use</mark> <mark style="color:orange;">`arrow-keys`</mark>
+
+* <mark style="color:purple;">Use</mark> <mark style="color:orange;">**`bash`**</mark><mark style="color:purple;">:</mark>
+
+```sh
+bash
+```
+
+* <mark style="color:purple;">Turn history on:</mark>
+
+```sh
+set -o history
+```
+
+* <mark style="color:purple;">In the</mark> <mark style="color:orange;">**`.bashrc`**</mark> <mark style="color:purple;">file, make sure</mark> <mark style="color:orange;">**`HISTSIZE`**</mark> <mark style="color:purple;">is not set to 0:</mark>
+
+{% code overflow="wrap" %}
+```sh
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=0
+HISTFILESIZE=0
+```
+{% endcode %}
 {% endhint %}
 
 ***
