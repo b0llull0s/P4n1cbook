@@ -30,6 +30,7 @@
 * [Dorks](fundamentals/dorks.md)
 * [Cryptography](fundamentals/cryptography.md)
 * [Steganography](fundamentals/steganography.md)
+* [Reverse Engineering](fundamentals/reverse-engineering.md)
 
 ## Tools
 

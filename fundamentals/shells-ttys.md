@@ -56,13 +56,13 @@ bash
 set -o history
 ```
 
-* <mark style="color:purple;">In the</mark> <mark style="color:orange;">**`.bashrc`**</mark> <mark style="color:purple;">file, make sure</mark> <mark style="color:orange;">**`HISTSIZE`**</mark> <mark style="color:purple;">is not set to 0:</mark>
+* <mark style="color:purple;">In the</mark> <mark style="color:orange;">**`.bashrc`**</mark> <mark style="color:purple;">file, make sure</mark> <mark style="color:orange;">**`HISTSIZE`**</mark> <mark style="color:purple;">is not set to</mark> <mark style="color:orange;">**`0`**</mark><mark style="color:purple;">:</mark>
 
 {% code overflow="wrap" %}
 ```sh
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=0
-HISTFILESIZE=0
+# for setting history length see HISTSIZE and HISTFILESIZE in bash
+HISTSIZE=1000
+HISTFILESIZE=1000
 ```
 {% endcode %}
 {% endhint %}
