@@ -65,6 +65,16 @@ HISTSIZE=1000
 HISTFILESIZE=1000
 ```
 {% endcode %}
+
+***
+
+### <mark style="color:purple;">Clear Terminal</mark>
+
+* <mark style="color:purple;">Set the environmental variable from the terminal to</mark> <mark style="color:orange;">**`xterm`**</mark><mark style="color:purple;">:</mark>
+
+```sh
+export TERM=xterm
+```
 {% endhint %}
 
 ***
