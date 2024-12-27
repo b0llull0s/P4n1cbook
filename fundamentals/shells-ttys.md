@@ -75,6 +75,22 @@ HISTFILESIZE=1000
 ```sh
 export TERM=xterm
 ```
+
+***
+
+### <mark style="color:purple;">Terminal Size</mark>
+
+* <mark style="color:purple;">Before check the size of your terminal outside the remote shell to have a reference:</mark>
+
+```sh
+stty size
+```
+
+* <mark style="color:purple;">Now you can set it up as you desired to work more comfortably:</mark>&#x20;
+
+```sh
+stty rows <NUMBER> columns <NUMBER>
+```
 {% endhint %}
 
 ***
