@@ -68,6 +68,7 @@
   * [IDOR](web-exploitation/main-techniques/idor.md)
   * [SSRF](web-exploitation/main-techniques/ssrf.md)
 * [Web Services](web-exploitation/web-services/README.md)
+  * [Laravel](web-exploitation/web-services/laravel.md)
   * [Express](web-exploitation/web-services/express.md)
   * [Magento](web-exploitation/web-services/magento.md)
   * [Tiny File Manager](web-exploitation/web-services/tiny-file-manager.md)

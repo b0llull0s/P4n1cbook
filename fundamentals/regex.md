@@ -24,6 +24,14 @@ sed 's/"\([^"]*\)"/\1/g' filename
 ```sh
 sed -i 's/\r$//' file.sh
 ```
+
+* <mark style="color:purple;">Execute a script on a loop until a condition is meet:</mark>
+
+{% code overflow="wrap" %}
+```sh
+until ! ./poc.sh | grep -q "[x] ERROR"; do :; done; echo "No ERROR found, script finished successfully."
+```
+{% endcode %}
 {% endhint %}
 
 ***
