@@ -1,6 +1,6 @@
 ---
-description: HyperText Transfer Protocol
 icon: globe-pointer
+description: HyperText Transfer Protocol
 ---
 
 # HTTP/HTTPS
@@ -42,3 +42,23 @@ openssl x509 -req -in client.req -CA lacasadepapel-htb.pem -CAkey ca.key -set_se
 openssl pkcs12 -export -inkey client.key -in client.cer -out client.p12
 ```
 {% endhint %}
+
+***
+
+{% hint style="info" %}
+### <mark style="color:purple;">Reverse Web Proxies</mark>
+
+* <mark style="color:purple;">Check if you can use proxies to access the local network form the web server</mark>
+* <mark style="color:purple;">First add the address and port to the last line of your</mark> <mark style="color:orange;">**`proxychain.conf`**</mark> <mark style="color:purple;">file:</mark>
+
+```
+http 10.10.10.67 312
+```
+
+* <mark style="color:purple;">Then, just</mark> <mark style="color:orange;">**`nmap`**</mark> <mark style="color:purple;">the</mark> <mark style="color:orange;">**`localhost`**</mark><mark style="color:purple;">:</mark>
+
+```sh
+proxychains nmap -n -sT 127.0.0.1
+```
+{% endhint %}
+

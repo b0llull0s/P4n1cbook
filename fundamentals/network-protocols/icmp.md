@@ -1,6 +1,6 @@
 ---
-description: Internet Control Message Protocol
 icon: hand-point-right
+description: Internet Control Message Protocol
 ---
 
 # ICMP
@@ -53,14 +53,14 @@ PING 192.168.1.1 (192.168.1.1) 56(84) bytes of data.
 
 ### <mark style="color:purple;">Commands</mark>
 
-{% code title="Number of packets" overflow="wrap" %}
+{% code title="Send 4 packages" overflow="wrap" %}
 ```sh
 ping -c 4 example.com
 ```
 {% endcode %}
 
 ```
-// Some code
+// Some c
 ```
 {% endhint %}
 
