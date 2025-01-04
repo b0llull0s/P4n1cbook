@@ -119,7 +119,7 @@ pwd
 dir
 ```
 
-* <mark style="color:purple;">This is the default config file for</mark> <mark style="color:purple;"></mark><mark style="color:purple;">**`TFTP`**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">--></mark> <mark style="color:orange;">**`tftpd-hpa`**</mark>
+* <mark style="color:purple;">This is the default config file for</mark> <mark style="color:orange;">**`TFTP`**</mark> <mark style="color:purple;">--></mark> <mark style="color:orange;">**`tftpd-hpa`**</mark>
 {% endhint %}
 
 ***
