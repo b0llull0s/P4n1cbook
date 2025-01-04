@@ -54,6 +54,7 @@
 
 * [Recon](web-exploitation/recon.md)
 * [Main Techniques](web-exploitation/main-techniques/README.md)
+  * [PHP Filters & Wrappers](web-exploitation/main-techniques/php-filters-and-wrappers.md)
   * [Path Traversal](web-exploitation/main-techniques/path-traversal.md)
   * [Prototype Pollution](web-exploitation/main-techniques/prototype-pollution.md)
   * [XXE](web-exploitation/main-techniques/xxe.md)

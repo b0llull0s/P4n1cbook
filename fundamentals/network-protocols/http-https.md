@@ -46,9 +46,10 @@ openssl pkcs12 -export -inkey client.key -in client.cer -out client.p12
 ***
 
 {% hint style="info" %}
-### <mark style="color:purple;">Reverse Web Proxies</mark>
+### <mark style="color:orange;">`Squid`</mark> <mark style="color:purple;">Proxy</mark>
 
-* <mark style="color:purple;">Check if you can use proxies to access the local network form the web server</mark>
+* <mark style="color:purple;">The config file normally lives in</mark> <mark style="color:orange;">**`/etc/squid/squid.conf`**</mark>&#x20;
+* <mark style="color:purple;">Check if you can reverse it to access the local network.</mark>
 * <mark style="color:purple;">First add the address and port to the last line of your</mark> <mark style="color:orange;">**`proxychain.conf`**</mark> <mark style="color:purple;">file:</mark>
 
 ```
