@@ -32,24 +32,20 @@
 * [Cryptography](fundamentals/cryptography.md)
 * [Steganography](fundamentals/steganography.md)
 * [Reverse Engineering](fundamentals/reverse-engineering.md)
-
-## Tools
-
-* [curl](tools/curl.md)
-* [Netcat](tools/netcat.md)
-* [tcpdump](tools/tcpdump.md)
-* [Nmap](tools/nmap.md)
-* [ffuf](tools/ffuz.md)
-* [Gobuster](tools/gobuster.md)
-* [feroxbuster](tools/feroxbuster.md)
-* [SQLmap](tools/sqlmap.md)
-* [🦈 Wireshark](tools/wireshark.md)
-* [Metasploit](tools/metasploit.md)
-* [JohnTheRipper](tools/johntheripper.md)
-* [NetExec](tools/netexec.md)
-* [impacket](tools/impacket.md)
-* [BURP](tools/burp.md)
-* [🥷 Shodan](tools/shodan.md)
+* [Tools](fundamentals/tools/README.md)
+  * [curl](fundamentals/tools/curl.md)
+  * [Netcat](fundamentals/tools/netcat.md)
+  * [tcpdump](fundamentals/tools/tcpdump.md)
+  * [Nmap](fundamentals/tools/nmap.md)
+  * [ffuf](fundamentals/tools/ffuf.md)
+  * [Gobuster](fundamentals/tools/gobuster.md)
+  * [feroxbuster](fundamentals/tools/feroxbuster.md)
+  * [SQLmap](fundamentals/tools/sqlmap.md)
+  * [🦈 Wireshark](fundamentals/tools/wireshark.md)
+  * [Metasploit](fundamentals/tools/metasploit.md)
+  * [NetExec](fundamentals/tools/netexec.md)
+  * [JohnTheRipper](fundamentals/tools/johntheripper.md)
+  * [impacket](fundamentals/tools/impacket.md)
 
 ## Web Exploitation
 
