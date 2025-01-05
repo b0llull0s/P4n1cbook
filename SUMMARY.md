@@ -36,6 +36,7 @@
 ## Tools
 
 * [curl](tools/curl.md)
+* [Netcat](tools/netcat.md)
 * [tcpdump](tools/tcpdump.md)
 * [Nmap](tools/nmap.md)
 * [ffuf](tools/ffuz.md)
@@ -43,7 +44,7 @@
 * [feroxbuster](tools/feroxbuster.md)
 * [SQLmap](tools/sqlmap.md)
 * [🦈 Wireshark](tools/wireshark.md)
-* [🤖 MetaExploit](tools/metaexploit.md)
+* [Metasploit](tools/metasploit.md)
 * [JohnTheRipper](tools/johntheripper.md)
 * [NetExec](tools/netexec.md)
 * [impacket](tools/impacket.md)

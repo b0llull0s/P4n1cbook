@@ -1,8 +1,9 @@
 ---
 description: Basic Sheet
+icon: hand-holding-skull
 ---
 
-# 🤖 MetaExploit
+# Metasploit
 
 <mark style="color:purple;">**Search:**</mark>
 
