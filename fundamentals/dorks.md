@@ -37,6 +37,12 @@ link:"https://example.com
 filetype:<log> site:<example.com>
 ```
 {% endcode %}
+
+{% code title="Search for multiple words" %}
+```
+allinurl:login.asp
+```
+{% endcode %}
 {% endhint %}
 {% endtab %}
 
@@ -77,64 +83,61 @@ Google Hacking Database
 
 ***
 
-{% tabs %}
-{% tab title="Subdomains" %}
-{% hint style="warning" %}
-```
-site:<*.example.com>
-```
-{% endhint %}
-{% endtab %}
+{% hint style="info" %}
+### <mark style="color:purple;">`Enumeration`</mark>
 
-{% tab title="APIs" %}
-{% hint style="warning" %}
+{% code title="Subdomains" %}
+```
+inurl:'/content/dam' ext:txt
+```
+{% endcode %}
+
+{% code title="PDF files" %}
+```
+filetype:pdf "cybersecurity report"
+```
+{% endcode %}
+
 {% code title="Kibana" %}
 ```
 site:example.com inurl:app/kibana
 ```
 {% endcode %}
-{% endhint %}
-{% endtab %}
 
-{% tab title="Files" %}
-{% hint style="warning" %}
-{% code title="PHP" %}
+{% code title="PHP files" %}
 ```
 site:example.com ext:php
 ```
 {% endcode %}
 
-{% code title="Log" %}
+{% code title="Log files" %}
 ```
 site:example.com ext:log
 ```
 {% endcode %}
 
-{% code title="Passwords" %}
+{% code title="Password files" %}
 ```
 site:example.com ext:txt password
 ```
 {% endcode %}
-{% endhint %}
-{% endtab %}
 
-{% tab title="AWS" %}
-{% hint style="warning" %}
-{% code title="Buckets" %}
+{% code title="Amazon Buckets" %}
 ```
 site:s3.amazonaws.com <Companay_name>
 ```
 {% endcode %}
-{% endhint %}
-{% endtab %}
 
-{% tab title="CISCO" %}
-{% hint style="warning" %}
-{% code title="Anyconnect" %}
+{% code title="Cisco Anyconnect" %}
 ```
 intitle:index.of cisco anyconnect
 ```
 {% endcode %}
+
+{% code title="Adobe Experience Manager" %}
+```
+inurl:'/content/dam' ext:txt
+```
+{% endcode %}
 {% endhint %}
-{% endtab %}
-{% endtabs %}
+
