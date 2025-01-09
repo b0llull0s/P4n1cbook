@@ -20,6 +20,7 @@
   * [SMB](fundamentals/network-protocols/smb.md)
   * [SNMP](fundamentals/network-protocols/snmp.md)
   * [SMTP](fundamentals/network-protocols/smtp.md)
+  * [NFS](fundamentals/network-protocols/nfs.md)
   * [IPP](fundamentals/network-protocols/ipp.md)
   * [WinRM](fundamentals/network-protocols/winrm.md)
   * [LLMNR](fundamentals/network-protocols/llmnr.md)
