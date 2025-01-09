@@ -44,6 +44,7 @@
   * [SQLmap](fundamentals/tools/sqlmap.md)
   * [🦈 Wireshark](fundamentals/tools/wireshark.md)
   * [Metasploit](fundamentals/tools/metasploit.md)
+  * [Crunch](fundamentals/tools/crunch.md)
   * [NetExec](fundamentals/tools/netexec.md)
   * [JohnTheRipper](fundamentals/tools/johntheripper.md)
   * [impacket](fundamentals/tools/impacket.md)
