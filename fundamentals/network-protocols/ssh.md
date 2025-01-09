@@ -89,6 +89,14 @@ ALL : 10.10.16.8
 
 * <mark style="color:purple;">Add that in the</mark> <mark style="color:orange;">**`/hosts.allow`**</mark> <mark style="color:purple;">file; make sure to let a blank line at the end.</mark>
 * <mark style="color:orange;">**`sshd_wl`**</mark> <mark style="color:purple;">is the syslink to</mark> <mark style="color:orange;">**`host.allow`**</mark> <mark style="color:purple;">and is normally in</mark> <mark style="color:orange;">**`.ssh`**</mark>
+
+***
+
+* <mark style="color:purple;">In recent versions of</mark> <mark style="color:orange;">**`OpenSSH`**</mark><mark style="color:purple;">, certain older key types like</mark> <mark style="color:orange;">**`ssh-rsa`**</mark> <mark style="color:purple;">have been deprecated because of security concerns with the</mark> <mark style="color:orange;">**`SHA-1`**</mark> <mark style="color:purple;">hash algorithm they use:</mark>
+
+```sh
+ssh root@10.10.10.34 -i id_rsa -o PubkeyAcceptedKeyTypes=ssh-rsa
+```
 {% endhint %}
 
 ## <mark style="color:purple;">**OpenSSH Vulnerabilities**</mark>
