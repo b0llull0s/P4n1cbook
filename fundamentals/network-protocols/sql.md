@@ -255,6 +255,18 @@ SELECT * FROM table_name WHERE <condition>;
 SELECT * FROM logins WHERE username LIKE 'admin%';
 ```
 {% endcode %}
+
+***
+
+### <mark style="color:green;">`pymysql`</mark>
+
+* <mark style="color:purple;">The</mark> <mark style="color:orange;">**`pymysql`**</mark> <mark style="color:purple;">library is a Python client for interacting with MySQL databases.</mark>
+
+<mark style="color:red;">**`Steps to Exploit`**</mark>
+
+1. <mark style="color:purple;">**Identify the Connection Script**</mark>
+2. <mark style="color:purple;">**Extract Database Credentials**</mark>
+3. <mark style="color:purple;">**Execute SQL Queries**</mark>
 {% endhint %}
 
 ***

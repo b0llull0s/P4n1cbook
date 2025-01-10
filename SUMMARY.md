@@ -53,6 +53,7 @@
 
 * [Recon](web-exploitation/recon.md)
 * [Main Techniques](web-exploitation/main-techniques/README.md)
+  * [Eval Injection](web-exploitation/main-techniques/eval-injection.md)
   * [Template Manipulation](web-exploitation/main-techniques/template-manipulation.md)
   * [PHP Exploitation Techniques](web-exploitation/main-techniques/php-exploitation-techniques.md)
   * [Path Traversal](web-exploitation/main-techniques/path-traversal.md)
@@ -72,6 +73,7 @@
   * [Apache](web-exploitation/web-servers/apache.md)
   * [Nginx](web-exploitation/web-servers/nginx.md)
 * [Web Services](web-exploitation/web-services/README.md)
+  * [HashiCorp Vault](web-exploitation/web-services/hashicorp-vault.md)
   * [Laravel](web-exploitation/web-services/laravel.md)
   * [Express](web-exploitation/web-services/express.md)
   * [Magento](web-exploitation/web-services/magento.md)
