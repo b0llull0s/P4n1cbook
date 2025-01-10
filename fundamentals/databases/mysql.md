@@ -1,77 +1,8 @@
 ---
 icon: database
-description: Structure Query Language
 ---
 
-# Databases
-
-{% hint style="warning" %}
-* <mark style="color:purple;">SQL queries are sent over</mark> <mark style="color:orange;">**`TCP/IP`**</mark>
-* <mark style="color:purple;">SQL can transported over</mark> <mark style="color:orange;">**`HTTP`**</mark><mark style="color:purple;">,</mark> <mark style="color:orange;">**`HTTPS`**</mark><mark style="color:purple;">, or custom protocols designed for database communication.</mark>
-* <mark style="color:purple;">SQL can be wrapped in other protocols (e.g.,</mark> <mark style="color:orange;">**`ODBC`**</mark>, <mark style="color:orange;">**`JDBC`**</mark><mark style="color:purple;">)</mark>
-{% endhint %}
-
-{% tabs %}
-{% tab title="SQL Server" %}
-{% code title="Default Port" %}
-```
-1433
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="MySQL" %}
-{% code title="Default Port" %}
-```
-3306 and 33060
-```
-{% endcode %}
-
-{% hint style="warning" %}
-<mark style="color:purple;">Same as</mark> <mark style="color:orange;">**`MariaDb`**</mark>
-{% endhint %}
-{% endtab %}
-
-{% tab title="PostgreSQL" %}
-{% code title="Port" %}
-```
-5432
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="MSSQL" %}
-{% code title="TCP Port" %}
-```
-1433
-```
-{% endcode %}
-
-{% code title="UDP Port" %}
-```
-1434
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="Oracle" %}
-{% code title="Port" %}
-```
-1521
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="IBM DB2" %}
-{% code title="TCP Port" %}
-```
-50000
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
-
-***
+# MySQL
 
 {% hint style="info" %}
 ## <mark style="color:orange;">`MySQL`</mark>
@@ -80,7 +11,7 @@ description: Structure Query Language
 
 ***
 
-### <mark style="color:purple;">Operator Precedence</mark>
+### <mark style="color:red;">`Operator Precedence`</mark>
 
 <mark style="color:purple;">**Highest to lowest:**</mark>
 
@@ -114,9 +45,7 @@ description: Structure Query Language
 
 ***
 
-### <mark style="color:purple;">Commands</mark>
-
-### <mark style="color:purple;">General</mark>
+### <mark style="color:red;">`General Commands`</mark>
 
 {% code title="Connect to the database" %}
 ```sh
@@ -136,7 +65,7 @@ use databasename;
 ```
 {% endcode %}
 
-#### <mark style="color:purple;">Tables</mark>
+#### <mark style="color:orange;">`Tables`</mark>
 
 {% code title="Print tables from the database" %}
 ```sql
@@ -168,7 +97,7 @@ UPDATE table_name SET column1=newvalue1, ... WHERE <condition>;
 ```
 {% endcode %}
 
-#### <mark style="color:purple;">Columns</mark>
+#### <mark style="color:orange;">`Columns`</mark>
 
 {% code title="Show all columns in a table" %}
 ```sql
@@ -212,7 +141,7 @@ ALTER TABLE logins DROP oldColumn;
 ```
 {% endcode %}
 
-#### <mark style="color:purple;">Output</mark>
+#### <mark style="color:orange;">`Output`</mark>
 
 {% code title="Sort By column" overflow="wrap" %}
 ```sql
@@ -267,81 +196,55 @@ SELECT * FROM logins WHERE username LIKE 'admin%';
 1. <mark style="color:purple;">**Identify the Connection Script**</mark>
 2. <mark style="color:purple;">**Extract Database Credentials**</mark>
 3. <mark style="color:purple;">**Execute SQL Queries**</mark>
-{% endhint %}
 
 ***
 
-{% hint style="info" %}
-## <mark style="color:orange;">`NoSQL`</mark>
+* The following script dynamically executes SQL queries on a target database using credentials extracted from application settings:
 
-### <mark style="color:orange;">`MongoDB`</mark>
+{% code overflow="wrap" %}
+```python
+#!/usr/bin/env python
 
-#### <mark style="color:purple;">Commands</mark>
+import pymysql
+import sys
+from craft_api import settings
 
-{% code title="Start it" %}
-```sh
-mongo
+# Test connection to MySQL database
+connection = pymysql.connect(
+    host=settings.MYSQL_DATABASE_HOST,
+    user=settings.MYSQL_DATABASE_USER,
+    password=settings.MYSQL_DATABASE_PASSWORD,
+    db=settings.MYSQL_DATABASE_DB,
+    cursorclass=pymysql.cursors.DictCursor
+)
+
+try:
+    with connection.cursor() as cursor:
+        sql = sys.argv[1]
+        cursor.execute(sql)
+        result = cursor.fetchall()
+        print(result)
+finally:
+    connection.close()
 ```
 {% endcode %}
 
-{% code title="Show databases" %}
-```mongodb
-show dbs
-```
-{% endcode %}
-
-{% code title="Select a database" %}
-```mongodb
-use database
-```
-{% endcode %}
-
-{% code title="List tables (collections)" %}
-```mongodb
-show collections
-```
-{% endcode %}
-
-{% code title="Show content from a collection (table)" %}
-```mongodb
-db.<collection>.find().pretty()
-```
-{% endcode %}
-
-{% code title="Passing parameters (greater than/equal)" %}
-```mongodb
-db.<collection>.find({ age: { $gte: 18 } })
-```
-{% endcode %}
-
-{% code title="Limit results (first five)" %}
-```mongodb
-db.users.find().limit(5)
-```
-{% endcode %}
-
-{% code title="Dump a database" %}
-```sh
-mongodump --db <database_name> --out <backup_directory>
-```
-{% endcode %}
-
-{% code title="Dump a collection" %}
-```sh
-mongodump --db myDatabase --collection myCollection --out /path/to/backup/
-codeshe
-```
-{% endcode %}
-
-* <mark style="color:orange;">**`Mongo`**</mark> <mark style="color:purple;">dump the data in binary form, creating</mark> <mark style="color:orange;">**`BSON`**</mark> <mark style="color:purple;">files, in order to convert then is a readable form use:</mark>
+<mark style="color:red;">**`Use Cases in Exploitation`**</mark>
 
 ```sh
-bsondump <input_bson_file>
+python myscript.py "SHOW TABLES"
 ```
 
-* <mark style="color:purple;">It's possible also to restore a database from a dump file with:</mark>
+```sh
+python myscript.py "SELECT * FROM user"
+```
 
 ```sh
-mongorestore --db <database_name> <path_to_backup>
+python myscript.py "SHOW GRANTS FOR CURRENT_USER()"
+```
+
+```sh
+python myscript.py "DESCRIBE user"
 ```
 {% endhint %}
+
