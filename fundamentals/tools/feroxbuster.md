@@ -27,7 +27,7 @@ sudo apt get feroxbuster
 ***
 
 {% hint style="info" %}
-## <mark style="color:purple;">Common Uses</mark>
+## <mark style="color:red;">`Common Uses`</mark>
 
 {% code title="Basic Usage" %}
 ```sh
@@ -38,6 +38,12 @@ feroxbuster -u <url> -w <wordlist>
 {% code title="Verbose Output" %}
 ```sh
 feroxbuster -u <url> -w <wordlist> -v
+```
+{% endcode %}
+
+{% code title="Skip TSL+Slash" %}
+```sh
+feroxbuster -u <url> -w <wordlist> -k -f -d 1
 ```
 {% endcode %}
 
@@ -57,7 +63,7 @@ feroxbuster -u <url> -w <wordlist> --extensions .txt, .js
 ***
 
 {% hint style="warning" %}
-## <mark style="color:purple;">Scanner Parameters</mark>
+## <mark style="color:red;">`Scanner Parameters`</mark>
 
 {% code title="Number of threads" %}
 ```sh
@@ -77,13 +83,13 @@ feroxbuster -u <url> -w <wordlist> --rate-limit <number>
 ```
 {% endcode %}
 
-* <mark style="color:purple;">For example, in this case there will be</mark> <mark style="color:orange;">**8**</mark> <mark style="color:purple;">active connections and each connection will have a timeout of</mark> <mark style="color:orange;">**500ms**</mark> <mark style="color:purple;">for</mark> <mark style="color:orange;">**1**</mark> <mark style="color:purple;">URL at the time</mark>
+* <mark style="color:purple;">For example, in this case there will be</mark> <mark style="color:orange;">**`8`**</mark> <mark style="color:purple;">active connections and each connection will have a timeout of</mark> <mark style="color:orange;">**`500ms`**</mark> <mark style="color:purple;">for</mark> <mark style="color:orange;">**`1`**</mark> <mark style="color:purple;">URL at the time</mark>
 
 ```sh
 feroxbuster --threads 4 --scan-limit 2 --rate-limit 2
 ```
 
-* <mark style="color:purple;">On the other the hand, here there will be</mark> <mark style="color:orange;">**8**</mark> <mark style="color:purple;">active connection with a timeout of</mark> <mark style="color:orange;">**500ms**</mark> <mark style="color:purple;">for</mark> <mark style="color:orange;">**4**</mark> <mark style="color:purple;">URLs at the time</mark>
+* <mark style="color:purple;">On the other the hand, here there will be</mark> <mark style="color:orange;">**`8`**</mark> <mark style="color:purple;">active connection with a timeout of</mark> <mark style="color:orange;">**`500ms`**</mark> <mark style="color:purple;">for</mark> <mark style="color:orange;">**`4`**</mark> <mark style="color:purple;">URLs at the time</mark>
 
 ```sh
 feroxbuster --threads 2--scan-limit 4 --rate-limit 2
@@ -93,7 +99,7 @@ feroxbuster --threads 2--scan-limit 4 --rate-limit 2
 ***
 
 {% hint style="warning" %}
-## <mark style="color:purple;">Filters</mark>
+## <mark style="color:red;">`Filters`</mark>
 
 {% code title="Exclude by status code" %}
 ```sh
@@ -147,7 +153,7 @@ feroxbuster -u <url> -w <wordlist> --filter-similar-to error.html
 ***
 
 {% hint style="warning" %}
-## <mark style="color:purple;">Special Options</mark>
+## <mark style="color:red;">`Special Options`</mark>
 
 {% code title="Recursive Scan" %}
 ```bash
@@ -173,7 +179,7 @@ feroxbuster -u <url> -w <wordlist> -H "User-Agent: <user_agent>"
 ```
 {% endcode %}
 
-{% code title="Provide a User Cookie" %}
+{% code title="Provide a User Cookie" overflow="wrap" %}
 ```bash
 feroxbuster -u http://example.com -w /path/to/wordlist.txt -H "Cookie: sessionid=your_session_id"
 ```
@@ -187,7 +193,7 @@ feroxbuster -u <url> -w <wordlist> -r
 
 {% code title="Use SSL verification/Disable TLS validation" %}
 ```sh
-feroxbuster -u <url> -w <wordlist> --insecure
+feroxbuster -u <url> -w <wordlist> -k
 ```
 {% endcode %}
 
