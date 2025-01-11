@@ -5,11 +5,11 @@ icon: database
 # NoSQL
 
 {% hint style="info" %}
-## <mark style="color:orange;">`NoSQL`</mark>
+## <mark style="color:purple;">`NoSQL`</mark>
 
-### <mark style="color:red;">`MongoDB`</mark>
+### <mark style="color:orange;">`MongoDB`</mark>
 
-#### <mark style="color:purple;">`Commands`</mark>
+#### <mark style="color:red;">`Commands`</mark>
 
 {% code title="Start it" %}
 ```sh
