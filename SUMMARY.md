@@ -92,6 +92,7 @@
   * [Java-based web application](web-exploitation/java-based-web-application/README.md)
     * [.WAR](web-exploitation/java-based-web-application/.war.md)
     * [JDWP](web-exploitation/java-based-web-application/jdwp.md)
+  * [ImageMagick](web-exploitation/web-services/imagemagick.md)
 * [Reporting](web-exploitation/reporting.md)
 
 ## Cloud Exploitation
