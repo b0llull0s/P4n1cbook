@@ -5,20 +5,6 @@ icon: binary-lock
 # Cryptography
 
 {% hint style="info" %}
-### <mark style="color:red;">`Openssl`</mark>
-
-* <mark style="color:purple;">Sometimes you may need to copy and encrypted key to its decrypted version:</mark>
-
-{% code overflow="wrap" %}
-```sh
-openssl rsa -in spanishdancer.key -out ~/keys/ariekei-spanishdancer
-```
-{% endcode %}
-{% endhint %}
-
-***
-
-{% hint style="info" %}
 ## <mark style="color:purple;">File Signatures</mark>
 
 * <mark style="color:purple;">Reads the first 16 bytes of a file and displays them in a hexadecimal format with</mark> <mark style="color:orange;">**`ASCII`**</mark> <mark style="color:purple;">representation:</mark>
