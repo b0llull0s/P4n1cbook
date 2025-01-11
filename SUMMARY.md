@@ -107,11 +107,11 @@
 * [Pivoting/Lateral Movement](post-exploitation/pivoting-lateral-movement.md)
 * [Linux Privilege Escalation](post-exploitation/linux-privilege-escalation/README.md)
   * [Hijacks](post-exploitation/linux-privilege-escalation/hijacks.md)
-  * [Environment Escapes](post-exploitation/linux-privilege-escalation/environment-escapes.md)
+  * [Jailbreaks](post-exploitation/linux-privilege-escalation/jailbreaks.md)
   * [Binary Exploitation - Linux](post-exploitation/linux-privilege-escalation/binary-exploitation-linux.md)
   * [Kernel Exploits](post-exploitation/linux-privilege-escalation/kernel-exploits.md)
   * [Buffer Overflow - Linux](post-exploitation/linux-privilege-escalation/buffer-overflow-linux.md)
-  * [Docker](post-exploitation/linux-privilege-escalation/docker.md)
+  * [Escaping Docker](post-exploitation/linux-privilege-escalation/escaping-docker.md)
 * [Windows Privilege Scalation](post-exploitation/windows-privilege-scalation.md)
 
 ## Wireless Exploitation
