@@ -65,7 +65,7 @@ use databasename;
 ```
 {% endcode %}
 
-#### <mark style="color:orange;">`Tables`</mark>
+#### <mark style="color:purple;">`Tables`</mark>
 
 {% code title="Print tables from the database" %}
 ```sql
@@ -97,7 +97,7 @@ UPDATE table_name SET column1=newvalue1, ... WHERE <condition>;
 ```
 {% endcode %}
 
-#### <mark style="color:orange;">`Columns`</mark>
+#### <mark style="color:purple;">`Columns`</mark>
 
 {% code title="Show all columns in a table" %}
 ```sql
@@ -141,7 +141,7 @@ ALTER TABLE logins DROP oldColumn;
 ```
 {% endcode %}
 
-#### <mark style="color:orange;">`Output`</mark>
+#### <mark style="color:purple;">`Output`</mark>
 
 {% code title="Sort By column" overflow="wrap" %}
 ```sql
@@ -199,7 +199,7 @@ SELECT * FROM logins WHERE username LIKE 'admin%';
 
 ***
 
-* The following script dynamically executes SQL queries on a target database using credentials extracted from application settings:
+* <mark style="color:purple;">The following script dynamically executes</mark> <mark style="color:orange;">**`SQL`**</mark> <mark style="color:purple;">queries on a target database using credentials extracted from application settings:</mark>
 
 {% code overflow="wrap" %}
 ```python
