@@ -105,6 +105,7 @@
 
 * [File Transfer](post-exploitation/file-transfer.md)
 * [Pivoting/Lateral Movement](post-exploitation/pivoting-lateral-movement.md)
+* [Persistence](post-exploitation/persistence.md)
 * [Linux Privilege Escalation](post-exploitation/linux-privilege-escalation/README.md)
   * [Hijacks](post-exploitation/linux-privilege-escalation/hijacks.md)
   * [Jailbreaks](post-exploitation/linux-privilege-escalation/jailbreaks.md)
