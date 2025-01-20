@@ -1,6 +1,6 @@
 ---
-description: Fuzz Faster U Fool
 icon: campfire
+description: Fuzz Faster U Fool
 ---
 
 # ffuf
@@ -22,6 +22,7 @@ go get github.com/ffuf/ffuf
 
 * <mark style="color:orange;">**`-u`**</mark> <mark style="color:purple;">-> Target URL.</mark>
 * <mark style="color:orange;">**`-w`**</mark> <mark style="color:purple;">-> Path to wordlist.</mark>
+* <mark style="color:orange;">**`-r`**</mark> <mark style="color:purple;">**->**</mark> <mark style="color:purple;">Follow Redirects.</mark>
 * <mark style="color:orange;">**`-t`**</mark> <mark style="color:purple;">-> Number of threads to run ( Normal :</mark> <mark style="color:orange;">**`50`**</mark><mark style="color:purple;">; Fast:</mark> <mark style="color:orange;">**`200`**</mark><mark style="color:purple;">).</mark>
 * <mark style="color:orange;">**`-v`**</mark> <mark style="color:purple;">-> Verbose Output.</mark>
 * <mark style="color:orange;">**`-c`**</mark> <mark style="color:purple;">-> Colorful output.</mark>&#x20;
