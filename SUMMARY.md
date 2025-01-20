@@ -90,6 +90,7 @@
   * [OpenNetAdmin](web-exploitation/web-services/opennetadmin.md)
   * [Wordpress](web-exploitation/wordpress.md)
   * [Java-based web application](web-exploitation/java-based-web-application/README.md)
+    * [Struts](web-exploitation/web-services/java-based-web-application/struts.md)
     * [.WAR](web-exploitation/java-based-web-application/.war.md)
     * [JDWP](web-exploitation/java-based-web-application/jdwp.md)
   * [ImageMagick](web-exploitation/web-services/imagemagick.md)
