@@ -65,7 +65,7 @@ ffuf -c -w wordlist.txt:FUZZ -u http://SERVER_IP:PORT/FUZZ
 ```
 {% endcode %}
 
-{% code title="Recursive Scan" %}
+{% code title="Recursive Scan" overflow="wrap" %}
 ```bash
 ffuf -c -w /path/to/wordlist -u https://ffuf.io.fi/FUZZ -recursion -recursion-depth 2
 ```
@@ -101,7 +101,7 @@ ffuf -c -w /path/to/wordlist -u https://ffuf.io.fi/FUZZ -e .bak, .zip
 ```
 {% endcode %}
 
-{% code title="Extension + Recursion" %}
+{% code title="Extension + Recursion" overflow="wrap" %}
 ```bash
 ffuf -w wordlist.txt:FUZZ -u http://SERVER_IP:PORT/FUZZ -recursion -recursion-depth 1 -e .php -v -c
 ```
@@ -119,7 +119,7 @@ ffuf -w wordlist.txt:FUZZ -u https://FUZZ.hackthebox.eu/
 ```
 {% endcode %}
 
-{% code title="VHOST Fuzzing" %}
+{% code title="VHOST Fuzzing" overflow="wrap" %}
 ```bash
 ffuf -c -w /path/to/wordlist -u https://ffuf.io.fi -H "Host: FUZZ.ffuf.io.fi"
 ```
@@ -143,13 +143,13 @@ ffuf -request ~/Desktop/request.txt -w ./wordlist.txt -u http://site.com
 ```
 {% endcode %}
 
-{% code title="Request Template + Proxy" %}
+{% code title="Request Template + Proxy" overflow="wrap" %}
 ```bash
 ffuf -request ~/Desktop/request.txt -w ./wordlist.txt -x http://127.0.0.1:8080
 ```
 {% endcode %}
 
-{% code title="Request Template + Replay-proxy" %}
+{% code title="Request Template + Replay-proxy" overflow="wrap" %}
 ```bash
 ffuf -request ~/Desktop/request.txt -w ./wordlist.txt -replay-proxy http://127.0.0.1:8080
 ```
@@ -163,13 +163,13 @@ ffuf -c -w /path/to/wordlist -u https://ffuf.io.fi?FUZZ=test_value
 ```
 {% endcode %}
 
-{% code title="POST Data Fuzzing" %}
+{% code title="POST Data Fuzzing" overflow="wrap" %}
 ```bash
 ffuf -c -w /path/to/wordlist -X POST -d "username=admin&password=FUZZ" -u https://ffuf.io.fi/login.php
 ```
 {% endcode %}
 
-{% code title="JSON POST data fuzzing" %}
+{% code title="JSON POST data fuzzing" overflow="wrap" %}
 ```bash
 ffuf -c -w /path/to/wordlist -X POST -d "username=admin&password=FUZZ" -u https://ffuf.io.fi/login.php
 ```
@@ -177,13 +177,13 @@ ffuf -c -w /path/to/wordlist -X POST -d "username=admin&password=FUZZ" -u https:
 
 ### <mark style="color:purple;">Path Traversal fuzzing</mark>
 
-{% code title="Fuzz LFI" %}
+{% code title="Fuzz LFI" overflow="wrap" %}
 ```bash
 ffuf -w /opt/useful/SecLists/Fuzzing/LFI/LFI-Jhaddix.txt:FUZZ -u 'http://<SERVER_IP>:<PORT>/index.php?language=FUZZ' -fs 2287
 ```
 {% endcode %}
 
-{% code title="Fuzz webroot path" %}
+{% code title="Fuzz webroot path" overflow="wrap" %}
 ```bash
 ffuf -w /opt/useful/SecLists/Discovery/Web-Content/default-web-root-directory-linux.txt:FUZZ -u 'http://<SERVER_IP>:<PORT>/index.php?language=../../../../FUZZ/index.php' -fs 2287
 ```
