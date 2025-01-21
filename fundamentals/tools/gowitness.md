@@ -9,7 +9,7 @@ icon: eyes
 
 {% code title="Scan from file + Write to DB" overflow="wrap" %}
 ```sh
-gowitness file -f urls.txt --url "https://sensepost.com" --write-db
+gowitness scan file -f urls.txt --write-db
 ```
 {% endcode %}
 
