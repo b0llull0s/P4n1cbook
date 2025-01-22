@@ -15,9 +15,11 @@ description: Secure Shell Protocol
 
 {% tabs %}
 {% tab title="RSA" %}
+{% code title="GitHub-Keys" %}
 ```sh
-ssh-keygen -b 4096
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 ```
+{% endcode %}
 {% endtab %}
 
 {% tab title="Ed25519" %}
