@@ -57,6 +57,7 @@
 
 * [Recon](web-exploitation/recon.md)
 * [Main Techniques](web-exploitation/main-techniques/README.md)
+  * [SSRF](web-exploitation/main-techniques/ssrf.md)
   * [Eval Injection](web-exploitation/main-techniques/eval-injection.md)
   * [Template Manipulation](web-exploitation/main-techniques/template-manipulation.md)
   * [PHP Exploitation Techniques](web-exploitation/main-techniques/php-exploitation-techniques.md)
@@ -72,7 +73,7 @@
   * [LFI](web-exploitation/main-techniques/lfi.md)
   * [XSS](web-exploitation/main-techniques/xss.md)
   * [IDOR](web-exploitation/main-techniques/idor.md)
-  * [SSRF](web-exploitation/main-techniques/ssrf.md)
+  * [SSRF](web-exploitation/main-techniques/ssrf-1.md)
 * [Web Servers](web-exploitation/web-servers/README.md)
   * [Apache](web-exploitation/web-servers/apache.md)
   * [Nginx](web-exploitation/web-servers/nginx.md)
