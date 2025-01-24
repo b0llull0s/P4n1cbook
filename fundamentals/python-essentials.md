@@ -5,7 +5,13 @@ icon: snake
 # Python Essentials
 
 {% hint style="info" %}
-### <mark style="color:purple;">`Libraries`</mark>&#x20;
+### <mark style="color:purple;">`Libraries`</mark>
+
+{% code title="Check Library Version" %}
+```sh
+pip show <library_name>
+```
+{% endcode %}
 
 #### <mark style="color:red;">`urllib3`</mark>
 

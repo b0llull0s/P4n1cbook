@@ -9,7 +9,9 @@
 
 ## Fundamentals
 
-* [Linux Cheat Sheet](fundamentals/linux-cheat-sheet.md)
+* [Basic Commands](fundamentals/basic-commands/README.md)
+  * [Linux](fundamentals/basic-commands/linux.md)
+  * [Git](fundamentals/basic-commands/git.md)
 * [🌐 Network Protocols](fundamentals/network-protocols/README.md)
   * [ICMP](fundamentals/network-protocols/icmp.md)
   * [SSH](fundamentals/network-protocols/ssh.md)
