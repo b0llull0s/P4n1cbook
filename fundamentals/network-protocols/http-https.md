@@ -48,7 +48,8 @@ openssl pkcs12 -export -inkey client.key -in client.cer -out client.p12
 {% hint style="info" %}
 ### <mark style="color:orange;">`Squid`</mark> <mark style="color:purple;">Proxy</mark>
 
-* <mark style="color:purple;">The config file normally lives in</mark> <mark style="color:orange;">**`/etc/squid/squid.conf`**</mark>&#x20;
+* <mark style="color:purple;">The config file normally lives in</mark> <mark style="color:orange;">**`/etc/squid/squid.conf`**</mark>
+* <mark style="color:purple;">Relays on</mark> <mark style="color:orange;">**`/usr/lib/squid/basic_ncsa_auth`**</mark> <mark style="color:purple;">for authentication and the program stores the passwords in</mark> <mark style="color:orange;">**`/etc/squid/passwords`**</mark><mark style="color:purple;">.</mark>
 * <mark style="color:purple;">Check if you can reverse it to access the local network.</mark>
 * <mark style="color:purple;">First add the address and port to the last line of your</mark> <mark style="color:orange;">**`proxychain.conf`**</mark> <mark style="color:purple;">file:</mark>
 
