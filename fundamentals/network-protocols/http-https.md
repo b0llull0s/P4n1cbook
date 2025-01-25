@@ -51,7 +51,7 @@ openssl pkcs12 -export -inkey client.key -in client.cer -out client.p12
 * <mark style="color:purple;">The config file normally lives in</mark> <mark style="color:orange;">**`/etc/squid/squid.conf`**</mark>
 * <mark style="color:purple;">Relays on</mark> <mark style="color:orange;">**`/usr/lib/squid/basic_ncsa_auth`**</mark> <mark style="color:purple;">for authentication and the program stores the passwords in</mark> <mark style="color:orange;">**`/etc/squid/passwords`**</mark><mark style="color:purple;">.</mark>
 * <mark style="color:purple;">Check if you can reverse it to access the local network.</mark>
-* <mark style="color:purple;">First add the address and port to the last line of your</mark> <mark style="color:orange;">**`proxychain.conf`**</mark> <mark style="color:purple;">file:</mark>
+* <mark style="color:purple;">First add the address and port to the last line of your</mark> <mark style="color:orange;">**`proxychains.conf`**</mark> <mark style="color:purple;">file:</mark>
 
 ```
 http 10.10.10.67 312
@@ -62,6 +62,15 @@ http 10.10.10.67 312
 ```sh
 proxychains nmap -n -sT 127.0.0.1
 ```
+
+***
+
+### <mark style="color:red;">`Upstream Proxy Server`</mark>&#x20;
+
+1. <mark style="color:purple;">On</mark> <mark style="color:orange;">**`burp`**</mark> <mark style="color:purple;">go to</mark> <mark style="color:orange;">**`Settings > Network > Connections`**</mark>
+2. <mark style="color:purple;">Create a new rule with</mark> <mark style="color:orange;">**`*`**</mark> <mark style="color:purple;">for the</mark> <mark style="color:orange;">**`Destination Host`**</mark><mark style="color:purple;">, set the target proxy as the</mark> <mark style="color:orange;">**`Proxy Host/Port`**</mark> <mark style="color:purple;">and set the credentials with basic</mark> <mark style="color:orange;">**`Authentication type`**</mark><mark style="color:purple;">.</mark>
+3. <mark style="color:purple;">In order to fuzz the</mark> <mark style="color:orange;">**`localhost`**</mark><mark style="color:purple;">, set a</mark> <mark style="color:orange;">**`Proxy Listener`**</mark><mark style="color:purple;">, redirect to</mark> <mark style="color:orange;">**`127.0.0.1:80`**</mark> <mark style="color:purple;">and set</mark> <mark style="color:orange;">**`127.0.0.1:1234`**</mark> <mark style="color:purple;">as the interface.</mark>
+4. <mark style="color:purple;">Now add the interface to</mark> <mark style="color:orange;">**`/etc/proxychains.conf`**</mark><mark style="color:purple;">.</mark>
 {% endhint %}
 
 ***
