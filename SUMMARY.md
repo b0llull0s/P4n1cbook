@@ -109,6 +109,8 @@
 ## Post Exploitation
 
 * [File Transfer](post-exploitation/file-transfer.md)
+* [Credential Dumping](post-exploitation/credential-dumping/README.md)
+  * [Thunderbird](post-exploitation/credential-dumping/thunderbird.md)
 * [Pivoting/Lateral Movement](post-exploitation/pivoting-lateral-movement.md)
 * [Persistence](post-exploitation/persistence.md)
 * [Linux Privilege Escalation](post-exploitation/linux-privilege-escalation/README.md)
