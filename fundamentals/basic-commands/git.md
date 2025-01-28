@@ -34,7 +34,7 @@ git show b73481bb823d2dfb49c44f4c1e6a7e11912ed8ae
 * Create and switch to a new branch:
 
 ```sh
-git checkout -b modular_changes
+git checkout -b <branch_name>
 ```
 
 * Push the changes:
