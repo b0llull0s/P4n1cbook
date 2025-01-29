@@ -62,7 +62,7 @@
   * [SSRF](web-exploitation/main-techniques/ssrf.md)
   * [Eval Injection](web-exploitation/main-techniques/eval-injection.md)
   * [Template Manipulation](web-exploitation/main-techniques/template-manipulation.md)
-  * [PHP Exploitation Techniques](web-exploitation/main-techniques/php-exploitation-techniques.md)
+  * [PHP Filters & Wrappers](web-exploitation/main-techniques/php-filters-and-wrappers.md)
   * [Path Traversal](web-exploitation/main-techniques/path-traversal.md)
   * [Prototype Pollution](web-exploitation/main-techniques/prototype-pollution.md)
   * [XXE](web-exploitation/main-techniques/xxe.md)
