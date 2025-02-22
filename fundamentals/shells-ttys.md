@@ -30,7 +30,7 @@ rlwrap nc 10.10.10.131 6200
 2. &#x20;<mark style="color:red;">**`CTRL+Z`**</mark>
 3. <mark style="color:red;">**`stty raw -echo; fg; ls; export SHELL=/bin/bash; export TERM=screen; stty rows 38 columns 116; reset;`**</mark>
 
-<mark style="color:orange;">**`ZSH`**</mark><mark style="color:purple;">:</mark>
+#### <mark style="color:orange;">**`ZSH`**</mark><mark style="color:purple;">:</mark>
 
 * <mark style="color:purple;">Same first two steps and then:</mark>
 
