@@ -1,9 +1,9 @@
 ---
-description: Data query and manipulation language for APIs
 icon: chart-bullet
+description: Data query and manipulation language for APIs
 ---
 
-# GraphSQL
+# GraphQL
 
 {% hint style="info" %}
 * <mark style="color:purple;">Uses</mark> <mark style="color:orange;">**`HTTP/HTTPS`**</mark><mark style="color:purple;">, typically over</mark> <mark style="color:orange;">**`POST`**</mark> <mark style="color:purple;">requests.</mark>
@@ -17,7 +17,7 @@ icon: chart-bullet
 ***
 
 {% hint style="info" %}
-### <mark style="color:purple;">Fuzzing Tips</mark>
+### <mark style="color:red;">`Fuzzing Tips`</mark>
 
 1. <mark style="color:orange;">**`Test Query Depth and Complexity`**</mark><mark style="color:purple;">: Check server limits on nested or complex queries to prevent performance issues.</mark>
 2. <mark style="color:orange;">**`Validate Input Types and Arguments`**</mark><mark style="color:purple;">: Test inputs with invalid data to identify validation weaknesses.</mark>
@@ -31,7 +31,7 @@ icon: chart-bullet
 ***
 
 {% hint style="info" %}
-### <mark style="color:orange;">`Introspection`</mark> <mark style="color:purple;">Queries</mark>
+### <mark style="color:red;">`Introspection Queries`</mark>
 
 {% code title="Query All types in the Schema" %}
 ```graphql
@@ -39,7 +39,7 @@ icon: chart-bullet
 ```
 {% endcode %}
 
-* <mark style="color:purple;">Queries all fields defined under the</mark> <mark style="color:orange;">**`Query`**</mark>  <mark style="color:purple;">type</mark><mark style="color:purple;">:</mark>
+* <mark style="color:purple;">Queries all fields defined under the</mark> <mark style="color:orange;">**`Query`**</mark>  <mark style="color:purple;">type:</mark>
 
 {% code overflow="wrap" %}
 ```graphql
@@ -67,7 +67,7 @@ icon: chart-bullet
 ***
 
 {% hint style="info" %}
-### <mark style="color:purple;">Data Queries</mark>
+### <mark style="color:red;">`Data Queries`</mark>
 
 * <mark style="color:purple;">Queries the actual</mark> <mark style="color:orange;">**`user`**</mark> <mark style="color:purple;">object for its</mark> <mark style="color:orange;">**`username`**</mark> <mark style="color:purple;">and</mark> <mark style="color:orange;">**`password`**</mark> <mark style="color:purple;">fields.</mark>
 
@@ -79,7 +79,7 @@ icon: chart-bullet
 ***
 
 {% hint style="info" %}
-### <mark style="color:purple;">Use</mark> <mark style="color:orange;">`curl`</mark>
+### `curl`
 
 {% code overflow="wrap" %}
 ```bash

@@ -5,7 +5,7 @@ description: Structure Query Language
 
 # Databases
 
-{% hint style="warning" %}
+{% hint style="info" %}
 * <mark style="color:purple;">SQL queries are sent over</mark> <mark style="color:orange;">**`TCP/IP`**</mark>
 * <mark style="color:purple;">SQL can transported over</mark> <mark style="color:orange;">**`HTTP`**</mark><mark style="color:purple;">,</mark> <mark style="color:orange;">**`HTTPS`**</mark><mark style="color:purple;">, or custom protocols designed for database communication.</mark>
 * <mark style="color:purple;">SQL can be wrapped in other protocols (e.g.,</mark> <mark style="color:orange;">**`ODBC`**</mark>, <mark style="color:orange;">**`JDBC`**</mark><mark style="color:purple;">)</mark>
@@ -27,7 +27,7 @@ description: Structure Query Language
 ```
 {% endcode %}
 
-{% hint style="warning" %}
+{% hint style="info" %}
 <mark style="color:purple;">Same as</mark> <mark style="color:orange;">**`MariaDb`**</mark>
 {% endhint %}
 {% endtab %}

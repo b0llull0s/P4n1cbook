@@ -5,8 +5,6 @@ icon: database
 # NoSQL
 
 {% hint style="info" %}
-## <mark style="color:purple;">`NoSQL`</mark>
-
 ### <mark style="color:orange;">`MongoDB`</mark>
 
 #### <mark style="color:red;">`Commands`</mark>

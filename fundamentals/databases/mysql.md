@@ -5,7 +5,7 @@ icon: database
 # MySQL
 
 {% hint style="info" %}
-## <mark style="color:orange;">`MySQL`</mark>
+## <mark style="color:purple;">`MySQL`</mark>
 
 * <mark style="color:green;">**`MySQL Connector/Python`**</mark> <mark style="color:purple;">automatically appends a semicolon at the end of your queries.</mark>
 
@@ -13,7 +13,7 @@ icon: database
 
 ### <mark style="color:red;">`Operator Precedence`</mark>
 
-<mark style="color:purple;">**Highest to lowest:**</mark>
+<mark style="color:purple;">**`Highest to lowest:`**</mark>
 
 1. <mark style="color:purple;">**Parentheses**</mark> <mark style="color:orange;">**`()`**</mark><mark style="color:purple;">: Operations inside parentheses are evaluated first.</mark>
 2. <mark style="color:purple;">**Unary Operators**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">(highest precedence):</mark>
