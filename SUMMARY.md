@@ -59,6 +59,7 @@
 
 * [Recon](web-exploitation/recon.md)
 * [Main Techniques](web-exploitation/main-techniques/README.md)
+  * [Session Hijacking](web-exploitation/main-techniques/session-hijacking.md)
   * [SSRF](web-exploitation/main-techniques/ssrf.md)
   * [Eval Injection](web-exploitation/main-techniques/eval-injection.md)
   * [Template Manipulation](web-exploitation/main-techniques/template-manipulation.md)
