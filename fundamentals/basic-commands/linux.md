@@ -6,7 +6,7 @@ description: Basic commands
 # Linux
 
 {% hint style="info" %}
-### <mark style="color:purple;">`System Commands`</mark>
+## <mark style="color:purple;">`System Commands`</mark>
 
 #### <mark style="color:red;">`File & Directory Management`</mark>
 
