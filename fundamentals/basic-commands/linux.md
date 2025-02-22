@@ -6,7 +6,7 @@ description: Basic commands
 # Linux
 
 {% hint style="info" %}
-## <mark style="color:purple;">System Commands</mark>
+## <mark style="color:purple;">`System Commands`</mark>
 
 #### <mark style="color:red;">`File & Directory Management`</mark>
 
@@ -337,7 +337,7 @@ dmesg
 ***
 
 {% hint style="info" %}
-## <mark style="color:purple;">User/Group Management</mark>
+## <mark style="color:purple;">`User/Group Management`</mark>
 
 #### <mark style="color:red;">`Users`</mark>
 
@@ -427,7 +427,7 @@ sudo gpasswd -a newuser newgroup
 ***
 
 {% hint style="info" %}
-## <mark style="color:purple;">Permission & Security</mark>
+## <mark style="color:purple;">`Permission & Security`</mark>
 
 #### <mark style="color:red;">`File Ownership`</mark>
 
@@ -531,7 +531,7 @@ sudo tripwire --update
 ***
 
 {% hint style="info" %}
-## <mark style="color:purple;">Networking Command</mark>
+## <mark style="color:purple;">`Networking Command`</mark>
 
 {% code title="Display network interfaces and their IP addresses" %}
 ```bash
@@ -643,7 +643,7 @@ sudo arch-chroot /mnt
 ```
 {% endcode %}
 
-#### `Connect using`` `<mark style="color:orange;">`WPA`</mark>
+#### <mark style="color:red;">`Connect using`</mark><mark style="color:orange;">`WPA`</mark>
 
 {% code title="Shows the current connection status for the wpa" %}
 ```bash
