@@ -84,7 +84,7 @@ Google Hacking Database
 ***
 
 {% hint style="info" %}
-### <mark style="color:purple;">`Enumeration`</mark>
+### <mark style="color:red;">`Enumeration`</mark>
 
 {% code title="Subdomains" %}
 ```
