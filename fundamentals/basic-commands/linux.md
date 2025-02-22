@@ -8,7 +8,7 @@ description: Basic commands
 {% hint style="info" %}
 ## <mark style="color:purple;">System Commands</mark>
 
-### <mark style="color:purple;">File & Directory Management</mark>
+#### <mark style="color:red;">`File & Directory Management`</mark>
 
 {% code title="List all files + details" %}
 ```bash
@@ -106,7 +106,7 @@ rm -r directory/
 ```
 {% endcode %}
 
-### <mark style="color:purple;">Process Management</mark>
+#### <mark style="color:red;">`Process Management`</mark>
 
 {% code title="List details for process" %}
 ```bash
@@ -150,7 +150,7 @@ sudo kill -9 <PID>
 ```
 {% endcode %}
 
-### <mark style="color:purple;">System Management</mark>
+#### <mark style="color:red;">`System Management`</mark>
 
 {% code title="Print Info about the system" %}
 ```bash
@@ -254,7 +254,7 @@ w
 ```
 {% endcode %}
 
-### <mark style="color:purple;">Logs</mark>
+#### <mark style="color:red;">`Logs`</mark>
 
 {% code title="Display login records" %}
 ```bash
@@ -304,16 +304,16 @@ journalctl -p <level>
 ```
 {% endcode %}
 
-#### <mark style="color:purple;">Priority Levels:</mark>
+#### <mark style="color:red;">`Priority Levels:`</mark>
 
-* <mark style="color:orange;">`0`</mark> <mark style="color:purple;">(emergency)</mark>
-* <mark style="color:orange;">`1`</mark> <mark style="color:purple;">(alert)</mark>
-* <mark style="color:orange;">`2`</mark> <mark style="color:purple;">(critical)</mark>
-* <mark style="color:orange;">`3`</mark> <mark style="color:purple;">(error)</mark>
-* <mark style="color:orange;">`4`</mark> <mark style="color:purple;">(warning)</mark>
-* <mark style="color:orange;">`5`</mark> <mark style="color:purple;">(notice)</mark>
-* <mark style="color:orange;">`6`</mark> <mark style="color:purple;">(informational)</mark>
-* <mark style="color:orange;">`7`</mark> <mark style="color:purple;">(debug)</mark>
+* <mark style="color:orange;">`0`</mark> <mark style="color:purple;">--></mark> <mark style="color:purple;">**`emergency`**</mark>
+* <mark style="color:orange;">`1`</mark> <mark style="color:purple;">--></mark> <mark style="color:purple;">**`alert`**</mark>
+* <mark style="color:orange;">`2`</mark> <mark style="color:purple;">--></mark> <mark style="color:purple;">**`critical`**</mark>
+* <mark style="color:orange;">`3`</mark> <mark style="color:purple;">--></mark> <mark style="color:purple;">**`error`**</mark>
+* <mark style="color:orange;">`4`</mark> <mark style="color:purple;">--></mark> <mark style="color:purple;"></mark><mark style="color:purple;">**`warning`**</mark>
+* <mark style="color:orange;">`5`</mark> <mark style="color:purple;">--></mark> <mark style="color:purple;"></mark><mark style="color:purple;">**`notice`**</mark>
+* <mark style="color:orange;">`6`</mark> <mark style="color:purple;">--></mark> <mark style="color:purple;"></mark><mark style="color:purple;">**`informational`**</mark>
+* <mark style="color:orange;">`7`</mark> <mark style="color:purple;">--></mark> <mark style="color:purple;"></mark><mark style="color:purple;">**`debug`**</mark>
 
 {% code title="Shows logs for a specific process" %}
 ```bash
@@ -339,7 +339,7 @@ dmesg
 {% hint style="info" %}
 ## <mark style="color:purple;">User/Group Management</mark>
 
-### <mark style="color:purple;">Users</mark>
+#### <mark style="color:red;">`Users`</mark>
 
 {% code title="Display user and group ID of the current user" %}
 ```bash
@@ -371,7 +371,7 @@ su - username
 ```
 {% endcode %}
 
-### <mark style="color:purple;">User Management</mark>
+#### <mark style="color:red;">`User Management`</mark>
 
 {% code title="Creates a new user" %}
 ```bash
@@ -403,7 +403,7 @@ sudo usermod --shell /usr/bin/zsh alice
 ```
 {% endcode %}
 
-### <mark style="color:purple;">Groups</mark>
+#### <mark style="color:red;">`Groups`</mark>
 
 {% code title="Create group" %}
 ```bash
@@ -429,7 +429,7 @@ sudo gpasswd -a newuser newgroup
 {% hint style="info" %}
 ## <mark style="color:purple;">Permission & Security</mark>
 
-### <mark style="color:purple;">File Ownership</mark>
+#### <mark style="color:red;">`File Ownership`</mark>
 
 {% code title="Set file permissions to rwxr-xr-x" %}
 ```bash
@@ -467,7 +467,7 @@ umask 022
 ```
 {% endcode %}
 
-### <mark style="color:purple;">Access Control Lists</mark>
+#### <mark style="color:red;">`Access Control Lists`</mark>
 
 {% code title="Show the ACL" %}
 ```bash
@@ -481,7 +481,7 @@ setfacl -m u:user:rw file.txt
 ```
 {% endcode %}
 
-### <mark style="color:purple;">Security Policies</mark>
+#### <mark style="color:red;">`Security Policies`</mark>
 
 {% code title="Display the current SELinux mode" %}
 ```bash
@@ -495,7 +495,7 @@ sudo setenforce 0
 ```
 {% endcode %}
 
-### <mark style="color:purple;">File Integrity</mark>
+#### <mark style="color:red;">`File Integrity`</mark>
 
 {% code title="Generates a SHA256 file" %}
 ```bash
@@ -615,9 +615,9 @@ traceroute example.com
 ***
 
 {% hint style="info" %}
-## <mark style="color:purple;">Chroot</mark>
+## <mark style="color:purple;">`Chroot`</mark>
 
-### <mark style="color:purple;">Decrypt the system</mark>
+#### <mark style="color:red;">`Decrypt the system`</mark>
 
 {% code title="Decrypt partition" %}
 ```bash
@@ -643,7 +643,7 @@ sudo arch-chroot /mnt
 ```
 {% endcode %}
 
-### <mark style="color:purple;">Connect using</mark> <mark style="color:orange;">`WPA`</mark>
+#### `Connect using`` `<mark style="color:orange;">`WPA`</mark>
 
 {% code title="Shows the current connection status for the wpa" %}
 ```bash
@@ -663,7 +663,7 @@ sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 {% endcode %}
 
-### <mark style="color:purple;">Boot/UEFI Management</mark>
+### <mark style="color:red;">`Boot/UEFI Management`</mark>
 
 {% code title=" Displays the current boot entries in the UEFI firmware" %}
 ```bash
