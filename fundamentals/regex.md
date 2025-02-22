@@ -5,7 +5,7 @@ description: Regular Expressions
 # 💾 Regex
 
 {% hint style="info" %}
-## <mark style="color:purple;">Basic Tricks</mark>
+## <mark style="color:red;">`Basic Tricks`</mark>
 
 * <mark style="color:purple;">Look at uncommented lines from a file:</mark>
 
@@ -37,7 +37,7 @@ until ! ./poc.sh | grep -q "[x] ERROR"; do :; done; echo "No ERROR found, script
 ***
 
 {% hint style="info" %}
-### <mark style="color:purple;">Making Wordlists</mark>
+### <mark style="color:red;">`Making Wordlists`</mark>
 
 * <mark style="color:purple;">Create wordlists for users and passwords from a dump file. The following code extracts the</mark> <mark style="color:orange;">**`first`**</mark> <mark style="color:purple;">(usernames) and</mark> <mark style="color:orange;">**`fourth`**</mark> <mark style="color:purple;">(password hashes) fields, which are separated by colons (</mark><mark style="color:orange;">**`:`**</mark><mark style="color:purple;">), and saves them into separate files:</mark>
 
