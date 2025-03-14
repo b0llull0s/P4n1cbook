@@ -1,13 +1,15 @@
 ---
-icon: linux
 description: Basic commands
+icon: linux
 ---
 
 # Linux
 
-{% hint style="info" %}
-## <mark style="color:purple;">`System Commands`</mark>
+<details>
 
+<summary><mark style="color:purple;"><strong><code>System Commands</code></strong></mark></summary>
+
+{% hint style="info" %}
 #### <mark style="color:red;">`File & Directory Management`</mark>
 
 {% code title="List all files + details" %}
@@ -17,36 +19,24 @@ ls -al
 {% endcode %}
 
 {% code title="List all files recursively" %}
-```sh
+```bash
 ls -lAR
 ```
 {% endcode %}
 
-{% code title="Read raw binary data" %}
+{% code title="Read raw binary data" overflow="wrap" %}
 ```bash
 cat example | hexdump -C
 ```
 {% endcode %}
 
-{% code title="Look for a given word inside a file" %}
-```bash
-cat file.txt | grep word
-```
-{% endcode %}
-
-{% code title="Count number of lines in a file" %}
+{% code title="Count number of lines in a file" overflow="wrap" %}
 ```bash
 wc -l myfile.txt
 ```
 {% endcode %}
 
-{% code title="Print Working Directory" %}
-```bash
-pwd
-```
-{% endcode %}
-
-{% code title="Print full path of a file/directory" %}
+{% code title="Print full path " overflow="wrap" %}
 ```bash
 realpath file.txt
 ```
@@ -58,7 +48,7 @@ cp -r dir/ /home/user/
 ```
 {% endcode %}
 
-{% code title="Find all .txt files" %}
+{% code title="Find all .txt files" overflow="wrap" %}
 ```bash
 find /home/user -name "*.txt"
 ```
@@ -70,41 +60,113 @@ find / -type f -size +10M
 ```
 {% endcode %}
 
-{% code title="Search the entire filesystem for any match with the regex pattern" %}
+{% code title="Search with regex" overflow="wrap" %}
 ```bash
 sudo find / -regex ".*alacritty.*" 2>/dev/null
 ```
 {% endcode %}
 
-{% code title="Updates the database used by locate" %}
+{% code title="Update locate db" %}
 ```bash
 sudo updatedb
 ```
 {% endcode %}
 
-{% code title="Look file from the database" %}
+{% code title="Look file from the database" overflow="wrap" %}
 ```bash
 locate file.txt
 ```
 {% endcode %}
 
-{% code title="Full path of a binary" %}
+{% code title="Full path of a binary" overflow="wrap" %}
 ```bash
 which binary
 ```
 {% endcode %}
 
-{% code title="Creates a new file/Update timestamps" %}
+{% code title="Delete recursively" %}
 ```bash
-touch newfile
+rm -rf <dir>
 ```
 {% endcode %}
+{% endhint %}
 
-{% code title="Delete directory" %}
-```bash
-rm -r directory/
+***
+
+{% hint style="info" %}
+#### <mark style="color:red;">`Process Management`</mark>
+
 ```
-{% endcode %}
+// Some code
+```
+{% endhint %}
+
+***
+
+
+
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>User/Group Management</code></strong></mark></summary>
+
+
+
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Permission &#x26; Security</code></strong></mark></summary>
+
+
+
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Networking Commands</code></strong></mark></summary>
+
+{% hint style="info" %}
+<mark style="color:red;">**`Ping and TCPdump Network Analysis for RCE Detection`**</mark>
+
+* <mark style="color:purple;">Simply</mark> <mark style="color:orange;">**`ping`**</mark> <mark style="color:purple;">your own host, you can use the command directly or as a payload for a script:</mark>
+
+```bash
+ping -c 1 10.10.14.6
+```
+
+* <mark style="color:purple;">And catch it with</mark> <mark style="color:orange;">**`tcpdump`**</mark><mark style="color:purple;">**:**</mark>
+
+```bash
+sudo tcpdump -ni <interface> icmp
+```
+{% endhint %}
+
+
+
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Chroot</code></strong></mark></summary>
+
+
+
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>base64</code></strong></mark></summary>
+
+
+
+</details>
+
+
+
+{% hint style="info" %}
+## <mark style="color:purple;">`System Commands`</mark>
 
 #### <mark style="color:red;">`Process Management`</mark>
 
