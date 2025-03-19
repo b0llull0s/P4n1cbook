@@ -290,7 +290,7 @@ sudo gpasswd -a newuser newgroup
 ```
 {% endcode %}
 
-### <mark style="color:orange;">**`File Ownership`**</mark>
+#### <mark style="color:orange;">**`File Ownership`**</mark>
 
 {% code title="Set file permissions to rwxr-xr-x" %}
 ```bash
@@ -441,7 +441,7 @@ sudo setenforce 0
 ```
 {% endcode %}
 
-### <mark style="color:red;">**`Access Control Lists`**</mark>
+#### <mark style="color:red;">**`Access Control Lists`**</mark>
 
 {% code title="Show the ACL" %}
 ```bash
@@ -483,9 +483,9 @@ sudo tripwire --update
 <summary><mark style="color:purple;"><strong><code>Networking</code></strong></mark> </summary>
 
 {% hint style="info" %}
-&#x20;
 
-### <mark style="color:red;">**`Ping and TCPdump Network Analysis for RCE Detection`**</mark>
+
+#### <mark style="color:red;">**`Ping and TCPdump Network Analysis for RCE Detection`**</mark>
 
 * <mark style="color:purple;">Simply</mark> <mark style="color:orange;">**`ping`**</mark> <mark style="color:purple;">your own host, you can use the command directly or as a payload for a script:</mark>
 
@@ -503,7 +503,7 @@ sudo tcpdump -ni <interface> icmp
 {% hint style="info" %}
 
 
-### <mark style="color:red;">**`Enumeration`**</mark>
+#### <mark style="color:red;">**`Enumeration`**</mark>
 
 {% code title="Show accessible via VPN" %}
 ```bash
@@ -585,7 +585,7 @@ sudo ip route add default via 192.168.1.1
 {% hint style="info" %}
 
 
-### <mark style="color:red;">**`Decrypt the system`**</mark>
+#### <mark style="color:red;">**`Decrypt the system`**</mark>
 
 {% code title="Decrypt partition" %}
 ```bash
