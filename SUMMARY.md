@@ -12,7 +12,7 @@
 * [Basic Commands](fundamentals/basic-commands/README.md)
   * [Linux](fundamentals/basic-commands/linux.md)
   * [Git](fundamentals/basic-commands/git.md)
-  * [💾 Regex](fundamentals/basic-commands/regex.md)
+  * [💾 Regex](fundamentals/regex.md)
 * [🌐 Network Protocols](fundamentals/network-protocols/README.md)
   * [ICMP](fundamentals/network-protocols/icmp.md)
   * [SSH](fundamentals/network-protocols/ssh.md)
