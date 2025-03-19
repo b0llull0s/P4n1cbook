@@ -7,55 +7,9 @@ icon: linux
 
 <details>
 
-<summary><mark style="color:purple;"><strong><code>System Commands</code></strong></mark></summary>
+<summary><mark style="color:purple;"><strong><code>System Management</code></strong></mark></summary>
 
 {% hint style="info" %}
-<mark style="color:red;">**`Process Management`**</mark>
-
-{% code title="List details for process" %}
-```bash
-ps -ef | grep process
-```
-{% endcode %}
-
-{% code title="Show a detailed process tree with wide output" %}
-```bash
-ps -auxwf
-```
-{% endcode %}
-
-{% code title=" Show process tree for a specific user" %}
-```bash
-pstree user
-```
-{% endcode %}
-
-{% code title="Show process IDs (PIDs) with the tree view" %}
-```bash
-pstree -p
-```
-{% endcode %}
-
-{% code title="Show real-time process stats" %}
-```bash
-htop
-```
-{% endcode %}
-
-{% code title="Get the current process ID" %}
-```sh
-echo $$
-```
-{% endcode %}
-
-{% code title="Kill a process" %}
-```bash
-sudo kill -9 <PID>
-```
-{% endcode %}
-
-<mark style="color:red;">**`System Management`**</mark>
-
 {% code title="Print Info about the system" %}
 ```bash
 uname -a 
@@ -110,24 +64,6 @@ ulimit -l
 ```
 {% endcode %}
 
-{% code title="Put a process in the background" %}
-```bash
-bg
-```
-{% endcode %}
-
-{% code title="List all process in the background" %}
-```bash
-jobs
-```
-{% endcode %}
-
-{% code title="Puts a process into the foreground" %}
-```bash
-fg
-```
-{% endcode %}
-
 {% code title="Display overall system performance stats" %}
 ```bash
 vmstat
@@ -149,104 +85,6 @@ vmstat 5 10
 {% code title="Show the system uptime" %}
 ```bash
 uptime
-```
-{% endcode %}
-{% endhint %}
-
-</details>
-
-<details>
-
-<summary><mark style="color:purple;"><strong><code>Users/Groups</code></strong></mark></summary>
-
-{% hint style="info" %}
-{% code title="Edit sudoers file" %}
-```bash
-sudo visudo
-```
-{% endcode %}
-
-#### <mark style="color:orange;">**`Users`**</mark>
-
-{% code title="Creates a new user" %}
-```bash
-sudo useradd newuser
-```
-{% endcode %}
-
-{% code title="Creates a new user with home directory and bash shell " %}
-```bash
-sudo useradd -m -s /bin/bash newuser
-```
-{% endcode %}
-
-{% code title="Add user to the sudo group" %}
-```bash
-sudo usermod -aG sudo newuser
-```
-{% endcode %}
-
-{% code title="Set or change password" %}
-```bash
-sudo passwd newuser
-```
-{% endcode %}
-
-{% code title="Set zsh as default shell" %}
-```bash
-sudo usermod --shell /usr/bin/zsh alice
-```
-{% endcode %}
-
-#### <mark style="color:orange;">**`Groups`**</mark>
-
-{% code title="Create group" %}
-```bash
-sudo groupadd newgroup
-```
-{% endcode %}
-
-{% code title="Delete Group" %}
-```bash
-sudo groupdel group
-```
-{% endcode %}
-
-{% code title="Add user to group" %}
-```bash
-sudo gpasswd -a newuser newgroup
-```
-{% endcode %}
-
-<mark style="color:orange;">**`File Ownership`**</mark>
-
-{% code title="Set file permissions to rwxr-xr-x" %}
-```bash
-sudo chmod 755 file.txt
-```
-{% endcode %}
-
-{% code title="Read permissions for all users" %}
-```bash
-sudo chmod a+r shell.sh
-```
-{% endcode %}
-
-{% code title="Add execution permission" %}
-```bash
-sudo chmod +x script.sh
-```
-{% endcode %}
-
-{% code title="Change file owner and group" %}
-```bash
-sudo chown user:group file.txt
-```
-{% endcode %}
-
-{% code title="Change group ownership" %}
-```bash
-sudo chgrp group file.txt
 ```
 {% endcode %}
 {% endhint %}
@@ -333,6 +171,154 @@ which binary
 {% code title="Delete recursively" %}
 ```bash
 rm -rf <dir>
+```
+{% endcode %}
+{% endhint %}
+
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Process Management</code></strong></mark></summary>
+
+{% hint style="info" %}
+{% code title="List process" %}
+```bash
+ps -ef | grep process
+```
+{% endcode %}
+
+{% code title="Processes by Trees" %}
+```bash
+ps -auxwf
+```
+{% endcode %}
+
+{% code title="User process tree + PID" %}
+```bash
+pstree -p user
+```
+{% endcode %}
+
+{% code title="Current process ID" %}
+```bash
+echo $$
+```
+{% endcode %}
+
+{% code title="Background process" %}
+```bash
+bg
+```
+{% endcode %}
+
+{% code title="List background process" overflow="wrap" %}
+```bash
+jobs
+```
+{% endcode %}
+
+{% code title="Foreground process" %}
+```bash
+fg
+```
+{% endcode %}
+{% endhint %}
+
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Users/Groups</code></strong></mark></summary>
+
+{% hint style="info" %}
+{% code title="Edit sudoers file" %}
+```bash
+sudo visudo
+```
+{% endcode %}
+
+#### <mark style="color:orange;">**`Users`**</mark>
+
+{% code title="Creates a new user" %}
+```bash
+sudo useradd newuser
+```
+{% endcode %}
+
+{% code title="Creates a new user with home directory and bash shell " %}
+```bash
+sudo useradd -m -s /bin/bash newuser
+```
+{% endcode %}
+
+{% code title="Add user to the sudo group" %}
+```bash
+sudo usermod -aG sudo newuser
+```
+{% endcode %}
+
+{% code title="Set or change password" %}
+```bash
+sudo passwd newuser
+```
+{% endcode %}
+
+{% code title="Set zsh as default shell" %}
+```bash
+sudo usermod --shell /usr/bin/zsh alice
+```
+{% endcode %}
+
+#### <mark style="color:orange;">**`Groups`**</mark>
+
+{% code title="Create group" %}
+```bash
+sudo groupadd newgroup
+```
+{% endcode %}
+
+{% code title="Delete Group" %}
+```bash
+sudo groupdel group
+```
+{% endcode %}
+
+{% code title="Add user to group" %}
+```bash
+sudo gpasswd -a newuser newgroup
+```
+{% endcode %}
+
+### <mark style="color:orange;">**`File Ownership`**</mark>
+
+{% code title="Set file permissions to rwxr-xr-x" %}
+```bash
+sudo chmod 755 file.txt
+```
+{% endcode %}
+
+{% code title="Read permissions for all users" %}
+```bash
+sudo chmod a+r shell.sh
+```
+{% endcode %}
+
+{% code title="Add execution permission" %}
+```bash
+sudo chmod +x script.sh
+```
+{% endcode %}
+
+{% code title="Change file owner and group" %}
+```bash
+sudo chown user:group file.txt
+```
+{% endcode %}
+
+{% code title="Change group ownership" %}
+```bash
+sudo chgrp group file.txt
 ```
 {% endcode %}
 {% endhint %}
@@ -455,7 +441,7 @@ sudo setenforce 0
 ```
 {% endcode %}
 
-#### <mark style="color:red;">**`Access Control Lists`**</mark>
+### <mark style="color:red;">**`Access Control Lists`**</mark>
 
 {% code title="Show the ACL" %}
 ```bash
@@ -494,10 +480,12 @@ sudo tripwire --update
 
 <details>
 
-<summary><mark style="color:purple;"><strong><code>Networking</code></strong></mark></summary>
+<summary><mark style="color:purple;"><strong><code>Networking</code></strong></mark> </summary>
 
 {% hint style="info" %}
-<mark style="color:red;">**`Ping and TCPdump Network Analysis for RCE Detection`**</mark>
+&#x20;
+
+### <mark style="color:red;">**`Ping and TCPdump Network Analysis for RCE Detection`**</mark>
 
 * <mark style="color:purple;">Simply</mark> <mark style="color:orange;">**`ping`**</mark> <mark style="color:purple;">your own host, you can use the command directly or as a payload for a script:</mark>
 
@@ -513,7 +501,9 @@ sudo tcpdump -ni <interface> icmp
 {% endhint %}
 
 {% hint style="info" %}
-#### <mark style="color:red;">**`Enumeration`**</mark>
+
+
+### <mark style="color:red;">**`Enumeration`**</mark>
 
 {% code title="Show accessible via VPN" %}
 ```bash
@@ -593,7 +583,9 @@ sudo ip route add default via 192.168.1.1
 <summary><mark style="color:orange;"><strong><code>Chroot</code></strong></mark></summary>
 
 {% hint style="info" %}
-<mark style="color:red;">**`Decrypt the system`**</mark>
+
+
+### <mark style="color:red;">**`Decrypt the system`**</mark>
 
 {% code title="Decrypt partition" %}
 ```bash
@@ -621,7 +613,7 @@ sudo arch-chroot /mnt
 
 #### <mark style="color:red;">**`Connect using WPA`**</mark>
 
-{% code title="Shows the current connection status for the wpa" %}
+{% code title="Shows connection status" %}
 ```bash
 wpa_cli status
 ```
