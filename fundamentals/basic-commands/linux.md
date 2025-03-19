@@ -10,165 +10,7 @@ icon: linux
 <summary><mark style="color:purple;"><strong><code>System Commands</code></strong></mark></summary>
 
 {% hint style="info" %}
-#### <mark style="color:red;">`File & Directory Management`</mark>
-
-{% code title="List all files + details" %}
-```bash
-ls -al
-```
-{% endcode %}
-
-{% code title="List all files recursively" %}
-```bash
-ls -lAR
-```
-{% endcode %}
-
-{% code title="Read raw binary data" overflow="wrap" %}
-```bash
-cat example | hexdump -C
-```
-{% endcode %}
-
-{% code title="Count number of lines in a file" overflow="wrap" %}
-```bash
-wc -l myfile.txt
-```
-{% endcode %}
-
-{% code title="Print full path " overflow="wrap" %}
-```bash
-realpath file.txt
-```
-{% endcode %}
-
-{% code title="Copy recursively " %}
-```bash
-cp -r dir/ /home/user/
-```
-{% endcode %}
-
-{% code title="Find all .txt files" overflow="wrap" %}
-```bash
-find /home/user -name "*.txt"
-```
-{% endcode %}
-
-{% code title="Find files larger than 10MB" %}
-```bash
-find / -type f -size +10M
-```
-{% endcode %}
-
-{% code title="Search with regex" overflow="wrap" %}
-```bash
-sudo find / -regex ".*alacritty.*" 2>/dev/null
-```
-{% endcode %}
-
-{% code title="Update locate db" %}
-```bash
-sudo updatedb
-```
-{% endcode %}
-
-{% code title="Look file from the database" overflow="wrap" %}
-```bash
-locate file.txt
-```
-{% endcode %}
-
-{% code title="Full path of a binary" overflow="wrap" %}
-```bash
-which binary
-```
-{% endcode %}
-
-{% code title="Delete recursively" %}
-```bash
-rm -rf <dir>
-```
-{% endcode %}
-{% endhint %}
-
-***
-
-{% hint style="info" %}
-#### <mark style="color:red;">`Process Management`</mark>
-
-```
-// Some code
-```
-{% endhint %}
-
-***
-
-
-
-</details>
-
-<details>
-
-<summary><mark style="color:purple;"><strong><code>User/Group Management</code></strong></mark></summary>
-
-
-
-</details>
-
-<details>
-
-<summary><mark style="color:purple;"><strong><code>Permission &#x26; Security</code></strong></mark></summary>
-
-
-
-</details>
-
-<details>
-
-<summary><mark style="color:purple;"><strong><code>Networking Commands</code></strong></mark></summary>
-
-{% hint style="info" %}
-<mark style="color:red;">**`Ping and TCPdump Network Analysis for RCE Detection`**</mark>
-
-* <mark style="color:purple;">Simply</mark> <mark style="color:orange;">**`ping`**</mark> <mark style="color:purple;">your own host, you can use the command directly or as a payload for a script:</mark>
-
-```bash
-ping -c 1 10.10.14.6
-```
-
-* <mark style="color:purple;">And catch it with</mark> <mark style="color:orange;">**`tcpdump`**</mark><mark style="color:purple;">**:**</mark>
-
-```bash
-sudo tcpdump -ni <interface> icmp
-```
-{% endhint %}
-
-
-
-</details>
-
-<details>
-
-<summary><mark style="color:purple;"><strong><code>Chroot</code></strong></mark></summary>
-
-
-
-</details>
-
-<details>
-
-<summary><mark style="color:purple;"><strong><code>base64</code></strong></mark></summary>
-
-
-
-</details>
-
-
-
-{% hint style="info" %}
-## <mark style="color:purple;">`System Commands`</mark>
-
-#### <mark style="color:red;">`Process Management`</mark>
+<mark style="color:red;">**`Process Management`**</mark>
 
 {% code title="List details for process" %}
 ```bash
@@ -212,7 +54,7 @@ sudo kill -9 <PID>
 ```
 {% endcode %}
 
-#### <mark style="color:red;">`System Management`</mark>
+<mark style="color:red;">**`System Management`**</mark>
 
 {% code title="Print Info about the system" %}
 ```bash
@@ -309,131 +151,22 @@ vmstat 5 10
 uptime
 ```
 {% endcode %}
-
-{% code title="Show info about current login user" %}
-```bash
-w
-```
-{% endcode %}
-
-#### <mark style="color:red;">`Logs`</mark>
-
-{% code title="Display login records" %}
-```bash
-last
-```
-{% endcode %}
-
-{% code title="Display bad login attempts" %}
-```bash
-lastb
-```
-{% endcode %}
-
-{% code title="Shows log as they are written" %}
-```bash
-journalctl -f 
-```
-{% endcode %}
-
-{% code title="Shows logs from the current boot" %}
-```bash
-journalctl -b
-```
-{% endcode %}
-
-{% code title="Shows logs from the previous boot" %}
-```bash
-journalctl -b -1
-```
-{% endcode %}
-
-{% code title="Shows logs from a specific service" %}
-```bash
-journalctl -u <service>
-```
-{% endcode %}
-
-{% code title="Shows logs from a time range" %}
-```bash
-journalctl --since "2024-11-01" --until "2024-11-10"
-```
-{% endcode %}
-
-{% code title="Show logs by priority level" %}
-```bash
-journalctl -p <level>
-```
-{% endcode %}
-
-#### <mark style="color:red;">`Priority Levels:`</mark>
-
-* <mark style="color:orange;">`0`</mark> <mark style="color:purple;">--></mark> <mark style="color:purple;">**`emergency`**</mark>
-* <mark style="color:orange;">`1`</mark> <mark style="color:purple;">--></mark> <mark style="color:purple;">**`alert`**</mark>
-* <mark style="color:orange;">`2`</mark> <mark style="color:purple;">--></mark> <mark style="color:purple;">**`critical`**</mark>
-* <mark style="color:orange;">`3`</mark> <mark style="color:purple;">--></mark> <mark style="color:purple;">**`error`**</mark>
-* <mark style="color:orange;">`4`</mark> <mark style="color:purple;">--></mark> <mark style="color:purple;"></mark><mark style="color:purple;">**`warning`**</mark>
-* <mark style="color:orange;">`5`</mark> <mark style="color:purple;">--></mark> <mark style="color:purple;"></mark><mark style="color:purple;">**`notice`**</mark>
-* <mark style="color:orange;">`6`</mark> <mark style="color:purple;">--></mark> <mark style="color:purple;"></mark><mark style="color:purple;">**`informational`**</mark>
-* <mark style="color:orange;">`7`</mark> <mark style="color:purple;">--></mark> <mark style="color:purple;"></mark><mark style="color:purple;">**`debug`**</mark>
-
-{% code title="Shows logs for a specific process" %}
-```bash
-journalctl _PID=<pid>
-```
-{% endcode %}
-
-{% code title="Shows logs from the kernel" %}
-```bash
-journalctl -k
-```
-{% endcode %}
-
-{% code title="Show kernel and boot messages" %}
-```bash
-dmesg
-```
-{% endcode %}
 {% endhint %}
 
-***
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Users/Groups</code></strong></mark></summary>
 
 {% hint style="info" %}
-## <mark style="color:purple;">`User/Group Management`</mark>
-
-#### <mark style="color:red;">`Users`</mark>
-
-{% code title="Display user and group ID of the current user" %}
-```bash
-id 
-```
-{% endcode %}
-
-{% code title="id from a specific user" %}
-```bash
-id username
-```
-{% endcode %}
-
 {% code title="Edit sudoers file" %}
 ```bash
 sudo visudo
 ```
 {% endcode %}
 
-{% code title="Switch to the root user" %}
-```bash
-su
-```
-{% endcode %}
-
-{% code title="Switch to another user" %}
-```bash
-su - username
-```
-{% endcode %}
-
-#### <mark style="color:red;">`User Management`</mark>
+#### <mark style="color:orange;">**`Users`**</mark>
 
 {% code title="Creates a new user" %}
 ```bash
@@ -465,7 +198,7 @@ sudo usermod --shell /usr/bin/zsh alice
 ```
 {% endcode %}
 
-#### <mark style="color:red;">`Groups`</mark>
+#### <mark style="color:orange;">**`Groups`**</mark>
 
 {% code title="Create group" %}
 ```bash
@@ -484,14 +217,8 @@ sudo groupdel group
 sudo gpasswd -a newuser newgroup
 ```
 {% endcode %}
-{% endhint %}
 
-***
-
-{% hint style="info" %}
-## <mark style="color:purple;">`Permission & Security`</mark>
-
-#### <mark style="color:red;">`File Ownership`</mark>
+<mark style="color:orange;">**`File Ownership`**</mark>
 
 {% code title="Set file permissions to rwxr-xr-x" %}
 ```bash
@@ -499,7 +226,7 @@ sudo chmod 755 file.txt
 ```
 {% endcode %}
 
-{% code title="Adds read permissions for all users" %}
+{% code title="Read permissions for all users" %}
 ```bash
 sudo chmod a+r shell.sh
 ```
@@ -522,14 +249,213 @@ sudo chown user:group file.txt
 sudo chgrp group file.txt
 ```
 {% endcode %}
+{% endhint %}
 
-{% code title="Prevent world-writable files" %}
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>File &#x26; Directory Management</code></strong></mark></summary>
+
+{% hint style="info" %}
+{% code title="List all files + details" %}
 ```bash
-umask 022 
+ls -al
 ```
 {% endcode %}
 
-#### <mark style="color:red;">`Access Control Lists`</mark>
+{% code title="List all files recursively" %}
+```bash
+ls -lAR
+```
+{% endcode %}
+
+{% code title="Read raw binary data" overflow="wrap" %}
+```bash
+cat example | hexdump -C
+```
+{% endcode %}
+
+{% code title="Count number of lines in a file" overflow="wrap" %}
+```bash
+wc -l myfile.txt
+```
+{% endcode %}
+
+{% code title="Print full path " overflow="wrap" %}
+```bash
+realpath file.txt
+```
+{% endcode %}
+
+{% code title="Copy recursively " %}
+```bash
+cp -r dir/ /home/user/
+```
+{% endcode %}
+
+{% code title="Find all .txt files" overflow="wrap" %}
+```bash
+find /home/user -name "*.txt"
+```
+{% endcode %}
+
+{% code title="Find files larger than 10MB" %}
+```bash
+find / -type f -size +10M
+```
+{% endcode %}
+
+{% code title="Search with regex" overflow="wrap" %}
+```bash
+sudo find / -regex ".*alacritty.*" 2>/dev/null
+```
+{% endcode %}
+
+{% code title="Update locate db" %}
+```bash
+sudo updatedb
+```
+{% endcode %}
+
+{% code title="Look file from the database" overflow="wrap" %}
+```bash
+locate file.txt
+```
+{% endcode %}
+
+{% code title="Full path of a binary" overflow="wrap" %}
+```bash
+which binary
+```
+{% endcode %}
+
+{% code title="Delete recursively" %}
+```bash
+rm -rf <dir>
+```
+{% endcode %}
+{% endhint %}
+
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Logs</code></strong></mark></summary>
+
+{% code title="Current login user" %}
+```bash
+w
+```
+{% endcode %}
+
+{% code title="Display login records" %}
+```bash
+last
+```
+{% endcode %}
+
+{% code title="Display bad login attempts" %}
+```sh
+lastb
+```
+{% endcode %}
+
+{% code title="Kernel and boot messages" %}
+```bash
+dmesg
+```
+{% endcode %}
+
+{% hint style="info" %}
+#### <mark style="color:orange;">**`journalctl`**</mark>
+
+{% code title="Shows logs live" %}
+```sh
+journalctl -f 
+```
+{% endcode %}
+
+{% code title="Logs from the current boot" %}
+```sh
+journalctl -b
+```
+{% endcode %}
+
+{% code title="Logs from the previous boot" %}
+```bash
+journalctl -b -1
+```
+{% endcode %}
+
+{% code title="Logs from a specific service" %}
+```bash
+journalctl -u <service>
+```
+{% endcode %}
+
+{% code title="Logs for a specific process" %}
+```bash
+journalctl _PID=<pid>
+```
+{% endcode %}
+
+{% code title="Shows logs from the kernel" %}
+```sh
+journalctl -k
+```
+{% endcode %}
+
+{% code title="Logs by time-frame" %}
+```bash
+journalctl --since "2024-11-01" --until "2024-11-10"
+```
+{% endcode %}
+
+#### <mark style="color:red;">**`Priority Levels`**</mark>
+
+```bash
+journalctl -p <level>
+```
+
+* <mark style="color:orange;">**`0`**</mark> <mark style="color:purple;">**-->**</mark> <mark style="color:purple;">**`emergency`**</mark>
+* <mark style="color:orange;">**`1`**</mark> <mark style="color:purple;">**-->**</mark> <mark style="color:purple;">**`alert`**</mark>
+* <mark style="color:orange;">**`2`**</mark> <mark style="color:purple;">**-->**</mark> <mark style="color:purple;">**`critical`**</mark>
+* <mark style="color:orange;">**`3`**</mark> <mark style="color:purple;">**-->**</mark> <mark style="color:purple;">**`error`**</mark>
+* <mark style="color:orange;">**`4`**</mark> <mark style="color:purple;">**-->**</mark> <mark style="color:purple;">**`warning`**</mark>
+* <mark style="color:orange;">**`5`**</mark><mark style="color:purple;">**-->**</mark> <mark style="color:purple;">**`notice`**</mark>
+* <mark style="color:orange;">**`6`**</mark> <mark style="color:purple;">**-->**</mark> <mark style="color:purple;">**`informational`**</mark>
+* <mark style="color:orange;">**`7`**</mark> <mark style="color:purple;">**-->**</mark> <mark style="color:purple;">**`debug`**</mark>
+{% endhint %}
+
+
+
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Security</code></strong></mark></summary>
+
+{% hint style="info" %}
+{% code title="Prevent world-writable files" %}
+```bash
+umask 022
+```
+{% endcode %}
+
+{% code title="Display SELinux mode" %}
+```bash
+getenforce
+```
+{% endcode %}
+
+{% code title="Disable SELinux " %}
+```bash
+sudo setenforce 0
+```
+{% endcode %}
+
+#### <mark style="color:red;">**`Access Control Lists`**</mark>
 
 {% code title="Show the ACL" %}
 ```bash
@@ -543,33 +469,7 @@ setfacl -m u:user:rw file.txt
 ```
 {% endcode %}
 
-#### <mark style="color:red;">`Security Policies`</mark>
-
-{% code title="Display the current SELinux mode" %}
-```bash
-getenforce
-```
-{% endcode %}
-
-{% code title="Disable SELinux " %}
-```bash
-sudo setenforce 0
-```
-{% endcode %}
-
-#### <mark style="color:red;">`File Integrity`</mark>
-
-{% code title="Generates a SHA256 file" %}
-```bash
-sha256sum file.txt
-```
-{% endcode %}
-
-{% code title="Generates a MD5 hash" %}
-```bash
-md5sum file.txt
-```
-{% endcode %}
+#### <mark style="color:red;">`tripwire`</mark>
 
 {% code title="Initialize the Tripwire database" %}
 ```bash
@@ -590,30 +490,32 @@ sudo tripwire --update
 {% endcode %}
 {% endhint %}
 
-***
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Networking</code></strong></mark></summary>
 
 {% hint style="info" %}
-## <mark style="color:purple;">`Networking Command`</mark>
+<mark style="color:red;">**`Ping and TCPdump Network Analysis for RCE Detection`**</mark>
 
-{% code title="Display network interfaces and their IP addresses" %}
+* <mark style="color:purple;">Simply</mark> <mark style="color:orange;">**`ping`**</mark> <mark style="color:purple;">your own host, you can use the command directly or as a payload for a script:</mark>
+
 ```bash
-ifconfig
+ping -c 1 10.10.14.6
 ```
-{% endcode %}
 
-{% code title="Display IP addresses of all network interfaces" %}
+* <mark style="color:purple;">And catch it with</mark> <mark style="color:orange;">**`tcpdump`**</mark><mark style="color:purple;">**:**</mark>
+
 ```bash
-ip a 
+sudo tcpdump -ni <interface> icmp
 ```
-{% endcode %}
+{% endhint %}
 
-{% code title="Bring interface up" %}
-```bash
-sudo ip link set eth0 up
-```
-{% endcode %}
+{% hint style="info" %}
+#### <mark style="color:red;">**`Enumeration`**</mark>
 
-{% code title="Show networks accessible via the VPN" %}
+{% code title="Show accessible via VPN" %}
 ```bash
 netstat -rn
 ```
@@ -625,15 +527,37 @@ netstat -tuln
 ```
 {% endcode %}
 
-{% code title="Show listening ports and services" %}
+{% code title="Listening ports & services" %}
 ```bash
 ss -tuln
 ```
 {% endcode %}
 
-{% code title="Show listening ports for a process" %}
+{% code title="Listening ports + PID" %}
 ```bash
 ss -tulnp | grep PID
+```
+{% endcode %}
+
+{% code title="Trace the network path" %}
+```bash
+traceroute example.com
+```
+{% endcode %}
+{% endhint %}
+
+{% code title="Change a route's metric" overflow="wrap" %}
+```bash
+sudo route change -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.1.254 metric 200
+```
+{% endcode %}
+
+{% hint style="info" %}
+#### <mark style="color:orange;">`ip`</mark>
+
+{% code title="Bring interface up" %}
+```bash
+sudo ip link set eth0 up
 ```
 {% endcode %}
 
@@ -660,26 +584,16 @@ sudo ip route del 192.168.2.0/24
 sudo ip route add default via 192.168.1.1
 ```
 {% endcode %}
-
-{% code title="Change a route's metric" %}
-```bash
-sudo route change -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.1.254 metric 200
-```
-{% endcode %}
-
-{% code title="Trace the network path to example.com" %}
-```bash
-traceroute example.com
-```
-{% endcode %}
 {% endhint %}
 
-***
+</details>
+
+<details>
+
+<summary><mark style="color:orange;"><strong><code>Chroot</code></strong></mark></summary>
 
 {% hint style="info" %}
-## <mark style="color:purple;">`Chroot`</mark>
-
-#### <mark style="color:red;">`Decrypt the system`</mark>
+<mark style="color:red;">**`Decrypt the system`**</mark>
 
 {% code title="Decrypt partition" %}
 ```bash
@@ -705,7 +619,7 @@ sudo arch-chroot /mnt
 ```
 {% endcode %}
 
-#### <mark style="color:red;">`Connect using`</mark><mark style="color:orange;">`WPA`</mark>
+#### <mark style="color:red;">**`Connect using WPA`**</mark>
 
 {% code title="Shows the current connection status for the wpa" %}
 ```bash
@@ -725,7 +639,7 @@ sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 {% endcode %}
 
-### <mark style="color:red;">`Boot/UEFI Management`</mark>
+#### <mark style="color:red;">**`Boot/UEFI Management`**</mark>
 
 {% code title=" Displays the current boot entries in the UEFI firmware" %}
 ```bash
@@ -740,21 +654,26 @@ sudo efibootmgr --delete-bootnum --bootnum 0
 {% endcode %}
 {% endhint %}
 
-***
+
+
+</details>
+
+<details>
+
+<summary><mark style="color:orange;"><strong><code>base64</code></strong></mark></summary>
 
 {% hint style="info" %}
-### <mark style="color:purple;">`base64`</mark>
-
-* <mark style="color:purple;">Using</mark> <mark style="color:orange;">**`base64`**</mark> <mark style="color:purple;">help to keep file integrity</mark>
-* <mark style="color:purple;">Check hashes to avoid file corruption</mark>
-
-{% code title="Generate hash" %}
+{% code title="Generate MD5 hash" %}
 ```sh
 md5sum <file>
 ```
 {% endcode %}
 
-***
+{% code title="Generates a SHA256 hash" %}
+```bash
+sha256sum file.txt
+```
+{% endcode %}
 
 #### <mark style="color:red;">`Encoding`</mark>
 
@@ -812,4 +731,12 @@ base64 -d -w 0 file.txt > decoded_output.bin
 ```
 {% endcode %}
 {% endhint %}
+
+</details>
+
+
+
+***
+
+***
 
