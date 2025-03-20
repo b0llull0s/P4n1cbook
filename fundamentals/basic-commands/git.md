@@ -34,8 +34,6 @@ git show b73481bb823d2dfb49c44f4c1e6a7e11912ed8ae
 
 <summary><mark style="color:purple;"><strong><code>Remote Repository</code></strong></mark></summary>
 
-* **Check your remote URL:**
-
 {% code title="Check your remote URL" overflow="wrap" %}
 ```sh
 git remote -v
