@@ -4,9 +4,11 @@ icon: git
 
 # Git
 
-{% hint style="info" %}
-### <mark style="color:red;">`Enumeration`</mark>
+<details>
 
+<summary><mark style="color:purple;"><strong><code>Enumeration</code></strong></mark></summary>
+
+{% hint style="info" %}
 {% code title="Repository Status" %}
 ```sh
 git status
@@ -26,11 +28,33 @@ git show b73481bb823d2dfb49c44f4c1e6a7e11912ed8ae
 {% endcode %}
 {% endhint %}
 
-***
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Remote Repository</code></strong></mark></summary>
+
+* **Check your remote URL:**
+
+{% code title="Check your remote URL" overflow="wrap" %}
+```sh
+git remote -v
+```
+{% endcode %}
+
+{% code title=" Remote URL to SSH" overflow="wrap" %}
+```sh
+git remote set-url origin git@github.com:b0llull0s/AI-Maths.git
+```
+{% endcode %}
+
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Branches</code></strong></mark></summary>
 
 {% hint style="info" %}
-### <mark style="color:red;">`Branches`</mark>
-
 * <mark style="color:purple;">Fetch the changes to local:</mark>
 
 ```sh
@@ -73,4 +97,8 @@ git push origin <branch_name>
 git fetch
 ```
 {% endhint %}
+
+</details>
+
+
 
