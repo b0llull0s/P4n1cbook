@@ -23,6 +23,8 @@ CTRL + ]
 
 * <mark style="color:purple;">Uses</mark> <mark style="color:orange;">**`Port 143`**</mark> <mark style="color:purple;">by default.</mark>
 
+<kbd><mark style="color:orange;">**`Custom Client PoC`**<mark style="color:orange;"></kbd>
+
 {% code title="Connect" %}
 ```sh
 telnet <URL> 143
@@ -52,7 +54,5 @@ a3 EXAMINE INBOX
 a4 FETCH 1 BODY[]
 ```
 {% endcode %}
-
-<kbd><mark style="color:orange;">**`Custom Client PoC`**<mark style="color:orange;"></kbd>
 
 </details>
