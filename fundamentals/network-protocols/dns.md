@@ -38,7 +38,7 @@ server 10.10.10.10
 
 #### <mark style="color:red;">**`Transfer Zones`**</mark>
 
-* #### <mark style="color:purple;">If</mark> <mark style="color:orange;">`DNS`</mark> <mark style="color:purple;">is running over</mark> <mark style="color:orange;">`TCP`</mark> <mark style="color:purple;">try a zone transfer:</mark>
+* <mark style="color:purple;">If</mark> <mark style="color:orange;">`DNS`</mark> <mark style="color:purple;">is running over</mark> <mark style="color:orange;">`TCP`</mark> <mark style="color:purple;">try a zone transfer:</mark>
 
 ```sh
 dig axfr HOST.NAME @10.10.10.29
