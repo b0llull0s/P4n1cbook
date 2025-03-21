@@ -85,11 +85,17 @@ curl -O ftp://<server-address>/path/to/file
 ```
 {% endhint %}
 
+</details>
+
+<details>
+
+<summary><mark style="color:orange;"><strong><code>TFTP</code></strong></mark></summary>
+
 {% hint style="info" %}
+<mark style="color:purple;">This is the default config file for</mark> <mark style="color:orange;">**`TFTP`**</mark> <mark style="color:purple;">--></mark> <mark style="color:orange;">**`tftpd-hpa`**</mark>
+{% endhint %}
 
-
-#### <mark style="color:orange;">`TFTP`</mark>
-
+{% hint style="info" %}
 {% code title="Start the service" %}
 ```sh
 tftp <IP>
@@ -138,10 +144,6 @@ pwd
 ```sh
 dir
 ```
-
-{% hint style="info" %}
-<mark style="color:purple;">This is the default config file for</mark> <mark style="color:orange;">**`TFTP`**</mark> <mark style="color:purple;">--></mark> <mark style="color:orange;">**`tftpd-hpa`**</mark>
-{% endhint %}
 
 </details>
 
