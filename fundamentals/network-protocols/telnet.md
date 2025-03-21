@@ -1,32 +1,36 @@
 ---
+description: Telecomunications Network - Port 23
 icon: tty-answer
 ---
 
 # Telnet
 
-{% hint style="info" %}
-#### <mark style="color:orange;">`Port 23`</mark>
+<details>
 
-#### <mark style="color:purple;">Basic text-based communication protocol that allows you to interact with remote servers or services</mark>
+<summary><mark style="color:purple;"><strong><code>Commands</code></strong></mark></summary>
 
-* <mark style="color:orange;">**`CTRL + ]`**</mark> <mark style="color:purple;">to escape characters.</mark>
-{% endhint %}
+{% code title="Escape Characters" %}
+```
+CTRL + ]
+```
+{% endcode %}
 
-***
+</details>
 
-{% hint style="info" %}
-### <mark style="color:red;">`IMAP`</mark>
+<details>
 
-#### <mark style="color:orange;">`Internet Message Access Protocol`</mark>&#x20;
+<summary><mark style="color:orange;"><strong><code>IMAP - Internet Message Access Protocol</code></strong></mark></summary>
 
 * <mark style="color:purple;">Uses</mark> <mark style="color:orange;">**`Port 143`**</mark> <mark style="color:purple;">by default.</mark>
 
+{% code title="Connect" %}
 ```sh
 telnet <URL> 143
 ```
+{% endcode %}
 
 {% code title="Login" %}
-```sh
+```bash
 a1 LOGIN <Username> <Password>
 ```
 {% endcode %}
@@ -44,9 +48,11 @@ a3 EXAMINE INBOX
 {% endcode %}
 
 {% code title="Fetch the first message" %}
-```sh
+```
 a4 FETCH 1 BODY[]
 ```
 {% endcode %}
-{% endhint %}
 
+<kbd><mark style="color:orange;">**`Custom Client PoC`**<mark style="color:orange;"></kbd>
+
+</details>
