@@ -4,30 +4,44 @@ icon: snake
 
 # Python Essentials
 
-{% hint style="info" %}
-### <mark style="color:purple;">`Libraries`</mark>
+<details>
 
-{% code title="Check Library Version" %}
-```sh
+<summary><mark style="color:purple;"><strong><code>Virtual Environment</code></strong></mark></summary>
+
+
+
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Libraries</code></strong></mark></summary>
+
+{% code title="Check Library Version" overflow="wrap" %}
+```bash
 pip show <library_name>
 ```
 {% endcode %}
 
+{% hint style="info" %}
 #### <mark style="color:red;">`urllib3`</mark>
 
-* <mark style="color:purple;">Disable</mark> <mark style="color:orange;">**`SSL`**</mark> <mark style="color:purple;">warnings for insecure connections:</mark>
+<mark style="color:purple;">Disable</mark> <mark style="color:orange;">**`SSL`**</mark> <mark style="color:purple;">warnings for insecure connections:</mark>
 
+{% code overflow="wrap" %}
 ```python
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 ```
+{% endcode %}
+{% endhint %}
 
-***
+{% hint style="info" %}
+#### <mark style="color:red;">**`pymysql`**</mark>
 
-#### <mark style="color:red;">**`pymysql`**</mark>&#x20;
+<mark style="color:purple;">Python client for interacting with</mark> <mark style="color:orange;">**`MySQL`**</mark> <mark style="color:purple;">databases.</mark>
 
-* <mark style="color:purple;">Python client for interacting with</mark> <mark style="color:orange;">**`MySQL`**</mark> <mark style="color:purple;">databases.</mark>
-* <mark style="color:purple;">The following script dynamically executes</mark> <mark style="color:orange;">**`SQL`**</mark> <mark style="color:purple;">queries on a target database using credentials extracted from application settings (It need to be in a directory where the</mark> <mark style="color:orange;">**`craft_api`**</mark> <mark style="color:purple;">module is accessible):</mark>
+* <mark style="color:purple;">The following script dynamically executes</mark> <mark style="color:orange;">**`SQL`**</mark> <mark style="color:purple;">queries on a target database using credentials extracted from application settings.</mark>
+* &#x20;<mark style="color:purple;">It need to be in a directory where the</mark> <mark style="color:orange;">**`craft_api`**</mark> <mark style="color:purple;">module is accessible.</mark>
 
 {% code overflow="wrap" %}
 ```python
@@ -57,22 +71,11 @@ finally:
 ```
 {% endcode %}
 
-* <mark style="color:purple;">Use Cases:</mark>
-
-```sh
-python myscript.py "SHOW TABLES"
-```
-
-```sh
-python myscript.py "SELECT * FROM user"
-```
+#### <mark style="color:red;">`Example`</mark>
 
 ```sh
 python myscript.py "SHOW GRANTS FOR CURRENT_USER()"
 ```
-
-```sh
-python myscript.py "DESCRIBE user"
-```
 {% endhint %}
 
+</details>
