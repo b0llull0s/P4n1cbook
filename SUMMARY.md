@@ -3,8 +3,8 @@
 ## 🏴‍☠️ Welcome!
 
 * [🔮 P4n1cBook](README.md)
-* [🚨 Licence and Disclaimer](welcome/licence-and-disclaimer.md)
 * [📚 Bookmarks](welcome/bookmarks.md)
+* [🚨 Licence and Disclaimer](welcome/licence-and-disclaimer.md)
 
 ## Fundamentals
 
@@ -26,6 +26,9 @@
   * [IPP](fundamentals/network-protocols/ipp.md)
   * [WinRM](fundamentals/network-protocols/winrm.md)
   * [LLMNR](fundamentals/network-protocols/llmnr.md)
+* [Code](fundamentals/code/README.md)
+  * [Python Essentials](fundamentals/code/python-essentials.md)
+  * [C & C++](fundamentals/code/c-and-c++.md)
 * [Databases](fundamentals/databases/README.md)
   * [MySQL](fundamentals/databases/mysql.md)
   * [NoSQL](fundamentals/databases/nosql.md)
@@ -33,10 +36,10 @@
   * [GraphQL](fundamentals/web-apis/graphql.md)
 * [Shells/TTYs](fundamentals/shells-ttys.md)
 * [Dorks](fundamentals/dorks.md)
-* [Python Essentials](fundamentals/python-essentials.md)
-* [Cryptography](fundamentals/cryptography.md)
 * [Steganography](fundamentals/steganography.md)
-* [Reverse Engineering](fundamentals/reverse-engineering.md)
+* [Cryptography](fundamentals/cryptography.md)
+* [Reverse Engineering](fundamentals/reverse-engineering/README.md)
+  * [Binaries](fundamentals/reverse-engineering/binaries.md)
 * [Tools](fundamentals/tools/README.md)
   * [curl](fundamentals/tools/curl.md)
   * [Netcat](fundamentals/tools/netcat.md)
