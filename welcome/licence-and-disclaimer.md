@@ -6,7 +6,7 @@ description: Share and Care
 
 ## <mark style="color:orange;">Licence</mark>&#x20;
 
-<mark style="color:purple;">**Except where otherwise specified (the external information copied into the book belongs to the original authors), the text on**</mark> [<mark style="color:red;">**`P4nicb00k`**</mark>](https://panic-thread.gitbook.io/p4n1cb00k) <mark style="color:purple;">**by Isaac P. Bassart is licensed under the**</mark>[ ](https://creativecommons.org/licenses/by-nc/4.0/)<mark style="color:red;">**`Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)`**</mark><mark style="color:purple;">**`.`**</mark>
+<mark style="color:purple;">**Except where otherwise specified (the external information copied into the book belongs to the original authors), the text on**</mark> [<mark style="color:red;">**`P4nicb00k`**</mark>](https://panic-thread.gitbook.io/p4n1cb00k) <mark style="color:purple;">**is licensed under the**</mark>[ ](https://creativecommons.org/licenses/by-nc/4.0/)<mark style="color:red;">**`Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)`**</mark><mark style="color:purple;">**`.`**</mark>
 
 <mark style="color:purple;">**Midjourney:**</mark>
 

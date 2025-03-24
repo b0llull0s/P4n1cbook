@@ -4,7 +4,6 @@
 
 * [🔮 P4n1cBook](README.md)
 * [🚨 Licence and Disclaimer](welcome/licence-and-disclaimer.md)
-* [⚡ About Author](welcome/about-author.md)
 * [📚 Bookmarks](welcome/bookmarks.md)
 
 ## Fundamentals
