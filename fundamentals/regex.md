@@ -4,45 +4,45 @@ description: Regular Expressions
 
 # 💾 Regex
 
-{% hint style="info" %}
-## <mark style="color:red;">`Basic Tricks`</mark>
+<details>
 
-* <mark style="color:purple;">Look at uncommented lines from a file:</mark>
+<summary><mark style="color:purple;"><strong><code>Basic Tricks</code></strong></mark></summary>
 
+{% code title="Print uncommented lines" overflow="wrap" %}
 ```sh
 cat example | grep -Ev "^#" | grep .
 ```
+{% endcode %}
 
-* <mark style="color:purple;">Extracts only the text inside the quotes from a file:</mark>
-
+{% code title="Extracts text within quotes" %}
 ```sh
 sed 's/"\([^"]*\)"/\1/g' filename
 ```
+{% endcode %}
 
-* <mark style="color:purple;">Converting</mark> <mark style="color:orange;">**`Windows-style`**</mark> <mark style="color:purple;">line endings to</mark> <mark style="color:orange;">**`Unix-style`**</mark> <mark style="color:purple;">line endings:</mark>
-
-```sh
+{% code title="Swap  to Unix-style" %}
+```bash
 sed -i 's/\r$//' file.sh
 ```
+{% endcode %}
 
-* <mark style="color:purple;">Execute a script on a loop until a condition is meet:</mark>
-
-{% code overflow="wrap" %}
+{% code title="Set a loop" overflow="wrap" %}
 ```sh
 until ! ./poc.sh | grep -q "[x] ERROR"; do :; done; echo "No ERROR found, script finished successfully."
 ```
 {% endcode %}
-{% endhint %}
 
-***
+</details>
 
-{% hint style="info" %}
-### <mark style="color:red;">`Making Wordlists`</mark>
+<details>
 
-* <mark style="color:purple;">Create wordlists for users and passwords from a dump file. The following code extracts the</mark> <mark style="color:orange;">**`first`**</mark> <mark style="color:purple;">(usernames) and</mark> <mark style="color:orange;">**`fourth`**</mark> <mark style="color:purple;">(password hashes) fields, which are separated by colons (</mark><mark style="color:orange;">**`:`**</mark><mark style="color:purple;">), and saves them into separate files:</mark>
+<summary><mark style="color:purple;"><strong><code>Making Wordlists</code></strong></mark></summary>
+
+<mark style="color:purple;">For example the following commands extracts the</mark> <mark style="color:purple;"></mark><mark style="color:purple;">**first**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">(</mark><mark style="color:orange;">**`usernames`**</mark><mark style="color:purple;">) and</mark> <mark style="color:purple;"></mark><mark style="color:purple;">**fourth**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">(</mark><mark style="color:red;">**`password hashes`**</mark><mark style="color:purple;">) fields, which are separated by colons (</mark><mark style="color:orange;">**`:`**</mark><mark style="color:purple;">):</mark>
 
 ```sh
 awk '{print $1}' FS=':' dump.txt > users.txt
 awk '{print $4}' FS=':' dump.txt > hashes.txt
 ```
-{% endhint %}
+
+</details>
