@@ -1,5 +1,5 @@
 ---
-description: Server Message Block
+description: Server Message Block - Ports 445/139
 icon: database
 ---
 
