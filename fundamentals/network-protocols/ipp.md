@@ -7,7 +7,7 @@ icon: print
 
 <details>
 
-<summary><mark style="color:orange;"><strong><code>CUPS</code></strong></mark> <mark style="color:orange;"><strong><code>Common UNIX Printing System)</code></strong></mark></summary>
+<summary><mark style="color:orange;"><strong><code>CUPS</code></strong><strong><code> </code></strong><strong><code>Common UNIX Printing System)</code></strong></mark></summary>
 
 * <mark style="color:purple;">It uses</mark> <mark style="color:orange;">**`UDP`**</mark> <mark style="color:purple;">and</mark> <mark style="color:orange;">**`TCP`**</mark> <mark style="color:purple;">**on Port**</mark> <mark style="color:orange;">**`631`**</mark>
 
