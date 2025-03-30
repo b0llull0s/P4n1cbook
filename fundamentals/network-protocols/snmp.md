@@ -1,53 +1,45 @@
 ---
+description: Simple Network Management Protocol - Port 161/162
 icon: shredder
-description: Simple Network Management Protocol
 ---
 
 # SNMP
 
-{% hint style="warning" %}
-<mark style="color:purple;">**Uses**</mark> <mark style="color:orange;">**`UDP`**</mark>
+{% hint style="info" %}
+* <mark style="color:purple;">**Uses**</mark> <mark style="color:orange;">**`UDP`**</mark>
+* <mark style="color:orange;">**`Port 161`**</mark> <mark style="color:purple;">**for sending**</mark>**&#x20;**<mark style="color:orange;">**`SNMP`**</mark> <mark style="color:purple;">**requests.**</mark>
+* <mark style="color:orange;">**`Port 162`**</mark> <mark style="color:purple;">**for receiving**</mark>**&#x20;**<mark style="color:orange;">**`SNMP`**</mark>**&#x20;**<mark style="color:purple;">**notifications (**</mark><mark style="color:orange;">**`Traps`**</mark>**&#x20;**<mark style="color:purple;">**and**</mark>**&#x20;**<mark style="color:orange;">**`InformRequests`**</mark><mark style="color:purple;">**)**</mark>
 {% endhint %}
 
-{% tabs %}
-{% tab title="Port 161" %}
-* <mark style="color:purple;">**Used for sending**</mark>**&#x20;**<mark style="color:orange;">**`SNMP`**</mark> <mark style="color:purple;">**requests to network devices.**</mark>
-{% endtab %}
+<details>
 
-{% tab title="Port 162" %}
-* <mark style="color:purple;">**Used for receiving**</mark>**&#x20;**<mark style="color:orange;">**`SNMP`**</mark>**&#x20;**<mark style="color:purple;">**notifications (**</mark><mark style="color:orange;">**`Traps`**</mark>**&#x20;**<mark style="color:purple;">**and**</mark>**&#x20;**<mark style="color:orange;">**`InformRequests`**</mark><mark style="color:purple;">**) from network devices.**</mark>
-{% endtab %}
-{% endtabs %}
+<summary><mark style="color:orange;"><strong><code>MIBs</code></strong></mark></summary>
 
-{% hint style="warning" %}
-* ## <mark style="color:purple;">Install</mark> <mark style="color:orange;">`MIBs`</mark>
-
-{% code title="Arch" %}
-```sh
+{% code title="Installation" %}
+```bash
 sudo pacman -Sy snmp-mibs-downloader
 ```
 {% endcode %}
 
-{% code title="Kali" %}
-```sh
-sudo apt install snmp-mibs-downloader
-```
-{% endcode %}
+</details>
 
-* ## <mark style="color:purple;">Install</mark> <mark style="color:orange;">`snmpwalk`</mark>
+<details>
 
-{% code title="Arch" %}
+<summary><mark style="color:purple;"><strong><code>Enumeration</code></strong></mark></summary>
+
+{% code title="Install snmpwalk" %}
 ```sh
 sudo pacman -Sy net-snmp
 ```
 {% endcode %}
-{% endhint %}
 
-***
+{% code title="Install onesixtyone" %}
+```bash
+yay -S onesixtyone-git 
+```
+{% endcode %}
 
 {% hint style="info" %}
-## <mark style="color:purple;">Enumeration</mark>
-
 {% code title="Full Enumeration" %}
 ```bash
 snmpwalk -v 2c -c public 10.10.10.92
@@ -84,3 +76,5 @@ onesixtyone -c dict.txt 10.129.42.254
 ```
 {% endcode %}
 {% endhint %}
+
+</details>
