@@ -5,9 +5,9 @@ icon: network-wired
 
 # NFS
 
-{% hint style="info" %}
-### <mark style="color:purple;">`Basic Commands`</mark>
+{% embed url="https://github.com/NetDirect/nfsshell" %}
 
+{% hint style="info" %}
 * <mark style="color:purple;">Mount shares in to your local system:</mark>
 
 ```sh
@@ -17,19 +17,17 @@ sudo mount 10.10.10.34:/var/nfsshare /mnt
 
 ***
 
-{% embed url="https://github.com/NetDirect/nfsshell" %}
+<details>
 
-***
+<summary><mark style="color:purple;"><strong><code>Enumeration</code></strong></mark></summary>
 
-{% hint style="info" %}
-### <mark style="color:purple;">`Enumeration`</mark>
-
-* <mark style="color:purple;">Use</mark> <mark style="color:orange;">**`nmap`**</mark> <mark style="color:purple;">scripts:</mark>
-
-```sh
+{% code title="Use nmap scripts" %}
+```bash
 nmap -sV --script=nfs-ls 10.10.10.34
 ```
+{% endcode %}
 
+{% hint style="info" %}
 * <mark style="color:purple;">And the</mark> <mark style="color:orange;">**`showmount`**</mark> <mark style="color:purple;">command to list all the shares:</mark>
 
 ```sh
@@ -43,10 +41,14 @@ cat /etc/exports
 ```
 {% endhint %}
 
-***
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Configuration</code></strong></mark></summary>
 
 {% hint style="info" %}
-### <mark style="color:purple;">`Configuration Options`</mark>
+
 
 #### <mark style="color:red;">**`Access Options`**</mark>&#x20;
 
@@ -96,3 +98,5 @@ cat /etc/exports
 * <mark style="color:orange;">**`*`**</mark><mark style="color:purple;">**:**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">Allows all clients to connect. Use cautiously as this is less secure.</mark>
 * <mark style="color:orange;">**`<hostname>`**</mark><mark style="color:purple;">**:**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">Specifies a hostname for allowed clients.</mark>
 {% endhint %}
+
+</details>
