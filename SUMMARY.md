@@ -118,6 +118,7 @@
 * [Pivoting/Lateral Movement](post-exploitation/pivoting-lateral-movement.md)
 * [Persistence](post-exploitation/persistence.md)
 * [Linux Privilege Escalation](post-exploitation/linux-privilege-escalation/README.md)
+  * [Enumeration](post-exploitation/linux-privilege-escalation/enumeration.md)
   * [Hijacks](post-exploitation/linux-privilege-escalation/hijacks.md)
   * [Jailbreaks](post-exploitation/linux-privilege-escalation/jailbreaks.md)
   * [Binary Exploitation - Linux](post-exploitation/linux-privilege-escalation/binary-exploitation-linux.md)
