@@ -21,9 +21,15 @@ b <functionName>
 ```
 {% endcode %}
 
-{% code title="Run the programm" overflow="wrap" %}
+{% code title="Run execution" overflow="wrap" %}
 ```sh
 r
+```
+{% endcode %}
+
+{% code title="Continue execution" %}
+```sh
+c
 ```
 {% endcode %}
 
@@ -32,6 +38,10 @@ r
 disass <functionName>
 ```
 {% endcode %}
+
+```sh
+set $rip = <memoryAddress>
+```
 
 </details>
 
