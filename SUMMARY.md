@@ -39,6 +39,7 @@
 * [Steganography](fundamentals/steganography.md)
 * [Cryptography](fundamentals/cryptography.md)
 * [Reverse Engineering](fundamentals/reverse-engineering/README.md)
+  * [GDB](fundamentals/reverse-engineering/gdb.md)
   * [Binaries](fundamentals/reverse-engineering/binaries.md)
 * [Tools](fundamentals/tools/README.md)
   * [curl](fundamentals/tools/curl.md)
