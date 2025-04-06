@@ -39,9 +39,11 @@ disass <functionName>
 ```
 {% endcode %}
 
+{% code title="Set Return Instruction Pointer" overflow="wrap" %}
 ```sh
 set $rip = <memoryAddress>
 ```
+{% endcode %}
 
 </details>
 
