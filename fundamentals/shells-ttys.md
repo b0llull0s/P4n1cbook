@@ -28,7 +28,7 @@ icon: book-skull
 {% hint style="info" %}
 
 
-#### <mark style="color:red;">`Clear Terminal`</mark>
+#### <mark style="color:purple;">`Clear Terminal`</mark>
 
 <mark style="color:purple;">Set the environmental variable from the terminal to</mark> <mark style="color:orange;">**`xterm`**</mark><mark style="color:purple;">:</mark>
 
@@ -40,9 +40,11 @@ export TERM=xterm
 {% endhint %}
 
 {% hint style="info" %}
-<mark style="color:red;">`Terminal Size`</mark>
 
-<mark style="color:purple;">Sometimes you may need to adjust your terminal size to the needs of the situation:</mark>
+
+#### <mark style="color:purple;">`Terminal Size`</mark>
+
+<mark style="color:red;">**`Sometimes you may need to adjust your terminal size to the needs of the situation`**</mark>
 
 {% code title="Check your terminal size" %}
 ```
@@ -58,9 +60,9 @@ stty rows <NUMBER> columns <NUMBER>
 {% endhint %}
 
 {% hint style="info" %}
-<mark style="color:red;">`Use arrow-keys`</mark>
 
-#### <mark style="color:orange;">`BASH`</mark>
+
+#### <mark style="color:purple;">`Use arrow-keys`</mark>
 
 {% code title="Just use it" %}
 ```sh
