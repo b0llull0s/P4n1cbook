@@ -69,6 +69,12 @@ ssh-keygen -l -f public_key
 ```
 {% endcode %}
 
+{% code title="Check SSH access" %}
+```sh
+netexec ssh <IP> -u <USER> -p 'password'
+```
+{% endcode %}
+
 </details>
 
 <details>
