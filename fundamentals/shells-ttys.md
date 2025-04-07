@@ -26,7 +26,9 @@ icon: book-skull
 {% endhint %}
 
 {% hint style="info" %}
-### <mark style="color:red;">`Clear Terminal`</mark>
+
+
+#### <mark style="color:red;">`Clear Terminal`</mark>
 
 <mark style="color:purple;">Set the environmental variable from the terminal to</mark> <mark style="color:orange;">**`xterm`**</mark><mark style="color:purple;">:</mark>
 
@@ -38,7 +40,7 @@ export TERM=xterm
 {% endhint %}
 
 {% hint style="info" %}
-### <mark style="color:red;">`Terminal Size`</mark>
+<mark style="color:red;">`Terminal Size`</mark>
 
 <mark style="color:purple;">Sometimes you may need to adjust your terminal size to the needs of the situation:</mark>
 
@@ -56,7 +58,7 @@ stty rows <NUMBER> columns <NUMBER>
 {% endhint %}
 
 {% hint style="info" %}
-### <mark style="color:red;">`Use arrow-keys`</mark>
+<mark style="color:red;">`Use arrow-keys`</mark>
 
 #### <mark style="color:orange;">`BASH`</mark>
 
