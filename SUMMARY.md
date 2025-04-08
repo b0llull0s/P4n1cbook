@@ -120,6 +120,7 @@
   * [Static Binaries](post-exploitation/linux-privilege-escalation/static-binaries.md)
   * [Enumeration](post-exploitation/linux-privilege-escalation/enumeration.md)
   * [Hijacks](post-exploitation/linux-privilege-escalation/hijacks.md)
+  * [Command Injection](post-exploitation/linux-privilege-escalation/command-injection.md)
   * [Jailbreaks](post-exploitation/linux-privilege-escalation/jailbreaks.md)
   * [Binary Exploitation - Linux](post-exploitation/linux-privilege-escalation/binary-exploitation-linux.md)
   * [Kernel Exploits](post-exploitation/linux-privilege-escalation/kernel-exploits.md)
