@@ -385,8 +385,9 @@ nmap -sV -p<PORT> --script vuln <IP>
 
 </details>
 
-{% hint style="info" %}
-## <mark style="color:purple;">Scan Output and Logging</mark>
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Outputs</code></strong></mark></summary>
 
 {% code title="Normal Output" %}
 ```bash
@@ -412,22 +413,23 @@ nmap -oG output.txt 192.168.1.1
 ```
 {% endcode %}
 
-### <mark style="color:purple;">Filtering Outputs</mark>
+{% hint style="info" %}
+<mark style="color:red;">**`Filtering`**</mark>
 
-{% code title="Regex, Parse, Direct" %}
-```bash
-cat nmap.txt | grep -oP '([\d]+)/open' | awk -F/ '{print $1}' | tr '\n' ','       
+{% code title="Regex, Parse, Direct" overflow="wrap" %}
+```sh
+cat nmap.txt | grep -oP '([\d]+)/open' | awk -F/ '{print $1}' | tr '\n' ','
 ```
 {% endcode %}
 
-{% code title="Removes Duplicates" %}
-```bash
+{% code title="Removes Duplicates" overflow="wrap" %}
+```sh
 cat nmap.txt | grep open | grep -v '#' | cut -d"/" -f1 | sort | uniq | sed -z 's/\n/,/g;s/,$/\n/'
 ```
 {% endcode %}
 
-{% code title="Filtering Function" %}
-```bash
+{% code title="Filtering Function" overflow="wrap" %}
+```sh
 function extractPorts(){
 	ports="$(cat $1 | grep -oP '\d{1,5}/open' | awk '{print $1}' FS='/' | xargs | tr ' ' ',')"
 	ip_address="$(cat $1 | grep -oP '\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}' | sort -u | head -n 1)"
@@ -441,46 +443,30 @@ function extractPorts(){
 ```
 {% endcode %}
 
-### <mark style="color:purple;">Examples</mark>
-
-{% code title="Web Server + Open Ports" %}
-```bash
-nmap -p80 -sV -oG - -open 192.168.1.1/24 | grep open
-```
-{% endcode %}
-
-{% code title="Generate a list of the IPs live hosts" %}
-```bash
-nmap -iR 10 -n -oX out.xml | grep "Nmap" | cut -d " " -f5 > live-hosts.txt
-```
-{% endcode %}
-
-{% code title="Append IP to the list of live hosts" %}
-```bash
-nmap -iR 10 -n -oX out2.xml | grep "Nmap" | cut -d " " -f5 >> live-hosts.txt
-```
-{% endcode %}
-
-{% code title="Compare Output from Nmap" %}
-```bash
-ndiff scanl.xml scan2.xml
-```
-{% endcode %}
-
-{% code title="Convert Nmap XML files to HTML files" %}
-```bash
-xsltproc nmap.xml -o nmap.html
-```
-{% endcode %}
-
-{% code title="Reverse sorted list" %}
-```bash
+{% code title="Reverse sorted list" overflow="wrap" %}
+```sh
 grep " open " results.nmap | sed -r ‘s/ +/ /g’ | sort | uniq -c | sort -rn | less
 ```
 {% endcode %}
 {% endhint %}
 
-***
+{% hint style="info" %}
+<mark style="color:red;">**`Generate a IPs live hosts list`**</mark>
+
+{% code overflow="wrap" %}
+```sh
+nmap -iR 10 -n -oX out.xml | grep "Nmap" | cut -d " " -f5 > live-hosts.txt
+```
+{% endcode %}
+
+{% code title="Append IPs" overflow="wrap" %}
+```sh
+nmap -iR 10 -n -oX out2.xml | grep "Nmap" | cut -d " " -f5 >> live-hosts.txt
+```
+{% endcode %}
+{% endhint %}
+
+</details>
 
 {% hint style="info" %}
 ## <mark style="color:purple;">Other Techniques</mark>
