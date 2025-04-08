@@ -1,6 +1,6 @@
 ---
-icon: database
 description: Structure Query Language
+icon: database
 ---
 
 # Databases
