@@ -125,6 +125,7 @@
   * [Kernel Exploits](post-exploitation/linux-privilege-escalation/kernel-exploits.md)
   * [Buffer Overflow - Linux](post-exploitation/linux-privilege-escalation/buffer-overflow-linux.md)
   * [Docker](post-exploitation/linux-privilege-escalation/docker.md)
+  * [Abusing Wildcards](post-exploitation/linux-privilege-escalation/abusing-wildcards.md)
 * [Windows Privilege Scalation](post-exploitation/windows-privilege-scalation.md)
 
 ## Wireless Exploitation
