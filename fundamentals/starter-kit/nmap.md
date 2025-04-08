@@ -1,41 +1,55 @@
 ---
-icon: eye
 description: Network Mapper
+icon: eye
 ---
 
 # Nmap
 
-{% hint style="info" %}
-## <mark style="color:purple;">Port Status</mark>
+<details>
 
-* <mark style="color:orange;">**`open`**</mark> -> _<mark style="color:purple;">The connection through the NMAP scan has been successful.</mark>_
-* <mark style="color:orange;">**`closed`**</mark> <mark style="color:purple;">-></mark> <mark style="color:purple;"></mark>_<mark style="color:purple;">The port is closed.</mark>_
-* <mark style="color:orange;">**`filtered`**</mark> <mark style="color:purple;">-></mark> <mark style="color:purple;"></mark>_<mark style="color:purple;">Nmap does not know if the port is open or closed.</mark>_
-* <mark style="color:orange;">**`unfiltered`**</mark> _<mark style="color:purple;">-> Port is accessible, but we don't know if it's open or closed.</mark>_
-* <mark style="color:orange;">**`open | filtered`**</mark> _<mark style="color:purple;">-> This default state is assigned. It could be that a firewall is protecting the port.</mark>_
-* <mark style="color:orange;">**`closed | filtered`**</mark>**&#x20;**<mark style="color:purple;">**->**</mark> <mark style="color:purple;"></mark>_<mark style="color:purple;">It's impossible to determine if the port is open or closed.</mark>_
+<summary><mark style="color:purple;"><strong><code>Performance Tuning</code></strong></mark></summary>
+
+{% hint style="info" %}
+* <mark style="color:red;">**`Timing tables`**</mark> <mark style="color:purple;">go from</mark> <mark style="color:orange;">`0`</mark> <mark style="color:purple;">to</mark> <mark style="color:orange;">`5`</mark><mark style="color:purple;">, being</mark> <mark style="color:orange;">`3`</mark> <mark style="color:purple;">the default.</mark>
+
+```bash
+nmap -T4 192.168.1.1
+```
+
+* <mark style="color:orange;">**`--min-parallelism`**</mark> <mark style="color:purple;">allows to manually control the concurrency of the scan:</mark>
+
+{% code overflow="wrap" %}
+```bash
+nmap -sS -T4 --min-parallelism 20 --max-retries 1 -p 80,443,22,3389 192.168.1.1
+```
+{% endcode %}
+
+* <mark style="color:red;">**`Rate Limiting`**</mark>**&#x20;**<mark style="color:purple;">**(**</mark><mark style="color:orange;">**`--min-rate`**</mark><mark style="color:purple;">**/**</mark><mark style="color:orange;">**`--max-rate`**</mark><mark style="color:purple;">**)**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">gives you a better control over packets/second:</mark>
+
+{% code overflow="wrap" %}
+```bash
+nmap -sS --min-rate 500 192.168.1.1
+```
+{% endcode %}
+
+* <mark style="color:orange;">**`--max-rtt-timeout`**</mark>**&#x20;**<mark style="color:purple;">**a**</mark><mark style="color:purple;">djusts how long Nmap waits for responses before retrying:</mark>
+
+{% code title="Optimized for LANs" %}
+```sh
+nmap -sS --max-rtt-timeout 200ms 192.168.1.1
+```
+{% endcode %}
 {% endhint %}
 
-***
+</details>
 
-{% hint style="info" %}
-## <mark style="color:purple;">TCP Scans</mark>
+<details>
+
+<summary><mark style="color:orange;"><strong><code>TCP</code></strong></mark> <mark style="color:purple;"><strong>Scans</strong></mark></summary>
 
 {% code title="Connect Scan" %}
 ```bash
-nmap -sT 192.168.1.1
-```
-{% endcode %}
-
-{% code title="Specific Ports" %}
-```bash
-nmap -p 22,80,443 192.168.1.1
-```
-{% endcode %}
-
-{% code title="All Ports" %}
-```bash
-nmap -p- 192.168.1.1
+nmap -sT -sV -p- 192.168.1.1
 ```
 {% endcode %}
 
@@ -57,41 +71,11 @@ nmap -sM 192.168.1.1
 ```
 {% endcode %}
 
-{% code title="Custom Source Port" %}
-```bash
-nmap --source-port 53 192.168.1.1
-```
-{% endcode %}
+</details>
 
-### <mark style="color:purple;">Timing and performance control</mark>
+<details>
 
-* <mark style="color:purple;">Timing templates go from</mark> <mark style="color:orange;">`0`</mark> <mark style="color:purple;">to</mark> <mark style="color:orange;">`5`</mark><mark style="color:purple;">, being</mark> <mark style="color:orange;">`3`</mark> <mark style="color:purple;">the default</mark>
-
-{% code title="Set Timing Tables" %}
-```bash
-nmap -T4 192.168.1.1
-```
-{% endcode %}
-
-{% code title="Very Fast Scan" %}
-```bash
-nmap -T5 192.168.1.1
-```
-{% endcode %}
-
-{% code title="Very Slow Scan" %}
-```bash
-nmap -T0 192.168.1.1
-```
-{% endcode %}
-
-{% code title="Control Parallelism" %}
-```bash
-nmap --min-parallelism 10 192.168.1.1
-```
-{% endcode %}
-
-### <mark style="color:purple;">Host Discovery</mark>
+<summary><mark style="color:purple;"><strong><code>Host Discovery</code></strong></mark></summary>
 
 {% code title="Ping Sweep" %}
 ```bash
@@ -147,7 +131,7 @@ nmap -PE -PA80 -PR 192.168.1.0/24
 ```
 {% endcode %}
 
-{% code title="Random Host Scan with traceroute" %}
+{% code title="Host Scan with traceroute" %}
 ```bash
 nmap -iR 10 -sn -traceroute
 ```
@@ -159,7 +143,11 @@ nmap --script discovery 192.168.1.1
 ```
 {% endcode %}
 
-### <mark style="color:purple;">DNS</mark>
+</details>
+
+<details>
+
+<summary><mark style="color:orange;"><strong><code>DNS</code></strong></mark> <mark style="color:purple;"><strong>Scans</strong></mark></summary>
 
 {% code title="Standard Scan" %}
 ```bash
@@ -179,7 +167,11 @@ nmap 192.168.1.1-50 -sL -dns-server 192.168.1.1
 ```
 {% endcode %}
 
-### <mark style="color:purple;">Service and OS Detection</mark>
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Service and OS Detection</code></strong></mark></summary>
 
 {% code title="Service Version Detection" %}
 ```bash
@@ -205,19 +197,17 @@ nmap -A 192.168.1.1
 ```
 {% endcode %}
 
-### <mark style="color:purple;">Examples</mark>
-
-{% code title="Service and Version + Specific Port" %}
+{% code title="Target Specific Ports" %}
 ```bash
 sudo nmap -sCV -oA nmap -p 'PORTS' [IP]
 ```
 {% endcode %}
-{% endhint %}
 
-***
+</details>
 
-{% hint style="info" %}
-## <mark style="color:purple;">UDP Scans</mark>
+<details>
+
+<summary><mark style="color:orange;"><strong><code>UDP</code></strong></mark> <mark style="color:purple;"><strong>Scans</strong></mark></summary>
 
 {% code title="Basic Scan" %}
 ```bash
@@ -227,7 +217,7 @@ nmap -sU 192.168.1.1
 
 {% code title="Specific Ports" %}
 ```bash
-nmap -p 53,123,161 -sU 192.168.1.1
+nmap -p 53,123,161 -sU -sC 192.168.1.1
 ```
 {% endcode %}
 
@@ -249,27 +239,35 @@ nmap -sU --script=udp* 192.168.1.1
 ```
 {% endcode %}
 
-### <mark style="color:purple;">Host Discovery</mark>
+{% hint style="info" %}
+<mark style="color:red;">**`Host discovery for UDP`**</mark>
 
-{% code title="UDP Ping" %}
-```bash
-nmap 192.168.1.1-5 -PU53
+{% code title="UDP Ping first" overflow="wrap" %}
+```sh
+nmap -PU53,161,123 192.168.1.1-254 -oN udp_live_hosts.txt  
 ```
 {% endcode %}
 
-### <mark style="color:purple;">Examples</mark>
-
-{% code title="Specific Port + Scripts" %}
-```bash
-sudo nmap -sU -p 161 -sC 10.10.10.92
+{% code title="Then scan live hosts" overflow="wrap" %}
+```sh
+nmap -sS -sV -p- -iL udp_live_hosts.txt -oA full_scan --max-retries 1  
 ```
 {% endcode %}
 {% endhint %}
 
-***
+</details>
 
-{% hint style="danger" %}
-## <mark style="color:purple;">Stealth Scans</mark>
+<details>
+
+<summary><mark style="color:purple;"><strong><code>Stealthy Scans</code></strong></mark></summary>
+
+{% hint style="info" %}
+{% code title="Example" overflow="wrap" %}
+```sh
+nmap -f -t 0 -n -Pn --data-length 200 -D 192.168.1.101,192.168.1.102,192.168.1.103,192.168.1.23 192.168.1.1
+```
+{% endcode %}
+{% endhint %}
 
 {% code title="SYN Scan" %}
 ```bash
@@ -343,17 +341,11 @@ nmap 192.168.1.1 -script "not intrusive"
 ```
 {% endcode %}
 
-### <mark style="color:purple;">Examples</mark>
+</details>
 
-```bash
-nmap -f -t 0 -n -Pn --data-length 200 -D 192.168.1.101,192.168.1.102,192.168.1.103,192.168.1.23 192.168.1.1
-```
-{% endhint %}
+<details>
 
-***
-
-{% hint style="warning" %}
-## <mark style="color:purple;">Scripting Engine (NSE)</mark>
+<summary><mark style="color:purple;"><strong>Scripting Engine -</strong></mark> <mark style="color:orange;"><strong><code>NSE</code></strong></mark></summary>
 
 {% code title="List Scripts" %}
 ```bash
@@ -385,118 +377,13 @@ nmap --script smb-vuln* 192.168.1.1
 ```
 {% endcode %}
 
-{% code title="Category Of Scripts (Wildcard)" %}
-```bash
-nmap --script ssl* 192.168.1.1
-```
-{% endcode %}
-
-{% code title="Script From File" %}
-```bash
-nmap --script /path/to/script.nse 192.168.1.1
-```
-{% endcode %}
-
-### <mark style="color:purple;">Examples</mark>
-
-{% code title="Safe SMB" %}
-```bash
-nmap -n -Pn -vv -O -sV -script smb-enum*,smb-ls,smb-mbenum,smb-os-discovery,smb-s*,smb-vuln*,smbv2* -vv 192.168.1.1
-```
-{% endcode %}
-
-{% code title="Safe HTTP" %}
-```bash
-nmap -n -Pn -vv -O -sV --script=http-enum,http-headers,http-methods,http-title,http-vuln* 192.168.1.1
-```
-{% endcode %}
-
-{% code title="HTTP Map Generator" %}
-```bash
-nmap -Pn -script=http-sitemap-generator scanme.nmap.org
-```
-{% endcode %}
-
-{% code title="Fast Search For Random Web-Servers" %}
-```bash
-nmap -n -Pn -p 80 -open -sV -vvv -script banner,http-title -iR 1000
-```
-{% endcode %}
-
-{% code title="Bruteforce DNS Hostname" %}
-```bash
-nmap -Pn -script=dns-brute domain.com
-```
-{% endcode %}
-
-{% code title="Whois Query" %}
-```bash
-nmap -script whois* domain.com
-```
-{% endcode %}
-
-{% code title="Cross Site Scripting" %}
-```bash
-nmap -p80 -script http-unsafe-output-escaping scanme.nmap.org
-```
-{% endcode %}
-
-{% code title="SQLi" %}
-```bash
-nmap -p80 -script http-sql-injection scanme.nmap.org
-```
-{% endcode %}
-
-{% code title="SNMP System Description" %}
-```bash
-nmap -script snmp-sysdescr -script-args snmpcommunity=admin 192.168.1.1
-```
-{% endcode %}
-
-{% code title="SSH Brute Force" %}
-```bash
-nmap -n -p22 --script ssh-brute --script-args userdb=usernames.txt,passdb=passwords.txt <IP>
-```
-{% endcode %}
-
-{% code title="CMS Configuration Backups" %}
-```bash
-nmap -n -p<PORT> --script http-config-backup <IP>
-```
-{% endcode %}
-
-{% code title="Service Version and Vulnerabilities" %}
-```bash
+{% code title="Version and Vulnerabilities" overflow="wrap" %}
+```sh
 nmap -sV -p<PORT> --script vuln <IP>
 ```
 {% endcode %}
 
-{% code title="Wordpress Enumeration" %}
-```bash
-nmap -n -p<PORT> --script http-wordpress-enum <DNS>bash
-```
-{% endcode %}
-
-{% code title="HeartBleed Vulnerability Check" %}
-```bash
-nmap -sV -p443 --script=ssl-heartbleed <DNS>
-```
-{% endcode %}
-
-{% code title="Banner Grab" %}
-```bash
-nmap -n -p<PORT> --script dns-nsid <IP>
-```
-{% endcode %}
-
-{% code title="Shellshock Vulnerability Check" %}
-```bash
-sudo nmap --script http-shellshock --script-args uri=<URL_ARCHIVO_SH> -p80 <IP>
-```
-{% endcode %}
-{% endhint %}
-
-***
+</details>
 
 {% hint style="info" %}
 ## <mark style="color:purple;">Scan Output and Logging</mark>

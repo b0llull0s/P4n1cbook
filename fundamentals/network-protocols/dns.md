@@ -45,4 +45,22 @@ dig axfr HOST.NAME @10.10.10.29
 ```
 {% endhint %}
 
+{% code title="Bruteforce DNS Hostname" overflow="wrap" %}
+```sh
+nmap -Pn -script=dns-brute domain.com
+```
+{% endcode %}
+
+{% code title="Whois Query" overflow="wrap" %}
+```sh
+nmap -script whois* domain.com
+```
+{% endcode %}
+
+{% code title="Banner Grab" overflow="wrap" %}
+```sh
+nmap -n -p<PORT> --script dns-nsid <IP>
+```
+{% endcode %}
+
 </details>

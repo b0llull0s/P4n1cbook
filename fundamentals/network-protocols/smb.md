@@ -77,9 +77,15 @@ mget *
 
 <summary><mark style="color:purple;"><strong>Enumeration</strong></mark></summary>
 
-{% code title="Nmap Scripts" %}
+{% code title="Nmap Scan" %}
 ```sh
 nmap --script smb-enum-shares.nse -p445 10.10.10.123
+```
+{% endcode %}
+
+{% code title="Stealthy Nmap Scan" overflow="wrap" %}
+```sh
+nmap -n -Pn -vv -O -sV -script smb-enum*,smb-ls,smb-mbenum,smb-os-discovery,smb-s*,smb-vuln*,smbv2* -vv 192.168.1.1
 ```
 {% endcode %}
 

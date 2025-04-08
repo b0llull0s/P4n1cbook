@@ -27,6 +27,12 @@ sudo pacman -Sy snmp-mibs-downloader
 
 <summary><mark style="color:purple;"><strong><code>Enumeration</code></strong></mark></summary>
 
+{% code title="SNMP System Description" overflow="wrap" %}
+```sh
+nmap -script snmp-sysdescr -script-args snmpcommunity=admin 192.168.1.1
+```
+{% endcode %}
+
 {% code title="Install snmpwalk" %}
 ```sh
 sudo pacman -Sy net-snmp

