@@ -112,7 +112,7 @@
 
 ## Post Exploitation
 
-* [File Transfer](post-exploitation/file-transfer/README.md)
+* [File Transfer](post-exploitation/file-transfer.md)
   * [Exfiltration](post-exploitation/file-transfer/exfiltration.md)
 * [Credential Dumping](post-exploitation/credential-dumping/README.md)
   * [Thunderbird](post-exploitation/credential-dumping/thunderbird.md)
