@@ -98,6 +98,7 @@
     * [MongoDB](web-exploitation/databases/nosql/mongodb.md)
     * [Redis](web-exploitation/databases/nosql/redis.md)
 * [Java-based web application](web-exploitation/web-services-frameworks/java-based-web-application/README.md)
+  * [pd4ml.jar](web-exploitation/java-based-web-application/pd4ml.jar.md)
   * [Struts](web-exploitation/web-services-frameworks/java-based-web-application/struts.md)
   * [.WAR](web-exploitation/web-services-frameworks/java-based-web-application/.war.md)
   * [JDWP](web-exploitation/web-services-frameworks/java-based-web-application/jdwp.md)
@@ -111,7 +112,8 @@
 
 ## Post Exploitation
 
-* [File Transfer](post-exploitation/file-transfer.md)
+* [File Transfer](post-exploitation/file-transfer/README.md)
+  * [Exfiltration](post-exploitation/file-transfer/exfiltration.md)
 * [Credential Dumping](post-exploitation/credential-dumping/README.md)
   * [Thunderbird](post-exploitation/credential-dumping/thunderbird.md)
 * [Lateral Movement](post-exploitation/lateral-movement.md)
