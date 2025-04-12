@@ -725,3 +725,80 @@ base64 -d -w 0 file.txt > decoded_output.bin
 {% endhint %}
 
 </details>
+
+<details>
+
+<summary><mark style="color:orange;"><strong><code>Qemu</code></strong></mark></summary>
+
+{% code title="Installation" overflow="wrap" lineNumbers="true" %}
+```sh
+sudo pacman -S qemu libvirt dnsmasq virt-manager bridge-utils ebtables
+sudo systemctl enable --now libvirtd
+```
+{% endcode %}
+
+{% code title="Check/Backup the XML" overflow="wrap" %}
+```sh
+sudo virsh net-dumpxml c2-lab
+```
+{% endcode %}
+
+{% hint style="info" %}
+<mark style="color:red;">**`Manual XML Virtual Network Configuration`**</mark>
+
+{% code title="Locked-down Version" overflow="wrap" %}
+```xml
+<network>
+  <name>c2-lab</name>
+  <bridge name="virbr2" stp="off" delay="0"/>  <!-- Disable STP (not needed) -->
+  <forward mode="none"/>                       <!-- NO NAT, NO ROUTING -->
+  <interface type="network">
+  <mac address="52:54:00:XX:XX:XX"/>  <!-- Set a static MAC -->
+  <source network="c2-lab"/>
+  <model type="virtio"/>
+</interface>
+  <ip address="192.168.100.1" netmask="255.255.255.0">
+  <ip family="ipv6" address="fe80::1" prefix="64"/>
+    <!-- No DHCP (assign IPs manually) -->
+  </ip>
+</network>
+```
+{% endcode %}
+{% endhint %}
+
+{% code title="Disable ICMP" overflow="wrap" %}
+```sh
+sudo iptables -I FORWARD -i virbr2 -p icmp -j DROP
+```
+{% endcode %}
+
+{% hint style="info" %}
+<mark style="color:purple;">**`Start the Virtual-Network`**</mark>
+
+{% code overflow="wrap" lineNumbers="true" %}
+```sh
+sudo virsh net-define c2-lab.xml
+sudo virsh net-start c2-lab
+```
+{% endcode %}
+
+{% code title="Start on boot" overflow="wrap" %}
+```sh
+sudo virsh net-autostart c2-lab
+```
+{% endcode %}
+
+{% code title="Check Network Info" overflow="wrap" %}
+```sh
+sudo virsh net-info c2-lab
+```
+{% endcode %}
+
+{% code title="Check for leaks" %}
+```sh
+sudo iptables -L -v -n | grep virbr2
+```
+{% endcode %}
+{% endhint %}
+
+</details>
