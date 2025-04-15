@@ -7,48 +7,15 @@ icon: linux
 
 <details>
 
-<summary><mark style="color:purple;"><strong><code>System Management</code></strong></mark></summary>
+<summary><mark style="color:purple;"><strong><code>Specifications &#x26; Performance</code></strong></mark></summary>
 
-{% hint style="info" %}
-{% code title="Print Info about the system" %}
-```bash
-uname -a 
+```sh
+uptime
 ```
-{% endcode %}
-
-{% code title="Print Environment" %}
-```bash
-env
-```
-{% endcode %}
 
 {% code title="Shows details about all block devices" %}
 ```bash
 lsblk -f
-```
-{% endcode %}
-
-{% code title="List PCI devices" %}
-```bash
-lspci
-```
-{% endcode %}
-
-{% code title="Display Disk Usage" %}
-```bash
-df -h
-```
-{% endcode %}
-
-{% code title="Show the size of files and directories in the current directory" %}
-```bash
-du -sh *
-```
-{% endcode %}
-
-{% code title="Shows the 10 largest directories on the system" %}
-```bash
-sudo du -hsx /* | sort -rh | head -n 10
 ```
 {% endcode %}
 
@@ -58,79 +25,100 @@ free -h
 ```
 {% endcode %}
 
-{% code title="Displays the maximum allowed size of a process's lockable memory" %}
-```bash
-ulimit -l
-```
-{% endcode %}
-
-{% code title="Display overall system performance stats" %}
-```bash
-vmstat
-```
-{% endcode %}
-
-{% code title="Print stats every 5 seconds" %}
-```bash
-vmstat 5
-```
-{% endcode %}
-
-{% code title="Print stats every 5 seconds for 10 iterations" %}
+{% code title="Stats 5s for 10 itinerations" %}
 ```bash
 vmstat 5 10
 ```
 {% endcode %}
 
-{% code title="Show the system uptime" %}
-```bash
-uptime
+{% hint style="info" %}
+<mark style="color:red;">**`Check RAM remaining to Memory Locking`**</mark>
+
+{% code title="Check" %}
+```sh
+ulimit -l
+```
+{% endcode %}
+
+{% code title="Set a new limit" %}
+```sh
+ulimit -l 10240
 ```
 {% endcode %}
 {% endhint %}
+
+{% code title="List USB" %}
+```sh
+lsusb
+```
+{% endcode %}
+
+{% code title="List Peripherals" %}
+```bash
+lspci
+```
+{% endcode %}
 
 </details>
 
 <details>
 
-<summary><mark style="color:purple;"><strong><code>File &#x26; Directory Management</code></strong></mark></summary>
-
-{% hint style="info" %}
-{% code title="List all files + details" %}
-```bash
-ls -al
-```
-{% endcode %}
+<summary><mark style="color:purple;"><strong><code>Store Management</code></strong></mark></summary>
 
 {% code title="List all files recursively" %}
-```bash
+```sh
 ls -lAR
 ```
 {% endcode %}
 
-{% code title="Read raw binary data" overflow="wrap" %}
+{% code title="Show Sizes Current Directory" %}
 ```bash
-cat example | hexdump -C
+du -sh *
 ```
 {% endcode %}
 
-{% code title="Count number of lines in a file" overflow="wrap" %}
-```bash
-wc -l myfile.txt
+{% code title="Largest 10 directories" overflow="wrap" %}
+```sh
+sudo du -hsx /* | sort -rh | head -n 10
 ```
 {% endcode %}
 
-{% code title="Print full path " overflow="wrap" %}
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>File Enumeration</code></strong></mark></summary>
+
+{% code title="Print full path " %}
 ```bash
 realpath file.txt
 ```
 {% endcode %}
 
-{% code title="Copy recursively " %}
+{% code title="Count Lines" %}
 ```bash
-cp -r dir/ /home/user/
+wc -l myfile.txt
 ```
 {% endcode %}
+
+{% hint style="info" %}
+<mark style="color:orange;">**`locate`**</mark>
+
+{% code title="Look for a file" %}
+```bash
+locate file.txt
+```
+{% endcode %}
+
+{% code title="Update the db" %}
+```bash
+sudo updatedb
+```
+{% endcode %}
+{% endhint %}
+
+{% hint style="info" %}
+<mark style="color:orange;">**`find`**</mark>
 
 {% code title="Find all .txt files" overflow="wrap" %}
 ```bash
@@ -147,30 +135,6 @@ find / -type f -size +10M
 {% code title="Search with regex" overflow="wrap" %}
 ```bash
 sudo find / -regex ".*alacritty.*" 2>/dev/null
-```
-{% endcode %}
-
-{% code title="Update locate db" %}
-```bash
-sudo updatedb
-```
-{% endcode %}
-
-{% code title="Look file from the database" overflow="wrap" %}
-```bash
-locate file.txt
-```
-{% endcode %}
-
-{% code title="Full path of a binary" overflow="wrap" %}
-```bash
-which binary
-```
-{% endcode %}
-
-{% code title="Delete recursively" %}
-```bash
-rm -rf <dir>
 ```
 {% endcode %}
 {% endhint %}
@@ -289,8 +253,13 @@ sudo groupdel group
 sudo gpasswd -a newuser newgroup
 ```
 {% endcode %}
+{% endhint %}
 
-#### <mark style="color:orange;">**`File Ownership`**</mark>
+</details>
+
+<details>
+
+<summary><mark style="color:purple;"><strong><code>File Ownership</code></strong></mark></summary>
 
 {% code title="Set file permissions to rwxr-xr-x" %}
 ```bash
@@ -304,15 +273,15 @@ sudo chmod a+r shell.sh
 ```
 {% endcode %}
 
-{% code title="Add execution permission" %}
-```bash
-sudo chmod +x script.sh
-```
-{% endcode %}
-
 {% code title="Change file owner and group" %}
 ```bash
 sudo chown user:group file.txt
+```
+{% endcode %}
+
+{% code title="Add execution permission" %}
+```bash
+sudo chmod +x script.sh
 ```
 {% endcode %}
 
@@ -321,7 +290,6 @@ sudo chown user:group file.txt
 sudo chgrp group file.txt
 ```
 {% endcode %}
-{% endhint %}
 
 </details>
 
@@ -418,36 +386,17 @@ journalctl -p <level>
 
 </details>
 
-<details>
-
-<summary><mark style="color:purple;"><strong><code>Security</code></strong></mark></summary>
-
 {% hint style="info" %}
-{% code title="Prevent world-writable files" %}
+<mark style="color:red;">**`Prevent world-writable files`**</mark>
+
 ```bash
 umask 022
 ```
-{% endcode %}
+{% endhint %}
 
-{% code title="Display SELinux mode" %}
-```bash
-getenforce
-```
-{% endcode %}
+<details>
 
-{% code title="Disable SELinux " %}
-```bash
-sudo setenforce 0
-```
-{% endcode %}
-
-#### <mark style="color:red;">**`Access Control Lists`**</mark>
-
-{% code title="Show the ACL" %}
-```bash
-getfacl file.txt
-```
-{% endcode %}
+<summary><mark style="color:purple;"><strong><code>Access Control Lists</code></strong></mark></summary>
 
 {% code title="Grant read/write permissions to 'user' on file.txt" %}
 ```bash
@@ -455,7 +404,27 @@ setfacl -m u:user:rw file.txt
 ```
 {% endcode %}
 
-#### <mark style="color:red;">`tripwire`</mark>
+{% code title="Show the ACL" %}
+```bash
+getfacl file.txt
+```
+{% endcode %}
+
+</details>
+
+{% hint style="info" %}
+<mark style="color:red;">**`Change a route's metric`**</mark>
+
+{% code overflow="wrap" %}
+```sh
+sudo route change -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.1.254 metric 200
+```
+{% endcode %}
+{% endhint %}
+
+<details>
+
+<summary><mark style="color:orange;"><strong><code>tripwire</code></strong></mark></summary>
 
 {% code title="Initialize the Tripwire database" %}
 ```bash
@@ -474,107 +443,24 @@ sudo tripwire --check
 sudo tripwire --update
 ```
 {% endcode %}
-{% endhint %}
 
 </details>
 
 <details>
 
-<summary><mark style="color:purple;"><strong><code>Networking</code></strong></mark> </summary>
+<summary><mark style="color:orange;"><strong><code>SELinux</code></strong></mark></summary>
 
-{% hint style="info" %}
-
-
-#### <mark style="color:red;">**`Ping and TCPdump Network Analysis for RCE Detection`**</mark>
-
-* <mark style="color:purple;">Simply</mark> <mark style="color:orange;">**`ping`**</mark> <mark style="color:purple;">your own host, you can use the command directly or as a payload for a script:</mark>
-
+{% code title="Display  mode" %}
 ```bash
-ping -c 1 10.10.14.6
-```
-
-* <mark style="color:purple;">And catch it with</mark> <mark style="color:orange;">**`tcpdump`**</mark><mark style="color:purple;">**:**</mark>
-
-```bash
-sudo tcpdump -ni <interface> icmp
-```
-{% endhint %}
-
-{% hint style="info" %}
-
-
-#### <mark style="color:red;">**`Enumeration`**</mark>
-
-{% code title="Show accessible via VPN" %}
-```bash
-netstat -rn
+getenforce
 ```
 {% endcode %}
 
-{% code title="Show listening TCP/UDP ports" %}
+{% code title="Disable SELinux " %}
 ```bash
-netstat -tuln
+sudo setenforce 0
 ```
 {% endcode %}
-
-{% code title="Listening ports & services" %}
-```bash
-ss -tuln
-```
-{% endcode %}
-
-{% code title="Listening ports + PID" %}
-```bash
-ss -tulnp | grep PID
-```
-{% endcode %}
-
-{% code title="Trace the network path" %}
-```bash
-traceroute example.com
-```
-{% endcode %}
-{% endhint %}
-
-{% code title="Change a route's metric" overflow="wrap" %}
-```bash
-sudo route change -net 192.168.2.0 netmask 255.255.255.0 gw 192.168.1.254 metric 200
-```
-{% endcode %}
-
-{% hint style="info" %}
-#### <mark style="color:orange;">`ip`</mark>
-
-{% code title="Bring interface up" %}
-```bash
-sudo ip link set eth0 up
-```
-{% endcode %}
-
-{% code title="Display the Routing Table" %}
-```bash
-ip route show
-```
-{% endcode %}
-
-{% code title="Add a route" %}
-```bash
-sudo ip route add 192.168.2.0/24 via 192.168.1.254
-```
-{% endcode %}
-
-{% code title="Delete a Route" %}
-```bash
-sudo ip route del 192.168.2.0/24
-```
-{% endcode %}
-
-{% code title="Add a Default Gateway" %}
-```bash
-sudo ip route add default via 192.168.1.1
-```
-{% endcode %}
-{% endhint %}
 
 </details>
 
@@ -723,6 +609,119 @@ base64 -d -w 0 file.txt > decoded_output.bin
 ```
 {% endcode %}
 {% endhint %}
+
+</details>
+
+<details>
+
+<summary><mark style="color:orange;"><strong><code>ip</code></strong></mark></summary>
+
+{% code title="Bring interface up" overflow="wrap" %}
+```bash
+sudo ip link set eth0 up
+```
+{% endcode %}
+
+{% code title="Display the Routing Table" %}
+```bash
+ip route show
+```
+{% endcode %}
+
+{% code title="Add a route" %}
+```bash
+sudo ip route add 192.168.2.0/24 via 192.168.1.254
+```
+{% endcode %}
+
+{% code title="Delete a Route" %}
+```bash
+sudo ip route del 192.168.2.0/24
+```
+{% endcode %}
+
+{% code title="Add a Default Gateway" %}
+```bash
+sudo ip route add default via 192.168.1.1
+```
+{% endcode %}
+
+</details>
+
+<details>
+
+<summary><mark style="color:orange;"><strong><code>ping</code></strong></mark></summary>
+
+{% hint style="info" %}
+<mark style="color:red;">**`Ping and TCPdump Network Analysis for RCE Detection`**</mark>
+
+* <mark style="color:purple;">Simply</mark> <mark style="color:orange;">**`ping`**</mark> <mark style="color:purple;">your own host, you can use the command directly or as a payload for a script:</mark>
+
+```bash
+ping -c 1 10.10.14.6
+```
+
+* <mark style="color:purple;">And catch it with</mark> <mark style="color:orange;">**`tcpdump`**</mark><mark style="color:purple;">**:**</mark>
+
+```bash
+sudo tcpdump -ni <interface> icmp
+```
+{% endhint %}
+
+{% hint style="info" %}
+<mark style="color:orange;">**`TTL`**</mark>**&#x20;**<mark style="color:purple;">**Values and**</mark>**&#x20;**<mark style="color:orange;">**`OS`**</mark>**&#x20;**<mark style="color:purple;">**Fingerprinting**</mark>
+
+* <mark style="color:purple;">The</mark> <mark style="color:orange;">**`TTL`**</mark> <mark style="color:purple;">value in the ping response is a starting value decremented by one for each hop the packet takes; Values differ between operating systems:</mark>
+* <mark style="color:orange;">**`Linux/Unix`**</mark> <mark style="color:purple;">-></mark> <mark style="color:orange;">**`64`**</mark>
+* <mark style="color:orange;">**`Windows`**</mark> <mark style="color:purple;">-></mark> <mark style="color:orange;">**`128`**</mark>
+* <mark style="color:orange;">**`Cisco`**</mark> <mark style="color:purple;">-></mark> <mark style="color:orange;">**`255`**</mark>
+{% endhint %}
+
+{% code title="Send 4 packages" overflow="wrap" %}
+```bash
+ping -c 4 example.com
+```
+{% endcode %}
+
+{% hint style="info" %}
+* <mark style="color:purple;">It sends</mark> <mark style="color:orange;">**`ICMP Echo Request`**</mark> <mark style="color:purple;">packets to a target and waits for</mark> <mark style="color:orange;">**`ICMP Echo Reply`**</mark> <mark style="color:purple;">packets in return.</mark>
+
+{% code title="Output Example" overflow="wrap" %}
+```bash
+PING 192.168.1.1 (192.168.1.1) 56(84) bytes of data.
+64 bytes from 192.168.1.1: icmp_seq=1 ttl=64 time=0.123 ms
+64 bytes from 192.168.1.1: icmp_seq=2 ttl=64 time=0.120 ms
+64 bytes from 192.168.1.1: icmp_seq=3 ttl=64 time=0.122 ms
+```
+{% endcode %}
+
+* <mark style="color:orange;">**`TTL`**</mark>**&#x20;**<mark style="color:purple;">**(Time to Live)**</mark><mark style="color:purple;">: The maximum number of hops a packet can traverse before being discarded.</mark>
+* <mark style="color:orange;">**`Time`**</mark><mark style="color:purple;">: The round-trip time (</mark><mark style="color:orange;">**`RTT`**</mark><mark style="color:purple;">) for the packet to reach the destination and return.</mark>
+{% endhint %}
+
+</details>
+
+<details>
+
+<summary><mark style="color:orange;"><strong><code>ss</code></strong></mark></summary>
+
+{% code title="Listening ports & services" %}
+```bash
+ss -tuln
+```
+{% endcode %}
+
+{% code title="Listening ports + PID" %}
+```bash
+ss -tulnp | grep PID
+```
+{% endcode %}
+
+{% code title="Trace the network path" %}
+```bash
+traceroute example.com
+```
+{% endcode %}
 
 </details>
 

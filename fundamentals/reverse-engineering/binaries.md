@@ -4,6 +4,18 @@ icon: laptop-binary
 
 # Binaries
 
+{% code title="Show the real path" %}
+```sh
+which binary
+```
+{% endcode %}
+
+{% code title="Display Binary data" %}
+```bash
+cat example | hexdump -C
+```
+{% endcode %}
+
 <details>
 
 <summary><mark style="color:purple;"><strong>Understanding</strong></mark><strong> </strong><mark style="color:orange;"><strong><code>ltrace</code></strong></mark><strong> </strong><mark style="color:purple;"><strong>Outputs</strong></mark></summary>
