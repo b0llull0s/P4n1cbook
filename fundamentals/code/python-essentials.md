@@ -8,7 +8,17 @@ icon: snake
 
 <summary><mark style="color:purple;"><strong><code>Virtual Environment</code></strong></mark></summary>
 
+{% code title="Create the environment" overflow="wrap" %}
+```sh
+python -m venv env_name
+```
+{% endcode %}
 
+{% code title="Activate it" overflow="wrap" %}
+```sh
+source env_name/bin/activate
+```
+{% endcode %}
 
 </details>
 
