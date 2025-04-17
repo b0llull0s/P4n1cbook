@@ -20,6 +20,12 @@ source env_name/bin/activate
 ```
 {% endcode %}
 
+{% code title="Install requirements" overflow="wrap" %}
+```sh
+pip install -r requirements.txt
+```
+{% endcode %}
+
 </details>
 
 <details>
