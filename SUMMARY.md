@@ -94,6 +94,7 @@
   * [Arbitrary Command Execution](web-exploitation/vulnerabilities/arbitrary-command-execution.md)
   * [SQLi](web-exploitation/vulnerabilities/sqli/README.md)
     * [SQLmap](web-exploitation/vulnerabilities/sqli/sqlmap.md)
+  * [SSI](web-exploitation/vulnerabilities/ssi.md)
   * [SSTI](web-exploitation/vulnerabilities/ssti.md)
   * [LFI](web-exploitation/vulnerabilities/lfi.md)
   * [XSS](web-exploitation/vulnerabilities/xss.md)
