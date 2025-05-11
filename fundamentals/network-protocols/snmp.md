@@ -29,7 +29,7 @@ sudo pacman -Sy snmp-mibs-downloader
 
 {% code title="SNMP System Description" overflow="wrap" %}
 ```sh
-nmap -script snmp-sysdescr -script-args snmpcommunity=admin 192.168.1.1
+nmap -sU -p 161 -script snmp-sysdescr -script-args snmpcommunity=admin 192.168.1.1
 ```
 {% endcode %}
 
