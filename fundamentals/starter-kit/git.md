@@ -68,6 +68,18 @@ git fetch origin
 ```
 {% endcode %}
 
+{% code title="Merge Branch" %}
+```sh
+git merge <branch_name>
+```
+{% endcode %}
+
+{% code title="Delete Branch" %}
+```sh
+git branch -D <branch_name>
+```
+{% endcode %}
+
 {% code title="Create and switch to a new branch" %}
 ```shell
 git checkout <branch_name>
@@ -105,6 +117,3 @@ git fetch
 {% endcode %}
 
 </details>
-
-
-
