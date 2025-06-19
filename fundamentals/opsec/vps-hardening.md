@@ -135,9 +135,9 @@ DenyUsers *                 # Explicitly block others (redundant but clear)
 ```
 {% endcode %}
 
-* For `keyboard-interactive` to work, configure PAM (e.g., `google-authenticator`)
-* Update firewall rules (`ufw allow 2222/tcp`).
-* Pair with Fail2ban to ban IPs after `MaxAuthTries` violations.
+* <mark style="color:purple;">For</mark> <mark style="color:orange;">**`keyboard-interactive`**</mark> <mark style="color:purple;">to work, configure PAM.</mark>
+* <mark style="color:purple;">Update firewall rules.</mark>
+* <mark style="color:purple;">Pair with</mark> <mark style="color:orange;">**`Fail2ban`**</mark> <mark style="color:purple;">to ban IPs after</mark> <mark style="color:orange;">**`MaxAuthTries`**</mark> <mark style="color:purple;">violations.</mark>
 {% endhint %}
 
 </details>
