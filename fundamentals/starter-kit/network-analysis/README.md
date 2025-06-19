@@ -14,6 +14,20 @@ sudo lft <IP:PORT>
 * <mark style="color:purple;">If you suspect that there is a</mark> <mark style="color:orange;">**`VM`**</mark> <mark style="color:purple;">or</mark> <mark style="color:orange;">**`docker`**</mark> <mark style="color:purple;">being hosted in a different port you can use</mark> <mark style="color:orange;">**`lft`**</mark> <mark style="color:purple;">and check if there are differences in  the results.</mark>
 {% endhint %}
 
+{% hint style="info" %}
+<mark style="color:purple;">**`Find the processes associated with a port`**</mark>
+
+```sh
+lsof -i -n -P <port_number>
+```
+
+<mark style="color:purple;">**`Shows`**</mark> <mark style="color:orange;">**`TCP`**</mark> <mark style="color:purple;">**`open connections in the Listen state`**</mark>
+
+```sh
+lsof -wnP -iTCP -sTCP:LISTEN
+```
+{% endhint %}
+
 <details>
 
 <summary><mark style="color:orange;"><strong><code>ip</code></strong></mark></summary>
