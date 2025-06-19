@@ -1,6 +1,0 @@
----
-icon: shield
----
-
-# Data Protection
-
