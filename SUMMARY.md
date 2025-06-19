@@ -41,6 +41,8 @@
   * [GraphQL](fundamentals/web-apis/graphql.md)
 * [Shells/TTYs](fundamentals/shells-ttys.md)
 * [Dorks](fundamentals/dorks.md)
+* [Data Protection](fundamentals/data-protection/README.md)
+  * [Metadata Removal](fundamentals/data-protection/metadata-removal.md)
 * [Steganography](fundamentals/steganography.md)
 * [Cryptography](fundamentals/cryptography.md)
 * [Reverse Engineering](fundamentals/reverse-engineering/README.md)
