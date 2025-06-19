@@ -43,6 +43,7 @@
 * [Shells/TTYs](fundamentals/shells-ttys.md)
 * [Dorks](fundamentals/dorks.md)
 * [Data Protection](fundamentals/data-protection/README.md)
+  * [VPS Hardening](fundamentals/data-protection/vps-hardening.md)
   * [Metadata Removal](fundamentals/data-protection/metadata-removal.md)
 * [Steganography](fundamentals/steganography.md)
 * [Cryptography](fundamentals/cryptography.md)
