@@ -15,13 +15,13 @@ sudo lft <IP:PORT>
 {% endhint %}
 
 {% hint style="info" %}
-<mark style="color:purple;">**`Find the processes associated with a port`**</mark>
+<mark style="color:purple;">**Find the processes associated with a port**</mark>
 
 ```sh
 lsof -i -n -P <port_number>
 ```
 
-<mark style="color:purple;">**`Shows`**</mark> <mark style="color:orange;">**`TCP`**</mark> <mark style="color:purple;">**`open connections in the Listen state`**</mark>
+<mark style="color:purple;">**Shows**</mark>**&#x20;**<mark style="color:orange;">**`TCP`**</mark>**&#x20;**<mark style="color:purple;">**open connections in the Listen state**</mark>
 
 ```sh
 lsof -wnP -iTCP -sTCP:LISTEN
