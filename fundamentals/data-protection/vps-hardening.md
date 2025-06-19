@@ -257,3 +257,160 @@ sudo ufw allow 443/tcp
 {% endhint %}
 
 </details>
+
+<details>
+
+<summary><mark style="color:orange;"><strong><code>MySQL</code></strong></mark><strong> </strong><mark style="color:purple;"><strong>hardening</strong></mark></summary>
+
+{% code title="Change MySQL’s port in /etc/mysql/my.cnf" overflow="wrap" %}
+```ini
+[mysqld]
+port = 33060
+```
+{% endcode %}
+
+{% code title="Forbid root login from remote" %}
+```sql
+UPDATE mysql.user SET Host='localhost' WHERE User='root';
+FLUSH PRIVILEGES;
+```
+{% endcode %}
+
+{% code title="Use strong passwords and restrict users" overflow="wrap" %}
+```sql
+CREATE USER 'user'@'192.168.1.100' IDENTIFIED BY 'YourComplexPassword!123';
+GRANT ALL PRIVILEGES ON odoo_db.* TO 'user'@'192.168.1.100';
+```
+{% endcode %}
+
+</details>
+
+<details>
+
+<summary><mark style="color:orange;"><strong><code>CrowdSec</code></strong></mark><strong> </strong><mark style="color:purple;"><strong>Configuration</strong></mark></summary>
+
+<pre class="language-sh" data-title="Add SSH Parsing/Detection" data-overflow="wrap" data-line-numbers><code class="lang-sh"><strong>sudo cscli parsers install crowdsecurity/sshd-logs
+</strong><strong>sudo cscli scenarios install crowdsecurity/ssh-bf
+</strong>sudo cscli collections install crowdsecurity/sshd
+</code></pre>
+
+{% code title="Verify Setup" overflow="wrap" %}
+```sh
+sudo cscli hub list
+```
+{% endcode %}
+
+{% hint style="info" %}
+<mark style="color:red;">**`Tailor to Your SSH Port`**</mark>
+
+* <mark style="color:purple;">Edit the SSH log path in</mark> <mark style="color:orange;">**`/etc/crowdsec/acquis.yaml`**</mark><mark style="color:purple;">:</mark>
+
+{% code overflow="wrap" %}
+```yaml
+filenames:
+  - /var/log/auth.log    # Debian/Ubuntu
+  # - /var/log/secure   # RHEL/CentOS
+labels:
+  type: syslog
+filter: "programname=='sshd'"
+```
+{% endcode %}
+
+{% code title="If using a custom SSH port, modify the SSH detection rule:" overflow="wrap" %}
+```sh
+sudo sed -i 's/port: 22/port: 2222/' /etc/crowdsec/scenarios/ssh-bf.yaml
+```
+{% endcode %}
+{% endhint %}
+
+{% code title="Start CrowdSec" overflow="wrap" %}
+```sh
+sudo systemctl enable --now crowdsec
+```
+{% endcode %}
+
+{% code title="Check Bans" overflow="wrap" %}
+```sh
+sudo cscli decisions list
+```
+{% endcode %}
+
+{% hint style="info" %}
+<mark style="color:red;">**`Integrate with UFW`**</mark>
+
+{% code title="Install UFW Bouncer" overflow="wrap" %}
+```sh
+sudo pacman -S crowdsec-firewall-bouncer-ufw  # Debian/Ubuntu
+```
+{% endcode %}
+
+{% code title="Edit /etc/crowdsec/bouncers/crowdsec-firewall-bouncer.yaml" overflow="wrap" %}
+```yaml
+mode: ufw
+deny_action: deny
+deny_log: true
+```
+{% endcode %}
+
+{% code title="Restart Services" overflow="wrap" %}
+```sh
+sudo systemctl restart crowdsec
+sudo systemctl restart crowdsec-firewall-bouncer
+```
+{% endcode %}
+{% endhint %}
+
+{% hint style="info" %}
+<mark style="color:red;">**`Ban Duration & Sensitivity`**</mark>
+
+{% code title="Edit /etc/crowdsec/profiles.yaml" overflow="wrap" %}
+```yaml
+name: default
+decisions:
+  - type: ban
+    duration: 24h    # Increase from default 4h
+scenarios:
+  - ssh-bf
+  # Add other scenarios (e.g., http-bf)
+```
+{% endcode %}
+
+{% code title="Community Blocklists" overflow="wrap" %}
+```sh
+sudo cscli collections install crowdsecurity/linux
+sudo cscli collections install crowdsecurity/http-cve
+```
+{% endcode %}
+{% endhint %}
+
+{% code title="Show attack statistics" overflow="wrap" %}
+```sh
+sudo cscli metrics
+```
+{% endcode %}
+
+{% code title="List active bans" overflow="wrap" %}
+```sh
+sudo cscli decisions list
+```
+{% endcode %}
+
+{% code title="View all detected threats" overflow="wrap" %}
+```sh
+sudo cscli alerts list
+```
+{% endcode %}
+
+{% code title="Update threat intelligence" overflow="wrap" %}
+```sh
+sudo cscli hub upgrade
+```
+{% endcode %}
+
+{% code title="Live debug logs" overflow="wrap" %}
+```sh
+sudo tail -f /var/log/crowdsec.log
+```
+{% endcode %}
+
+</details>
