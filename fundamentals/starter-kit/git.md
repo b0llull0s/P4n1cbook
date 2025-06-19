@@ -52,49 +52,47 @@ git remote set-url origin git@github.com:b0llull0s/AI-Maths.git
 
 <summary><mark style="color:purple;"><strong><code>Branches</code></strong></mark></summary>
 
-{% hint style="info" %}
-* <mark style="color:purple;">Fetch the changes to local:</mark>
-
+{% code title="Fetch the changes to local" overflow="wrap" %}
 ```sh
 git fetch origin
 ```
+{% endcode %}
 
-* <mark style="color:purple;">Create and switch to a new branch:</mark>
-
-```sh
+{% code title="Create and switch to a new branch" %}
+```shell
 git checkout <branch_name>
 ```
+{% endcode %}
 
-* <mark style="color:purple;">In case you can to create a feature branch:</mark>
-
-```
+{% code title="In case you can to create a feature branch" overflow="wrap" %}
+```sh
 git checkout -b feature-branch
 ```
+{% endcode %}
 
-* <mark style="color:purple;">Pull the latest changes:</mark>
-
+{% code title="Pull the latest changes" overflow="wrap" %}
 ```sh
 git pull origin dev
 ```
+{% endcode %}
 
-* <mark style="color:purple;">Switch to another branch:</mark>
-
+{% code title="Switch to another branch" overflow="wrap" %}
 ```sh
 git switch <branch-name>
 ```
+{% endcode %}
 
-* <mark style="color:purple;">Push the changes:</mark>
-
+{% code title="Push the changes" overflow="wrap" %}
 ```sh
 git push origin <branch_name>
 ```
+{% endcode %}
 
-* <mark style="color:purple;">Fetch changes to local:</mark>
-
+{% code title="Fetch changes to local" overflow="wrap" %}
 ```sh
 git fetch
 ```
-{% endhint %}
+{% endcode %}
 
 </details>
 
