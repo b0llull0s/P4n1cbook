@@ -37,6 +37,7 @@
 * [Code](fundamentals/code/README.md)
   * [Python Essentials](fundamentals/code/python-essentials.md)
   * [C & C++](fundamentals/code/c-and-c++.md)
+  * [GO](fundamentals/code/go.md)
 * [Web APIs](fundamentals/web-apis/README.md)
   * [GraphQL](fundamentals/web-apis/graphql.md)
 * [Shells/TTYs](fundamentals/shells-ttys.md)
