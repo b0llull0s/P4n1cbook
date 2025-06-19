@@ -8,8 +8,7 @@ icon: git
 
 <summary><mark style="color:purple;"><strong><code>Enumeration</code></strong></mark></summary>
 
-{% hint style="info" %}
-{% code title="Repository Status" %}
+{% code title="Repository Status" overflow="wrap" %}
 ```sh
 git status
 ```
@@ -26,7 +25,18 @@ git log
 git show b73481bb823d2dfb49c44f4c1e6a7e11912ed8ae
 ```
 {% endcode %}
-{% endhint %}
+
+{% code title="Show all the branches in the repository" %}
+```sh
+git branch -a
+```
+{% endcode %}
+
+{% code title="Show the commit history across multiple branches" %}
+```sh
+git show-branch
+```
+{% endcode %}
 
 </details>
 
